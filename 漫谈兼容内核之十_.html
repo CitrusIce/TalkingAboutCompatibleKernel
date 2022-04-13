@@ -1,0 +1,1602 @@
+
+<!-- saved from url=(0098)https://web.archive.org/web/20171110175842/http://www.longene.org/techdoc/0625005001224576737.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030"><script src="./漫谈兼容内核之十__files/analytics.js.下载" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app211.us.archive.org';v.server_ms=302;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./漫谈兼容内核之十__files/bundle-playback.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./漫谈兼容内核之十__files/wombat.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.longene.org:80/techdoc/0625005001224576737.html","20171110175842","https://web.archive.org/","web","/_static/",
+	      "1510336722");
+</script>
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之十__files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之十__files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://web.archive.org/web/20171110175842/http://www.longene.org/techdoc/0625005001224576737.files/filelist.xml">
+<title>漫谈兼容内核之十:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tt</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>SYSTEM</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3502</o:TotalTime>
+  <o:Created>2008-10-21T08:12:00Z</o:Created>
+  <o:LastSaved>2008-10-21T08:12:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1733</o:Words>
+  <o:Characters>9880</o:Characters>
+  <o:Lines>82</o:Lines>
+  <o:Paragraphs>23</o:Paragraphs>
+  <o:CharactersWithSpaces>11590</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="ZH-CN" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimHei;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:正文;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:144.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:黑体;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+p.doctext, li.doctext, div.doctext
+	{mso-style-name:doctext;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:"Times New Roman";}
+p.doclist, li.doclist, div.doclist
+	{mso-style-name:doclist;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:6180251;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-990083792 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l1
+	{mso-list-id:30571076;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-990083792 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:48769839;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1224260682 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:48847387;
+	mso-list-type:hybrid;
+	mso-list-template-ids:169527964 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:190807080;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-643944514 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:242683058;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1807129460 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l6
+	{mso-list-id:244842798;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-395799204 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:533156945;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-674181678 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:793329020;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-379163010 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:973951326;
+	mso-list-type:hybrid;
+	mso-list-template-ids:493242828 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:1004359038;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1363475660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l11
+	{mso-list-id:1061438785;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1595834230 1688262452 67698689 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-number-format:japanese-counting;
+	mso-level-text:%1、;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l12
+	{mso-list-id:1078677497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1959094908 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l12:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l13
+	{mso-list-id:1299456346;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1152175040 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l14
+	{mso-list-id:1658459889;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1828712382 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l15
+	{mso-list-id:1780830494;
+	mso-list-type:hybrid;
+	mso-list-template-ids:863028420 -2143931400 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l15:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l16
+	{mso-list-id:1914898788;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-990083792 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l16:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l17
+	{mso-list-id:2072073787;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-686359072 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l18
+	{mso-list-id:2099867160;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-931641820 1057138654 -1545050612 830644146 -192135772 1316153712 -319403880 1226194656 -1706236884 -403284958;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l18:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l19
+	{mso-list-id:2123255970;
+	mso-list-type:hybrid;
+	mso-list-template-ids:978116996 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l20
+	{mso-list-id:2146005750;
+	mso-list-type:hybrid;
+	mso-list-template-ids:938895032 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l20:level1
+	{mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+
+<body lang="ZH-CN" style="tab-interval:21.0pt;text-justify-trim:punctuation"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20171110175842/http://www.longene.org:80/techdoc/0625005001224576737.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.longene.org/techdoc/0625005001224576737.html","20171110175842",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="Section1" style="layout-grid:15.6pt">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+隶书;mso-hansi-font-family:&quot;Times New Roman&quot;">漫谈兼容内核之十</span></b><b><span lang="EN-US" style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书;
+mso-fareast-font-family:宋体">:</span></b><b><span lang="EN-US" style="font-size:
+22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt">Windows</span></b><b><span style="font-size:22.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的进程创建和映像装入</span></b><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毛德操</span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">关于</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的进程创建和映像装入的过程，“</span><span lang="EN-US">Microsoft Windows
+Internals 4e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">”一书的第六章中有颇为详细的说明。本文就以此为依据，夹译、夹叙、夹议地作一介绍。书中说，创建进程的过程分成六个阶段，发生于操作系统的三个部分中，那就是：</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">客户端即某个应用进程的包括</span><span lang="EN-US">Kernel32.dll</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在内的动态连接库，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的“执行体”、即内核</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">确切地说是内核的上层</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以及</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统的服务进程</span><span class="SpellE"><span lang="EN-US">Csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中。这六个阶段是：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo8;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">打开目标映像文件。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo8;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">创建</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的“执行体进程对象”，也就是内核中的“进程控制块”数据结构。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo8;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">创建该进程的初始</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第一个</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">线程，包括其堆栈、上下文、以及“执行体线程对象”，即内核中的“线程控制块”数据结构。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo8;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将新建进程通知</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">子系统。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo8;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">启动初始线程地运行</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">除非因为参数中的</span><span lang="EN-US">CREATE_SUSPENDED</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">标志位为</span><span lang="EN-US">1</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">而一创建便被挂起</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo8;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在新进程和线程的上下文中完成用户空间的初始化，包括装入所需的</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，然后开始目标程序的运行。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">下面分阶段叙述。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第一阶段：打开目标映像文件</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在</span><span lang="EN-US">Win32</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">API</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中，创建进程是由</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">完成的。这实际上是个宏定义，根据不同的情况定义成</span><span class="SpellE"><span lang="EN-US">CreateProcessA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">或</span><span class="SpellE"><span lang="EN-US">CreateProcessW</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">之一，这两个函数都在</span><span lang="EN-US">kernel32.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">可以用工具</span><span lang="EN-US">depends</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">观察</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。两个函数的区别仅在于字符串的表达，前者采用</span><span lang="EN-US">ASCII</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">字符，而后者采用“宽字符”、即</span><span lang="EN-US">Unicode</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。实际上</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的内部都采用宽字符，所以前者只是把字符串转换成宽字符格式，然后调用后者。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可以在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上运行的可执行软件有好几类，处理的方法自然就不一样：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo9;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">32</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">映像，直接运行。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo9;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">16</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">映像，启动</span><span lang="EN-US">ntvdm.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以原有命令行作为参数。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo9;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">DOS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">.exe</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span lang="EN-US">.com</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">、或</span><span lang="EN-US">.<span class="SpellE">pif</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像，启动</span><span lang="EN-US">ntvdm.exe</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，以原有命令行作为参数。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo9;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">DOS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">.bat</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">或</span><span lang="EN-US">.<span class="SpellE">cmd</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">批命令文件</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">脚本</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，启动</span><span lang="EN-US">cmd.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以原有命令行作为参数。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo9;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">POSIX</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可执行映像，启动</span><span lang="EN-US">posix.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以原有命令行作为参数。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo9;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">OS/2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可执行映像，启动</span><span lang="EN-US">os2.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以原有命令行作为参数。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这里面最重要的当然是</span><span lang="EN-US">32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位的</span><span lang="EN-US">.exe</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像，而最后两类现在已经很少见了。从对于除</span><span lang="EN-US">32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">以外的各种映像的处理，读者不妨对比一下</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对</span><span lang="EN-US">.exe</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像的处理，看看这里有着什么样的相似性。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">当然，我们在这里只关心</span><span lang="EN-US">32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位</span><span lang="EN-US">.exe</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像。对于这一类映像，</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先打开映像文件，再为其</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">分配</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">创建一个“</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”、即内存区间。创建内存区间的目的当然是要把映像文件影射到这个区间，不过此时还不忙着映射，还要看看。看什么呢？首先是看已经打开的目标文件是否一个合格的</span><span lang="EN-US">.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">映像</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">万一是</span><span lang="EN-US">DLL</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像？</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。还要看的事就有点出乎读者意外了，看的是在“注册表”中的这个路径：</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span lang="EN-US">HKLM\SOFTWARE\Microsoft\Windows NT\<span class="SpellE">CurrentVersion</span>\Image
+File Execution Options</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">用</span><span lang="EN-US">depends</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可以看到，</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中有个函数</span><span class="SpellE"><span lang="EN-US">LdrQueryImageFileExecutionOptions</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，就是专门干这个事的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">如果上述路径下有以目标映像文件的文件名和扩展名为“键”的表项，例如“</span><span lang="EN-US">image.exe</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”，而表项中又有名为“</span><span lang="EN-US">Debugger</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”的值，那么这个值</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">一个字符串</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就替换了原来的目标文件名，变成新的目标映像名，并重新执行上述的第一阶段操作。这样做的目的当然是为调试程序提供方便，但是我们不妨设想：如果黑客或某个木马程序设法在注册表中加上了一个表项？这时候用户以为是启动了程序</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，而实际启动的却是</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">！。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第二阶段：创建内核中的进程对象</span></b><span lang="EN-US"> </span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">我们知道，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上的每个进程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">线程</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">都有一个“进程控制块”、即</span><span class="SpellE"><span lang="EN-US">task_struct</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构，与具体进程</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">线程有关的绝大部分信息都集中存储在这个数据结构中。而</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">则有所不同。首先，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的进程和线程各有不同的“对象”、即数据结构，从概念上把线程和进程分离开来。线程是具体的</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">执行</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上下文，是</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">调度的单位和目标，而进程只是若干共享地址空间和特性</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如调度优先级</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的线程的集合。于是，进程有进程的数据结构，线程有线程的数据结构。这就好像是对一组</span><span class="SpellE"><span lang="EN-US">task_struct</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构“提取公因子”所形成的结果，这个举措是很好理解的。进一步，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">又把本可集中存储的的进程数据结构也拆分成好几个对象，有的在内核中，有的则在用户空间。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中与进程有关的对象有：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l14 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。即</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> _EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，在“</span><span lang="EN-US">Internals</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”书中也称为“</span><span lang="EN-US">Process Block</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”。它代表着</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的一个进程，‘</span><span lang="EN-US">E</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">’表示“</span><span lang="EN-US">Executive</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”，微软把</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中的上层称为“</span><span lang="EN-US">Executive</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”、以区别于下层的设备驱动和内存管理等成分、一般翻译成“执行体”。“</span><span lang="EN-US">Executive</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”也有“管理”、“运行”的意思</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所以</span><span lang="EN-US">CEO</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">就是“总裁”</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l14 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">KPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这是</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内部的一个成分，其名称就叫“</span><span class="SpellE"><span lang="EN-US">Pcb</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l14 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">W32PROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。下面将要讲到，在用户空间有个“</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统”的服务进程</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这个服务进程为系统中的每个</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">应用进程都维持着一个数据结构，其中包含了一些与窗口和图形界面有关的信息。而对于窗口和图形界面的操作原来也是由</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在“客户”进程的请求下实现的。但是，为了提高效率，后来把这部分功能移到了内核中。与此相应，有关数据结构的一部分也需要移到内核中，就成了</span><span lang="EN-US">W32PROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">既然</span><span lang="EN-US">KPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">一部分，实际上内核中与进程有关的对象实际上只有两种，就是</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">W32PROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。不过这里没有包括“打开对象表”，那也是每个进程都有的</span><span lang="EN-US">(Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核中的“打开文件表”也在进程控制块的外面</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">用户空间与进程有关的对象有：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l14 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">如上所述，把</span><span lang="EN-US">W32PROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构移入内核以后，</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">仍需要为每个</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程保持一些别的信息，所以</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内部仍有按进程的相应数据结构。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l14 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">PEB(Process Environment Block)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、即“进程环境块”。</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中记录着进程的运行参数、映像装入地址等等信息。</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在用户空间中的位置是固定的，总是在</span><span lang="EN-US">0x7ffdf000</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中，用户空间和系统空间的分界线是</span><span lang="EN-US">2GB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、即</span><span lang="EN-US">0x80000000</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，所以</span><span lang="EN-US">PEB</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在靠近用户空间顶端的地方。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">“</span><span lang="EN-US">Internals</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”书中并未给出有关数据结构的定义，但是通过</span><span lang="EN-US">Debug</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">手段给出了</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的内部结构：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x000<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">Pcb</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+_KPROCESS</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x06c<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ProcessLock</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>: _EX_PUSH_LOCK</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x070<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">CreateTime</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+_LARGE_INTEGER</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x078<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ExitTime</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+_LARGE_INTEGER</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x080<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">RundownProtect</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+_EX_RUNDOWN_REF</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x084<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">UniqueProcessId</span><span style="mso-spacerun:yes">&nbsp;
+</span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Ptr32Void</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x088<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ActiveProcessLinks</span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+: _LIST_ENTRY</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x090<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">QuotaUsage</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>: [3]<span style="mso-spacerun:yes">&nbsp; </span>Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x09c<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">QuotaPeak</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>: [3]<span style="mso-spacerun:yes">&nbsp; </span>Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0a8<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">CommitCharge</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>: Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0ac<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">PeakVirtualSize</span><span style="mso-spacerun:yes">&nbsp;
+</span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0b0<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">VirtualSize</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0b4<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SessionProcessLinks</span> <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span>:
+_LIST_ENTRY</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0bc<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DebugPort</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>: Ptr32Void</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0c0<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ExceptionPort</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:
+2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>: Ptr32Void</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0c4<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ObjectTable</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Ptr32_HANDLE_TABLE</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0c8<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Token<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+_EX_FAST_REF</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0cc<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">WorkingSetLock</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+_FAST_MUTEX</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0ec<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">WorkingSetPage</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x0f0<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">AddressCreationLock</span> <span style="mso-tab-count:1">&nbsp;&nbsp; </span>:
+_FAST_MUTEX</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x110<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">HyperSpaceLock</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Uint4B</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x114<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ForkInProgress</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Ptr32_ETHREAD</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>+0x118<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">HardwareTrigger</span><span style="mso-spacerun:yes">&nbsp;
+</span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>:
+Uint4B</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可见，</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的第一个成分是</span><span class="SpellE"><span lang="EN-US">Pcb</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，其类型是</span><span lang="EN-US">_KPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、即</span><span lang="EN-US">KPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这是一个大小为</span><span lang="EN-US">0x6c</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的数据结构。书中也给出了它的内部结构。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">“</span><span lang="EN-US">Undocumented Windows 2000 Secrets</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”一书也以</span><span lang="EN-US">Debug</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">手段给出了这个数据结构的内部结构，但是列出的结构与此有很大的不同，也许是因为版本的关系。从所列的内容看，似乎“</span><span lang="EN-US">Secrets</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”一书倒是正确的，因为那里所列的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">结构中有关于虚存的成分</span><span class="SpellE"><span lang="EN-US">Vm</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，是一个大小为</span><span lang="EN-US">0x50</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的数据结构，而这里没有，但是虚存</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">地址空间</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">显然是进程的主要资源，所以</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中理应有它的位置。由此看来，“</span><span lang="EN-US">Secrets</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”一书所述更接近于桌面和服务器系统的现实，而“</span><span lang="EN-US">Internals</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”书中所列可能更接近于不带</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的嵌入式系统。而且，“</span><span lang="EN-US">Secrets</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”一书还在附录</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中给出了通过逆向工程手段得到的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">PEB</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">等数据结构的定义</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">代码</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这当然是很有价值的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">那么，如果确有不同版本的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这会有什么影响呢？首先，用户空间的应用程序不能直接访问内核中的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，所以具体的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构属于内核的内部实现，只要内核中的各种成分、各个环节都配套成龙，“自圆其说”，就没有什么问题，这跟</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核中一些条件编译和裁剪的效果是类似的。可是，另一方面，对于可以动态装入的</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">模块，如果在模块中需要访问这些数据结构，那就可能有问题了，因为</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">模块都是以二进制映像的形式提供的，不像在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中那样可以由源代码重新编译。怎么办呢？我们可以到</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">DDK</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中去找找答案。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在</span><span lang="EN-US">DDK</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">.h</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件中，有函数</span><span class="SpellE"><span lang="EN-US">IoGetCurrentProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的申明：</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTKERNELAPI</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">PEPROCESS</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">IoGetCurrentProcess</span></b></span><span lang="EN-US">(</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>VOID</span></p>
+
+<p class="MsoNormal" style="text-indent:21.75pt"><span lang="EN-US">);</span></p>
+
+<p class="MsoNormal" style="text-indent:21.75pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.75pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这个函数是内核为</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">模块提供的支撑函数，相当于由</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核导出的函数。其返回值类型是</span><span lang="EN-US">PEPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，就是指向</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构的指针。显然，这跟</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中的</span><span lang="EN-US">current</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">相似，调用的目的是获取当前进程的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">指针</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。但是，</span><span lang="EN-US">DDK</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">.h</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">文件中却并未给出</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构的定义，所以调用这个函数所得到的仅仅是个指针，实际上与</span><span lang="EN-US">void*</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">并无区别。这意味着在</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">模块中是不允许直接访问其内部成分的。那么，</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">模块如何使用这个指针呢？下面就是一个例子，还是在</span><span lang="EN-US">DDK</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中：</span></p>
+
+<p class="MsoNormal" style="text-indent:21.75pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTKERNELAPI</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">VOID</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">MmProbeAndLockProcessPages</span></b></span><span lang="EN-US"> (</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>IN OUT PMDL <span class="SpellE">MemoryDescriptorList</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>IN PEPROCESS Process,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>IN KPROCESSOR_MODE <span class="SpellE">AccessMode</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>IN LOCK_OPERATION Operation</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>);</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这个函数的作用是锁定某个进程的某些存储页面</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不让换出</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，其输入参数之一就是指向该进程的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">结构的指针。当然，这个函数也是由内核提供的</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">属于我们所说的设备驱动界面</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。所以指针的提供者和使用者都是内核，只要这二者配套即可，</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">模块在这里只不过是传递了一下，所以也不会有问题。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">假定</span><span lang="EN-US">proc</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是指向进程控制块的指针，并且进程控制块中有个成份</span><span lang="EN-US">X</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，是个整数，那么在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的动态安装模块中可以直接用“</span><span lang="EN-US">proc-&gt;X</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”访问这个成分，但是在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">.sys</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">模块中则只能通过类似于</span><span class="SpellE"><span lang="EN-US">get_X</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">set_X</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">一类的支撑函数访问这个成分。将数据结构的内容跟对于这些内容的操作</span><span lang="EN-US">(method)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">相分离，正是“对象”与“数据结构”的区别所在。而将数据结构的内容“封装”起来，也正是微软所需要的，因为它不愿意公开这些数据结构。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对于兼容内核的开发，这意味着我们不必拘泥于采用与</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">完全一致的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">尽管“</span><span lang="EN-US">Secrets</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”的附录</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">已经给出了它的定义</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，一些内部的操作和处理也不必完全与之相同，而只要与</span><span lang="EN-US">DDK</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所规定的界面相符就可以了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">了解了有关的进程对象，我们可以言归正传了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所谓创建内核中的进程对象，实际上就是创建以</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为核心、为基础的相关数据结构，这就是系统调用</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">要做的事情，主要包括：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">分配并设置</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">其他相关的数据结构的设置，例如“打开对象表”。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">为目标进程创建初始的地址空间。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对目标进程的“内核进程块”</span><span lang="EN-US">KPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进行初始化。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将系统</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的映像映射到目标进程的</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">用户</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">地址空间。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将目标进程的映像映射到其自身的用户空间。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">设置好目标进程的“进程环境块”</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映射其他需要映射到用户空间的数据结构，例如与“当地语言支持”、即</span><span lang="EN-US">NLS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">有关的数据结构。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo10;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">完成</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">创建，将其挂入进程队列</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">注意受调度的是线程队列而不是进程队列</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这里将系统</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、实际上是</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、映射到目标进程的用户空间是很关键的。这是因为，除别的、主流的功能和作用外，</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">同时也起着相当于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中</span><span lang="EN-US">ELF</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">“解释器”的作用，也担负着为目标映像建立动态连接的任务。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">值得注意的是，</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">与</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不同。</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">创建一个进程并使其</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">初始线程</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">运行，除非在创建时就指定要将其挂起。而</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，则只是在内核中创建该进程的</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构并为其建立起地址空间。这只是个空壳架子，因为没有线程就谈不上运行，调度的目标是线程而不是线程。而且，对</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的调用还有个条件，那就是目标映像已经被映射到一个存储区间</span><span lang="EN-US">(Section)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第三阶段：创建初始线程</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如上所述，进程只是个空架子，实际的运行实体是里面的线程。所以下一步就是创建目标进程的初始线程，即其第一个线程。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">与</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">相对应，线程的数据结构是</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，并且其第一个成分是数据结构</span><span lang="EN-US">KTHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，称为</span><span lang="EN-US">TCB</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。同样，“</span><span lang="EN-US">Internals</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”和“</span><span lang="EN-US">Secrets</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”两本书中所列的</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内部结构有所不同，后者的附录</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中给出了通过逆向工程得到的</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构定义。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">同样，从</span><span lang="EN-US">Windows DDK</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中申明的一些函数也可以看出，</span><span lang="EN-US">.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">模块只是传递</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针或</span><span lang="EN-US">KTHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">由于</span><span lang="EN-US">KTHREAD</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中的第一个成分，二者实际上是一回事</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，而不会直接访问它的具体成分。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">PKTHREAD NTAPI <span class="SpellE"><b>KeGetCurrentThread</b></span>();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTKERNELAPI <span style="mso-spacerun:yes">&nbsp;</span>KPRIORITY </span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">KeQueryPriorityThread</span></b></span><span lang="EN-US"> (IN PKTHREAD Thread);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTKERNELAPI <span style="mso-spacerun:yes">&nbsp;</span>LONG </span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">KeSetBasePriorityThread</span></b></span><span lang="EN-US"> (IN PKTHREAD Thread, IN LONG Increment);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTKERNELAPI<span style="mso-spacerun:yes">&nbsp; </span>PDEVICE_OBJECT</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">IoGetDeviceToVerify</span></b></span><span lang="EN-US">(IN PETHREAD Thread);</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">此外，就像进程有“进程环境块”</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">一样，线程也有“线程环境块”</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，</span><span lang="EN-US">KTHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">结构中有个指针指向其存在于用户空间的</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。前面讲过，</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在用户空间的位置是固定的，</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下方就是</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，进程中有几个线程就有几个</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，每个</span><span lang="EN-US">TEB</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">占一个</span><span lang="EN-US">4KB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的页面。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这个阶段的操作是通过系统调用</span><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">完成的，主要包括：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l13 level1 lfo12;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">创建和设置目标线程的</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构，并处理好与</span><span lang="EN-US">EPROCESS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的关系</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">例如进程块中的线程计数等等</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在目标进程的用户空间创建并设置目标线程的</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将目标线程在用户空间的起始地址设置成指向</span><span lang="EN-US">Kernel32.dll</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中的</span><span class="SpellE"><span class="docemphasis"><span lang="EN-US">BaseProcessStart</span></span></span><span class="docemphasis"><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">或</span><span class="SpellE"><span lang="EN-US">BaseThreadStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，前者用于进程中的第一个线程，后者用于随后的线程。用户程序在调用</span></span><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时也要提供一个用户级的起始函数</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">地址</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span><span class="SpellE"><span class="docemphasis"><span lang="EN-US">BaseProcessStart</span></span></span><span class="docemphasis"><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">BaseThreadStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在完成初始化时会调用这个</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">起始函数。</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中有两个成份，分别用来存放这两个地址。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span class="docemphasis"><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">设置目标线程的</span><span lang="EN-US">KTHREAD</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构并为其分配堆栈。特别地，将其上下文中的断点</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">返回点</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">设置成指向内核中的一段程序</span><span class="SpellE"><span class="docemphasis"><span lang="EN-US">KiThreadStartup</span></span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，使得该线程一旦被调度运行时就从这里开始执行。</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">系统中可能登记了一些每当创建线程时就应加以调用的“通知”函数，调用这些函数。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第四阶段：通知</span><span lang="EN-US">Windows</span></b><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、确切地说是</span><span lang="EN-US">Windows NT</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、当初的设计目标是支持三种不同系统的应用软件。第一种是</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">本身的应用软件，即所谓“</span><span lang="EN-US">Native</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">”</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">软件，这是微软开发</span><span lang="EN-US">Windows NT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的真正目的。第二种是</span><span lang="EN-US">OS/2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的应用软件，这是因为当时微软与</span><span lang="EN-US">IBM</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">还有合作关系。第三种是与</span><span lang="EN-US">Unix</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">应用软件相似、符合</span><span lang="EN-US">POSIX</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">标准的软件，那是因为当时美国的军方采购有这样的要求。不过实际上微软对后两种应用的支持从一开始就是半心半意的，后来翅膀长硬了，就更不必勉为其难了。但是，尽管如此，当初在设计的时候还是考虑了对不同“平台”的支持，即在同一个内核的基础上配以不同的外围软件，形成不同的应用软件运行环境，微软称之为“子系统（</span><span lang="EN-US">Subsystem</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">）”。于是，在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核上就有了所谓“</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">子系统”、“</span><span lang="EN-US">OS/2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">子系统”、和“</span><span lang="EN-US">POSIX</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统”。当然，时至今日，实际上只剩下</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">那么，所谓子系统是怎样构成的呢？“</span><span lang="EN-US">Internals</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”书中阐明了</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统的构成，说这是由下列几个要素构成的。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l11 level1 lfo18;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-bidi-font-family:
+宋体"><span style="mso-list:Ignore">一、</span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统进程</span><span lang="EN-US">csrss.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。包括了对下列成分和功能的支持：</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt;text-indent:-21.0pt;mso-list:l11 level2 lfo18;
+tab-stops:list 63.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">控制台</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">字符型</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">窗口的操作。面向控制台</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">终端的应用本身不支持窗口操作</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">例如窗口的移动、大化</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">小化、遮盖等等</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，但是又需要在窗口中运行，所以需要有额外的支持。</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt;text-indent:-21.0pt;mso-list:l11 level2 lfo18;
+tab-stops:list 63.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程和线程的管理。例如弹出一个对话窗，说某个进程没有响应，让使用者选择是否结束该进程的运行，等等。每个</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">线程再创建</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">退出时都要向</span><span lang="EN-US">csrss.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程发出通知。</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt;text-indent:-21.0pt;mso-list:l11 level2 lfo18;
+tab-stops:list 63.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">DOS</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">软件和</span><span lang="EN-US">16</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">软件在</span><span lang="EN-US">(32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">)Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上的运行。</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt;text-indent:-21.0pt;mso-list:l11 level2 lfo18;
+tab-stops:list 63.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">其它。包括对当地语言</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">输入法</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的支持。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:21.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这个进程之所以叫</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，是“</span><span lang="EN-US">C/S Run-time <span class="SpellE">SubSystem</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”的意思，</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统的服务进程。其实三个子系统都是</span><span lang="EN-US">C/S</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">结构，但是</span><span lang="EN-US">OS/2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">子系统的服务进程称为</span><span lang="EN-US">os2ss</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，</span><span lang="EN-US">POSIX</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">子系统的服务进程称为</span><span class="SpellE"><span lang="EN-US">Psxss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。之所以如此，据“</span><span lang="EN-US">Internals</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”说，是因为最初时三个子系统的服务进程是合在一起的，就叫</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，后来才把那两个子系统移了出来另立门户，但剩下的还继续叫</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l11 level1 lfo18;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-bidi-font-family:
+宋体"><span style="mso-list:Ignore">二、</span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中的图形设备驱动、即</span><span lang="EN-US">Win32k.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">模块。其功能包括：</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt;text-indent:-21.0pt;mso-list:l17 level1 lfo19;
+tab-stops:list 63.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">视窗管理，控制着窗口的显示和各种屏幕输出</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">例如光标</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，还担负着从键盘、鼠标等设备接收输入并将它们分发给各个具体应用的任务。</span></p>
+
+<p class="MsoNormal" style="margin-left:63.0pt;text-indent:-21.0pt;mso-list:l17 level1 lfo19;
+tab-stops:list 63.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">为应用软件提供一个图形函数库。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l11 level1 lfo18;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-bidi-font-family:
+宋体"><span style="mso-list:Ignore">三、</span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">若干“系统</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”，如</span><span lang="EN-US">Kernel32.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">Advapi32.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">User32.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、以及</span><span lang="EN-US">Gdi32.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上述的第二个要素</span><span lang="EN-US">Win32k.sys</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">原先也是和</span><span lang="EN-US">csrss.exe</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">合在一起的，这部分功能也由服务进程在用户空间提供。应用进程通过进程间通信向</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">发出图形操作请求，由</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">完成有关的图形操作。但是后来发现频繁的进程间通信和调度成了瓶颈，所以就把这一部分功能剥离出来，移进了内核，这就是</span><span lang="EN-US">Win32k.sys</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。这一来，对于一般的</span><span lang="EN-US">32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">应用而言，留给</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、或者说必须要通过</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">办的事就很少了。但是，尽管如此，在创建</span><span class="SpellE"><span lang="EN-US">WIndows</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程时还是要通知</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，因为它担负着对所有</span><span class="SpellE"><span lang="EN-US">WIndows</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程的管理。另一方面，</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在接到通知以后就会在屏幕上显示那个沙漏状的光标，如果这是个有窗口的进程的话。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">注意这里向</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">发出通知的是父进程、即调用</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的进程，而不是新创建出来的进程，它还没有开始运行。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">至此</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的操作已经完成，从</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">返回就退出了</span><span lang="EN-US">kernel32.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，回到了应用程序或更高层的</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中。这四个阶段都是立足于父进程的用户空间，在整个过程中进行了多次系统调用，每次系统调用完成后都回到用户空间中。例如，在第二阶段中就调用了</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，第三阶段中就调用了</span><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，而整个创建进程的过程包括了许多次系统调用</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">有些系统调用属于细节，所以上面并未提及</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">其实</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的进程创建也不是一次系统调用就可完成的，典型的过程就包括</span><span class="SpellE"><span lang="EN-US">fock</span></span><span lang="EN-US">()</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">execve</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等系统调用，但是在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上就更多了。这跟</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的整个系统调用界面的设计有关。以用户空间的内存分配为例，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的系统调用</span><span class="SpellE"><span lang="EN-US">brk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">只有一个参数，那就是区间的长度，但是</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的系统调用</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">NtAllocateVirtualMemory()</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">却有6个参数，其第一个参数是</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">ProcessHandle</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">，这是标志着一个已打开进程对象的</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">Handle</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">。这说明什么呢？这说明</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">Linux</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">进程只能为自己分配空间，而</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">Windows</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">进程却可以为别的进程分配空间。或者说，在存储空间的分配上</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">Linux</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">进程是“自力更生”的，而</span><span style="color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">Windows</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">进程却可以“包办代替”。<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt;mso-ansi-language:ZH-CN">这对于系统设计的影响可能远超读者的想像。就拿为子进程的第一个线程分配用户空间堆栈而言，</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt">既然</span><span lang="EN-US" style="color:black;mso-font-kerning:
+0pt">Linux</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-font-kerning:0pt">进程<span lang="EN-US">(</span>线程<span lang="EN-US">)</span>只能为自己分配空间，而</span><span style="font-family:宋体;mso-hansi-font-family:
+&quot;Times New Roman&quot;;color:black;mso-font-kerning:0pt;mso-ansi-language:ZH-CN">用户空间堆栈又必须在进入用户空间运行之前就已存在，那就只好在内核中完成用户空间堆栈的分配。相比之下，</span><span lang="EN-US" style="color:black;mso-font-kerning:0pt">Windows</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt">进程可以为别的进程分配空间，于是就可以由父进程在用户空间中为子进程完成这些操作。这样，有些事情</span><span lang="EN-US" style="color:black;mso-font-kerning:0pt">Linux</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt">只能在内核中做，而</span><span lang="EN-US" style="color:black;
+mso-font-kerning:0pt">Windows</span><span style="font-family:宋体;mso-hansi-font-family:
+&quot;Times New Roman&quot;;color:black;mso-font-kerning:0pt">可以在用户空间做。有些人称</span><span lang="EN-US" style="color:black;mso-font-kerning:0pt">Windows</span><span style="font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-font-kerning:0pt">为“微内核”，这或许也是个原因。而</span><span lang="EN-US" style="color:black;mso-font-kerning:0pt">Windows</span><span style="font-family:
+宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;color:black;mso-font-kerning:0pt">的</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中包含着更多的系统调用，也就很好理解了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">现在，虽然父进程已经从库函数</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中返回了，子进程的运行却还未开始，它的运行还要经历下面的第五和第六两个阶段。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第五阶段：启动初始线程</span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">新创建的线程未必是可以被立即调度运行的，因为用户可能在创建时把标志位</span><span lang="EN-US">CREATE_
+SUSPENDED</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">设成了</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。如果那样的话，就需要等待别的进程通过系统调用恢复其运行资格以后才可以被调度运行。否则现在已经可以被调度运行了。至于什么时候才会被调度运行，则就要看优先级等等条件了。而一旦受调度运行，那就是以新建进程的身份在运行、与</span><span class="SpellE"><span lang="EN-US">CreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的调用者无关了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如前所述，当进程的第一个线程首次受调度运行时，由于线程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统空间</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">堆栈的设置，首先执行的是</span><span class="SpellE"><span lang="EN-US">KiThreadStartup</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这段程序把目标线程的</span><span lang="EN-US">IRQL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">从</span><span lang="EN-US">DPC</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">级降低到</span><span lang="EN-US">APC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">级，然后调用内核函数</span><span class="SpellE"><span class="docemphasis"><span lang="EN-US">PspUserThreadStartup</span></span></span><span class="docemphasis"><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">最后，</span><span class="SpellE"><span lang="EN-US">PspUserThreadStartup</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">将用户空间</span><span lang="EN-US">ntdll.dll</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中的函数</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">作为</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">函数挂入</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">队列，再企图“返回到”用户空间。</span><span lang="EN-US">Windows</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">跟</span><span lang="EN-US">Linux</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">signal</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">机制颇为相似，相当于用户空间的“中断服务”。所以，在返回用户空间的前夕，就会检查</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">函数的存在并加以执行</span><span lang="EN-US">(</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">如果存在的话</span><span lang="EN-US">)</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">于是，此时的</span><span lang="EN-US">CPU</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">将两次进入用户空间。第一次是因为</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">请求的存在而进入用户空间，执行</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">函数</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，执行完毕以后仍回到系统空间。然后，第二次进入用户空间才是“返回”用户空间。返回到用户空间的什么地方呢？前面已经讲到，返回到</span><span lang="EN-US">Kernel32.dll</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的</span><span class="SpellE"><span lang="EN-US">BaseProcessStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">或</span><span class="SpellE"><span lang="EN-US">BaseThreadStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，对于进程中的第一个线程是</span><span class="SpellE"><span lang="EN-US">BaseProcessStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。至于用户程序所提供的</span><span lang="EN-US">(</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">线程</span><span lang="EN-US">)</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">入口，则是作为参数</span><span lang="EN-US">(</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">函数指针</span><span lang="EN-US">)</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">提供给</span><span class="SpellE"><span lang="EN-US">BaseProcessStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">或</span><span class="SpellE"><span lang="EN-US">BaseThreadStart</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的，这两个函数都会使用这指针调用由用户提供的入口函数。</span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第六阶段：用户空间的初始化和</span><span lang="EN-US">DLL</span></b><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的连接</span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">用户空间的初始化和</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的连接是由</span><span class="SpellE"><span class="docemphasis"><span lang="EN-US">LdrInitializeThunk</span></span></span><span class="docemphasis"><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">作为</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">函数的执行来完成的。</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在应用软件与动态连接库的连接这一点上，我们已经看到，不管是</span><span lang="EN-US">Linux</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span lang="EN-US">Windows</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、还是</span><span lang="EN-US">Wine</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，都是一致的，那就是在用户空间完成：</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l3 level1 lfo20;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span class="docemphasis"><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><!--[endif]--><span class="docemphasis"><span lang="EN-US">Linux</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">.so</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">模块连接由“解释器”在用户空间完成。“解释器”相当于一个不需要事先连接的动态库，因为它的入口是固定的。“解释器”的映像是由内核装入用户空间的。</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l3 level1 lfo20;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span class="docemphasis"><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><!--[endif]--><span class="docemphasis"><span lang="EN-US">Windows</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">DLL</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">连接由</span><span lang="EN-US">ntdll.dll</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中的</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在用户空间完成。在此之前</span><span lang="EN-US">ntdll.dll</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">与应用软件尚未连接，但是已经被映射到了用户空间。函数</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在映像中的位置是系统初始化时就预先确定并记录在案的，所以在进入这个函数之前也不需要连接。</span><span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l3 level1 lfo20;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span class="docemphasis"><span lang="EN-US">Wine</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的动态库连接分两种情况。一种是</span><span lang="EN-US">ELF</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">格式的</span><span lang="EN-US">.so</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">模块，另一种是</span><span lang="EN-US">PE</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">格式的</span><span lang="EN-US">DLL</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。二者的连接都是在用户空间完成的，前者仍由</span><span lang="EN-US">ELF</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">解释器</span></span><span lang="EN-US" style="font-size:10.0pt;mso-font-kerning:0pt">ld-linux.so.2</span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">完成，后者则由工具软件</span></span><span lang="EN-US">wine-<span class="SpellE">kthread</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">完成。<span class="docemphasis">后者</span>的具体调用路径是：</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd;
+text-indent:31.5pt;mso-char-indent-count:3.0"><span lang="EN-US">main() &gt; <span class="SpellE">wine_init</span>() &gt; __<span class="SpellE">wine_process_init</span>()
+&gt; __<span class="SpellE">wine_kernel_init</span>() &gt; </span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd;
+text-indent:63.0pt;mso-char-indent-count:6.0"><span class="SpellE"><span lang="EN-US">wine_switch_to_stack</span></span><span lang="EN-US">() &gt; <span class="SpellE">start_process</span>() &gt; <span class="SpellE">LdrInitializeThunk</span>()</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;mso-para-margin-left:4.0gd"><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这在“</span></span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的二进制映像装入和启动<span class="docemphasis">”那篇漫谈中已经讲到过了。注意这里最终完成</span></span><span class="docemphasis"><span lang="EN-US">DLL</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">连接的函数也叫</span></span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，显然</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的作者对于</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的这一套是清楚的<span class="docemphasis">。</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">通过以上的叙述，我们可以看到</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的进程创建过程与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">有较大的不同，但是装入</span><span lang="EN-US">PE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">映像和实现</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">连接的过程却与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的对应过程相似，只是把“解释器”集成到了“系统</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”里面，并且是作为</span><span lang="EN-US">APC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数执行的，其他就没有太大的区别了。但是，如果跟</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">PE</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像装入过程相比，则显然</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的过程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">见“</span><span lang="EN-US">Wine</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的二进制映像装入和启动”</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是比较复杂、效率也比较低的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 17:58:42 Nov 10, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:43:10 Apr 13, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 112.951
+  exclusion.robots: 0.232
+  exclusion.robots.policy: 0.224
+  RedisCDXSource: 1.472
+  esindex: 0.014
+  LoadShardBlock: 92.428 (3)
+  PetaboxLoader3.datanode: 210.037 (4)
+  CDXLines.iter: 16.46 (3)
+  load_resource: 175.063
+  PetaboxLoader3.resolve: 47.507
+--><div id="react-toast" class="Toaster"><span class="Toaster__manager-top-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; left: 0px;"></span><span class="Toaster__manager-top" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; top: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-top-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; right: 0px;"></span><span class="Toaster__manager-bottom-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; left: 0px;"></span><span class="Toaster__manager-bottom" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; bottom: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-bottom-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; right: 0px;"></span></div><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>

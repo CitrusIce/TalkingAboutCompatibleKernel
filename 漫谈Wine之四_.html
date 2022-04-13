@@ -1,0 +1,1072 @@
+
+<!-- saved from url=(0098)https://web.archive.org/web/20130213050104/http://www.longene.org/techdoc/0531255001224577169.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030"><script src="./漫谈Wine之四__files/analytics.js.下载" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app220.us.archive.org';v.server_ms=224;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./漫谈Wine之四__files/bundle-playback.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./漫谈Wine之四__files/wombat.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.longene.org:80/techdoc/0531255001224577169.html","20130213050104","https://web.archive.org/","web","/_static/",
+	      "1360731664");
+</script>
+<link rel="stylesheet" type="text/css" href="./漫谈Wine之四__files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./漫谈Wine之四__files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://web.archive.org/web/20130213050104/http://www.longene.org/techdoc/0531255001224577169.files/filelist.xml">
+<title>漫谈Wine之四:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tt</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>SYSTEM</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2920</o:TotalTime>
+  <o:Created>2008-10-21T08:19:00Z</o:Created>
+  <o:LastSaved>2008-10-21T08:19:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1318</o:Words>
+  <o:Characters>7513</o:Characters>
+  <o:Lines>62</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>8814</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="ZH-CN" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimHei;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:正文;
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:22.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:22.0pt;}
+h2
+	{mso-style-next:正文;
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:173%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:黑体;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+h3
+	{mso-style-next:正文;
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:173%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:16.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:48769839;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1224260682 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:244842798;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-395799204 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:394008514;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1805962144 621736834 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:57.75pt;
+	mso-level-number-position:left;
+	margin-left:57.75pt;
+	text-indent:-36.75pt;}
+@list l3
+	{mso-list-id:605385220;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-15678300 1152565332 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-text:%1．;
+	mso-level-tab-stop:57.75pt;
+	mso-level-number-position:left;
+	margin-left:57.75pt;
+	text-indent:-36.75pt;}
+@list l4
+	{mso-list-id:973951326;
+	mso-list-type:hybrid;
+	mso-list-template-ids:493242828 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:1004359038;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1363475660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:1078677497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1959094908 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l7
+	{mso-list-id:1495993140;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-414447730 1553504718 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-text:%1．;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:1780830494;
+	mso-list-type:hybrid;
+	mso-list-template-ids:863028420 -2143931400 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:2136022598;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-64717292 -663221420 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-text:%1．;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:2146005750;
+	mso-list-type:hybrid;
+	mso-list-template-ids:938895032 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+
+<body lang="ZH-CN" style="tab-interval:21.0pt;text-justify-trim:punctuation"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20130213050104/http://www.longene.org:80/techdoc/0531255001224577169.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.longene.org/techdoc/0531255001224577169.html","20130213050104",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="Section1" style="layout-grid:15.6pt">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书">漫谈<span lang="EN-US">Wine</span>之四<span lang="EN-US">:<o:p></o:p></span></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:22.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核差异核内补</span></b><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毛德操</span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">明眼人一看便知，我的前几篇漫谈都是在为“内核差异核内补”这个话题作铺垫。本来，我的计划是还要再铺垫上几篇，然后才转入这个话题，可是现在已经有网友在我们论坛上摩拳擦掌，说要动手干了。在这样的形势下，我觉得有必要调整一下计划，先讲讲“内核差异核内补”、以及怎样“核内补”的话题。而别的内容，则可以留到后面慢慢来谈。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">之所以要“内核差异核内补”，是因为内核的差异往往很难在核外高效地加以补偿，有些甚至可能是无法妥善补偿的。</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">之所以性能不佳，主要就是因为走的是“核外补”的技术路线。我常常想，以参与</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这个项目的人员的素质和才华，如果早一点就转向“核内补”，说不定现在桌面</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的竟争力早已有了长足的进步。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">我在漫谈之三中引用了“写文件”这个操作来说明</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对此操作的实现效率如何的低，以及为什么这么低，并且说明了只要是“核外补”就只能这么低</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">小幅的改进是可能的，但是大幅的、根本性的改进则不可能</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。现在，作为对比，我们仍以写文件操作为例，来看看如果是“核内补”的话可以怎样来实现，以及可以达到甚么样的效率。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先，我们要为</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核增添一个与</span><span class="SpellE"><span lang="EN-US">NtWriteFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">等价的系统调用。至于以什么方式来实现新增的系统调用是另一回事，有的网友建议用</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，有的网友建议用</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，那都属于实现细节，我们回头再来讨论。之所以要增添这么一个系统调用，是为了要把</span><span class="SpellE"><span lang="EN-US">NtWriteFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所有的参数都带进内核，并且在内核中正确地使用这些参数，达到所规定的效果。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">如果以</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的系统调用为参照，那么最大的差异就是</span><span class="SpellE"><span lang="EN-US">NtWriteFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">带下来的是</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">而不是打开文件号。但是现在就不需要由服务进程进行从</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">到打开文件号的映射了。与进程的“打开文件表”相对应，我们应该仿照</span><span lang="EN-US">WinNT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">（实际上是</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">）为每个进程配备一个“</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表”。为此，我们可以在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的进程控制块中增加一个指针，例如：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">task_struct</span> {</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">……</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">/* open file
+information */</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">files_struct</span>
+*files;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">ifdef</span>
+UNIFIED_KERNEL</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">handle_struct</span>
+*handles;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">endif</span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">……</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这里的指针</span><span lang="EN-US">files</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指向本进程的“打开文件表”，而新增加的指针</span><span lang="EN-US">handles</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">则指向本进程的“</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表”。为此，我们需要对源代码打上一个补丁。我们兼容内核的程序主体当然会做成可动态安装的模块，但是适当地打一些</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">少量</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">补丁也是必要的。不过指针</span><span lang="EN-US">handles</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">也可以不放在进程控制块中，而放在</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">files_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中，那也是属于实现细节，例如：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* Open file table structure</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">files_struct</span> {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_t</span>
+count;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spinlock_t</span>
+<span class="SpellE">file_lock</span>; <span style="mso-spacerun:yes">&nbsp;&nbsp;</span>/* Protects all the below members.
+Nests inside <span class="SpellE">tsk</span>-&gt;<span class="SpellE">alloc_lock</span>
+*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span>
+<span class="SpellE">max_fds</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span>
+<span class="SpellE">max_fdset</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span>
+<span class="SpellE">next_fd</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">struct</span>
+file ** <span class="SpellE">fd</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* current <span class="SpellE">fd</span> array */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">fd_set</span>
+*<span class="SpellE">close_on_exec</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">fd_set</span>
+*<span class="SpellE">open_fds</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">fd_set</span>
+<span class="SpellE"><b>close_on_exec_init</b></span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">fd_set</span>
+<span class="SpellE">open_fds_init</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">ifdef</span>
+UNIFIED_KERNEL</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">handle_struct</span> *<b>handles</b>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">endif</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">struct</span>
+file * <span class="SpellE">fd_array</span>[NR_OPEN_DEFAULT];</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">至于“</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表”的内容，当然有</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">到打开文件号的映射。但是</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不完全是用于已打开文件，也可以标志着一个进程，还可以是别的“对象”。所以，每个表项中还应该包含关于对象类型的描述，以及由此而来的具体映射目标的数据类型。例如，要是一个</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">标志着一个已打开文件，那么映射的目标可以是一个整数、即打开文件号，而若标志着一个进程，则映射的目标应该是个</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">task_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">指针。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">那怎么知道传下来的是</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、还是</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的打开文件号呢？这很简单，从</span><span class="SpellE"><span lang="EN-US">NtWriteFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">下来的是</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，而从</span><span lang="EN-US">write()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下来的是打开文件号。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">我在前两篇漫谈中说过，</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">之所以要由服务进程来集中管理所有进程的已打开文件，是因为否则就不便、甚至不能实现</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">文件操作的一些特殊性。那么，如果我们按上述的方案来实现文件操作，是否就能够实现这些特殊的文件操作呢？回答是肯定的。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">先看创建子进程时的遗传。我在漫谈之二中提到过，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核在各进程的“打开文件表”、即数据结构</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">files_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中也记录了各个已打开文件是否需要遗传的信息，这就是位图</span><span class="SpellE"><span lang="EN-US">close_on_exec_init</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，而指针</span><span class="SpellE"><span lang="EN-US">close_on_exec</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">则指向这个位图。问题在于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核没有在创建子进程时再提供一次是否确实要遗传的选项，系统调用</span><span class="SpellE"><span lang="EN-US">execve</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的参数表中也不包含这样的信息。可是，如果我们增添一个与</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等价的系统调用，那么它的一个参数、即布尔量</span><span class="SpellE"><span lang="EN-US">InheritObjectTable</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，就携带着这个信息。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在</span><span lang="EN-US">Linux</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核的代码中，子进程在</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">时全盘继承下来的已打开的文件是通过</span><span class="SpellE"><span lang="EN-US">flush_old_files</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">有选择地加以关闭的，其根据就是</span><span class="SpellE"><span lang="EN-US">close_on_exec</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位图。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">static inline void <span class="SpellE"><b>flush_old_files</b></span>(<span class="SpellE">struct</span> <span class="SpellE">files_struct</span> * files)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>long
+j = -1;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_lock</span>(&amp;files-&gt;<span class="SpellE">file_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for
+(;;) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>unsigned
+long set, <span class="SpellE">i</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>j++;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">i</span> = j * __NFDBITS;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(<span class="SpellE">i</span> &gt;= files-&gt;<span class="SpellE">max_fds</span>
+|| <span class="SpellE">i</span> &gt;= files-&gt;<span class="SpellE">max_fdset</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>set
+= files-&gt;<span class="SpellE">close_on_exec</span>-&gt;<span class="SpellE">fds_bits</span>[j];</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(!set)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>continue;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>files-&gt;<span class="SpellE">close_on_exec</span>-&gt;<span class="SpellE">fds_bits</span>[j] =
+0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_unlock</span>(&amp;files-&gt;<span class="SpellE">file_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for
+( ; set ; <span class="SpellE">i++,set</span> &gt;&gt;= 1) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(set &amp; 1) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>sys_close</b></span>(<span class="SpellE">i</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_lock</span>(&amp;files-&gt;<span class="SpellE">file_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_unlock</span>(&amp;files-&gt;<span class="SpellE">file_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">现在，只要改成有条件地、根据</span><span class="SpellE"><span lang="EN-US">InheritObjectTable</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的值确定是否调用这个</span><span lang="EN-US">inline</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数就行了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">事实上，对于</span><span class="SpellE"><span lang="EN-US">flush_old_files</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的调用本来就是在具体格式的可执行文件装入程序中调用的，例如</span><span lang="EN-US">ELF</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">格式的装入程序</span><span class="SpellE"><span lang="EN-US">load_elf_binary</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">a.out</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">格式的</span><span class="SpellE"><span lang="EN-US">load_aout_binary</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">等等。而对于</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的可执行程序，我们本来就需要有个针对</span><span lang="EN-US">PE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">格式的</span><span class="SpellE"><span lang="EN-US">load_pe_binary</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，只要在这个程序中直接或间接实现对</span><span class="SpellE"><span lang="EN-US">flush_old_files</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的有条件调用就可以了。例如：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">ifdef</span>
+UNIFIED_KERNEL</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(!<span class="SpellE">InheritObjectTable</span>) </span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">endif</span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">flush_old_files</span>();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">再看跨进程的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">复制。</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核本来就有本进程的打开文件号复制，即</span><span class="SpellE"><span lang="EN-US">sys_dup</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。现在需要的是跨进程的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">复制。在内核里面这显然不是一件困难的事，因为在内核中我们可以访问所有进程的进程控制块，当然也就可以进而访问所有进程的“</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">表”。至于具体的程序，则一可以参考</span><span class="SpellE"><span lang="EN-US">sys_dup</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的实现，二可以参考</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">（在用户空间）的实现，三可以参考</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的实现，我这里就不多费口舌了。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">回到前面的进程控制块数据结构中，从本质上说，指针</span><span lang="EN-US">handles</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所直接和间接指向的数据结构就是用来弥补</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核在文件系统方面的数据结构与其</span><span lang="EN-US">WinNT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核对应物之间的差异。而程序上的修改，则用来弥补二者在操作</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">包括算法</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和性状上的差异。一般而言，我们只需要、也只应该补上二者之差。如果以</span><span lang="EN-US">W</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">表示</span><span lang="EN-US">WinNT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核、</span><span lang="EN-US">L</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">表示</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核，那就是</span><span lang="EN-US">(W - L)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。我曾经解释，兼容内核决不是把两个内核</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">例如</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">跟</span><span lang="EN-US">Linux)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">堆积在一起，那样的话就变成</span><span lang="EN-US">(W + L)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">了。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件操作是两个内核之间的重要差异之一，而对进程</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">线程的管理又是另一个重要差异，对此我将在以后的漫谈中加以讨论，这里先说“核内补”的事。为了弥补二者在这方面的差异，在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的进程控制块</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">task_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中还应再增添一个指针，例如：</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:21.0pt"><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US">
+w32_task_struct <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*w32_task;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这里的数据结构</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> w32_task_struct</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">就是对</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">task_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的补充，使得两个</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">或更多</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构之和能够实现它们在</span><span lang="EN-US">WinNT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中的对应物。当然，对原有的程序也要作相应的修改和补充。这样，如果</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程控制块中的这个指针为</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，就说明本进程是个</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">线程</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，否则就是个</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">线程</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。相应地，代码中对于程序的修改和扩充，则一般都可以用指针</span><span lang="EN-US">current-&gt;w32_task</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">非</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">作为执行的条件、或者条件之一。至于具体如何修改和扩充，那是另一个问题，我们以后还要讨论。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上述的两个指针，即</span><span lang="EN-US">handles</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">w32_task</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，当然也可以合并成一个，就是把</span><span lang="EN-US">handles</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">移到</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> w32_task_struct</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中。这一般只是具体实现上的细小差别，并不影响到整个方案的实施。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">两个内核在其它方面的差异，原则上也可以仿此办理。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">倘若我们按这样的方案、在这样的背景下实现</span><span class="SpellE"><span lang="EN-US">NtWriteFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，其运行效率与</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在核外的实现显然不可同日而语。另一方面，我们也看到，这与简单的“把</span><span lang="EN-US">Wine(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">服务进程</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">搬进内核”也不是一回事。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">当然，作为一个中间步骤，先简单地把</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的服务进程基本上原封不动地搬入内核，让它作为一个内核线程在内核中运行，从而提高一些效率，让用户尽快见到一些效果，那也未尝不可，但是我们长远的目标则必须更加远大。这里还要指出，把</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">服务进程搬入内核成为内核线程，所节省下来的只是切换空间</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">进程切换、以及进</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">出系统调用时</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所需的时间，这毕竟是很有限的。所以，这样固然可以提高一些效率，期望值却不能太高。另一方面，把</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">服务进程移入内核也实际上不可能原封不动、也得作一些修改，例如必须在某些点上主动调用</span><span lang="EN-US">schedule()</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进行进程调度。再说，</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">服务进程的有些操作是因为身处用户空间、不得已而为之，搬进内核以后就没有理由继续存在，而且修改也比较容易，这样必然就有人会去作一些“顺手牵羊”式的优化。慢慢地，如果能不断“精益求精”的话，我看最终还是会发展成上面所说哪样的实现。不过先把</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的服务进程搬入内核毕竟简单。作为第一步也是好的。所以，从这个意义上说，兼容内核的开发几乎不可能完全失败，因为我们可以走一条完全渐进的道路，从把</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">搬入内核开始，再逐步向前推进、逐步替换。这样，每向前推进一步，就可以得倒一个性能更好、兼容程度更高的版本。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">实际上，对于兼容内核来说，情况还要更复杂一点。这是因为除上面所说的实现以外还需要考虑设备驱动的问题，但是那可以留待稍后再来讨论和考虑。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">最后，我们再回到系统调用界面，考虑一下以甚么方式实现系统调用、即应用进程进行系统调用时怎样进</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">出内核的问题。对此，网友们提出了几种不同的建议。归纳起来，大致上有这么几种方式：</span></p>
+
+<p class="MsoNormal" style="margin-left:39.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 39.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">把新的系统调用“搭载”在对一个虚拟设备的</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用上。这种方式的好处是简单易行，也不会导致不兼容的问题。但是也有缺点，那就是多少要降低一些运行效率，因为每次系统调用都要到</span><span class="SpellE"><span lang="EN-US">sys_ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中去转上一圈。</span></p>
+
+<p class="MsoNormal" style="margin-left:39.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 39.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">为</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">系统调用界面增加一个总的</span><span lang="EN-US">w32call()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用，把所有的</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用搭载在这上面。这样的做法不乏先例，</span><span lang="EN-US">socket</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">操作的所有系统调用就都搭载在</span><span class="SpellE"><span lang="EN-US">socketcall</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">上，所有系统</span><span lang="EN-US">5</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US"> IPC</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">操作就都搭载在</span><span class="SpellE"><span lang="EN-US">ipc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用上。这种方法也很简单易行，问题是需要取得</span><span lang="EN-US">OSDL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的同意，否则日后可能发生系统调用号的冲突和不兼容。</span></p>
+
+<p class="MsoNormal" style="margin-left:39.0pt;text-indent:-18.0pt;mso-list:l7 level1 lfo11;
+tab-stops:list 39.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">实现一套新的、独立的系统调用。缺点当然是</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">相对而言</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">不那么简单易行，但是好处也不少。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">首先，从整个兼容内核的实现形式上考虑，不管采用这三种方式中的哪一种，总归都是模块加补丁。当然，如果能有无须打补丁、纯粹由模块实现的形式，那是再好不过的事，但是实际上这是不现实的，因为我们不主张将两个内核简单地“堆积”在一起。事实上，即便是堆积，也还避免不了要对现有的</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核代码打一些补丁。为说明这一点，我们先考虑对进程控制块的补丁。如上所述，我们可以把指针</span><span lang="EN-US">handles(</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">以及其它类似的指针</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">移到</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> w32_task_struct</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中，从而使需要增添到进程控制块中的指针减少到只剩一个。那么是否可以连一个也不要、从而可以避免对进程控制块打补丁呢？如果单纯从功能上考虑是可以的，例如我们可以在</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US">
+w32_task_struct</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中放上进程号</span><span class="SpellE"><span lang="EN-US">pid</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，这样根据当前进程的</span><span class="SpellE"><span lang="EN-US">pid</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">就可以找到对应的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US">
+w32_task_struct</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构。但是这显然会降低性能，所以并不合适。再考虑对于文件的操作，想要充分利用现有的代码，就难免要在程序中加上一些条件语句和</span><span lang="EN-US">#<span class="SpellE">ifdef</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，这就免不了要打补丁了。既然补丁不可避免，上述三种方式在这方面就没有多大区别。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">再看实现的难易，第一种方式固然很容易，但是第三种方式、即采用</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的方式也并不很困难。为此，我们可以回顾一下</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中的有关代码</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">参看“情景分析”，以下代码取自</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核代码</span><span lang="EN-US">2.6</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">版，所以略有不同</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">void __init <span class="SpellE"><b>trap_init</b></span>(void)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>……</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">set_system_gate</span>(SYSCALL_VECTOR, &amp;<span class="SpellE">system_call</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>……</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先在</span><span class="SpellE"><span lang="EN-US">trap_init</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中设置好</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x80</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的向量，使其指向汇编程序</span><span class="SpellE"><span lang="EN-US">system_call</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这跟设置中断向量没有什么区别，这里</span><span lang="EN-US">SYSCALL_VECTOR</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的定义就是</span><span lang="EN-US">0x80</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。设置好向量以后，当应用程序在用户空间执行指令“</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x80</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”时，</span><span lang="EN-US">CPU</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">就会进入内核空间并转入汇编程序</span><span class="SpellE"><span lang="EN-US">system_call</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。不过，在一般的应用程序中是见不到“</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x80</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”这条指令的，因为它深埋在</span><span lang="EN-US">C</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">程序库的</span><span lang="EN-US">read()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">write()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等等函数中。我们接下去看</span><span class="SpellE"><span lang="EN-US">system_call</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">ENTRY(<span class="SpellE"><b>system_call</b></span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">pushl</span> %<span class="SpellE">eax</span><span style="mso-tab-count:
+3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#
+save <span class="SpellE">orig_eax</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SAVE_ALL</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>GET_THREAD_INFO(%<span class="SpellE">ebp</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cmpl</span> $(<span class="SpellE">nr_syscalls</span>), %<span class="SpellE">eax</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">jae</span> <span class="SpellE">syscall_badsys</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span># system call tracing in operation</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">testb</span> $_TIF_SYSCALL_TRACE,TI_FLAGS(%<span class="SpellE">ebp</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">jnz</span> <span class="SpellE">syscall_trace_entry</span></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">syscall_call</span></span><span lang="EN-US">:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>call
+*<span class="SpellE"><b>sys_call_table</b></span>(,%eax,4)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">movl</span> %<span class="SpellE">eax,EAX</span>(%<span class="SpellE">esp</span>)<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#
+store the return value</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">syscall_exit</span></span><span lang="EN-US">:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cli</span><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#
+make sure we don't miss an interrupt</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#
+setting <span class="SpellE">need_resched</span> or <span class="SpellE">sigpending</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>#
+between sampling and the <span class="SpellE">iret</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">movl</span> TI_FLAGS(%<span class="SpellE">ebp</span>), %<span class="SpellE">ecx</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">testw</span> $_TIF_ALLWORK_MASK, %<span class="SpellE">cx</span><span style="mso-tab-count:1"> </span><span style="mso-spacerun:yes">&nbsp; </span>#
+current-&gt;work</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">jne</span> <span class="SpellE">syscall_exit_work</span></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">restore_all</span></span><span lang="EN-US">:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>RESTORE_ALL</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">代码中的宏操作</span><span lang="EN-US">SAVE_ALL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">RESTORE_ALL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">分别为保存现场和恢复现场的操作。从用户空间带下来的“系统调用号”在寄存器</span><span lang="EN-US">%<span class="SpellE">eax</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中。将</span><span lang="EN-US">%<span class="SpellE">eax</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">nr_syscalls</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">相比较，就是在检查系统调用号是否越界。如果系统调用号在合理的范围中，就调用</span><span class="SpellE"><span lang="EN-US">sys_call_table</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，在那里</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">会根据系统调用号在一个跳转表</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针数组</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中取得相应的地址、并进入具体系统调用的服务程序。然后，当</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">从</span><span class="SpellE"><span lang="EN-US">sys_call_table</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">返回时，具体系统调用的程序已经执行完了，如果没有别的事要干就恢复现场并返回用户空间。否则就先执行一些附加的系统操作，例如进程调度、本进程对信号</span><span lang="EN-US">(signal)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的处理等，然后再返回。至于代码中的</span><span class="SpellE"><span lang="EN-US">syscall_trace_entry</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，则用于对系统调用的跟踪。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这段代码既不长，也不复杂，我们完全可以仿照着写一段汇编代码</span><span lang="EN-US">w32_syscall</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，并让它与</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">挂上勾：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">ifdef</span>
+UNIFIED_KERNEL</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">set_system_gate</span>(0x2e, &amp;w32_syscall);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">endif</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">汇编代码</span><span lang="EN-US">w32_syscall</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">基本上可以照抄</span><span class="SpellE"><span lang="EN-US">system_call</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，只是一些具体的变量和参数需要加以修改。例如代码中的</span><span class="SpellE"><span lang="EN-US">nr_syscalls</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">应改成</span><span lang="EN-US">nr_w32calls</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，即</span><span lang="EN-US">Win2k</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的系统调用总数，实际上是</span><span lang="EN-US">248</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">；而对</span><span class="SpellE"><span lang="EN-US">sys_call_table</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的调用则应改成</span><span lang="EN-US">w32_call_table()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。当然，还要增加一个变量</span><span lang="EN-US">nr_w32calls</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，还要有个函数</span><span lang="EN-US">w32_call_table()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。如有必要的话，我还将在以后的漫谈中进一步讨论有关细节。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">显然，这样的实现并不难。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">至于运行效率，采用</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的方式显然是最佳的，尽管去</span><span class="SpellE"><span lang="EN-US">sys_ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">转一圈的开销也不大，但毕竟要受一些影响。为说明这个问题，我们不妨看一下</span><span class="SpellE"><span lang="EN-US">sys_ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">asmlinkage</span></span><span lang="EN-US"> long <span class="SpellE"><b>sys_ioctl</b></span>(unsigned <span class="SpellE">int</span> <span class="SpellE">fd</span>, unsigned <span class="SpellE">int</span> <span class="SpellE">cmd</span>, unsigned long <span class="SpellE">arg</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">struct</span> file * <span class="SpellE">filp</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>unsigned
+<span class="SpellE">int</span> flag;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span> on, error = -EBADF;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">filp</span> = <span class="SpellE">fget</span>(<span class="SpellE">fd</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(!<span class="SpellE">filp</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">goto</span> out;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>error
+= 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">lock_kernel</span>();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>switch
+(<span class="SpellE">cmd</span>) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>case
+FIOCLEX:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">set_close_on_exec</span>(<span class="SpellE">fd</span>, 1);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>……</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>default:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>error
+= -ENOTTY;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(S_ISREG(<span class="SpellE">filp</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>-&gt;<span class="SpellE">i_mode</span>))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>error
+= <span class="SpellE">file_ioctl</span>(<span class="SpellE">filp</span>, <span class="SpellE">cmd</span>, <span class="SpellE">arg</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else
+if (<span class="SpellE">filp</span>-&gt;<span class="SpellE">f_op</span>
+&amp;&amp; <span class="SpellE">filp</span>-&gt;<span class="SpellE">f_op</span>-&gt;<span class="SpellE">ioctl</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>error
+= <span class="SpellE">filp</span>-&gt;<span class="SpellE">f_op</span>-&gt;<span class="SpellE">ioctl</span>(<span class="SpellE">filp</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>, <span class="SpellE">filp</span>, <span class="SpellE">cmd</span>, <span class="SpellE">arg</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">unlock_kernel</span>();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">fput</span>(<span class="SpellE">filp</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">out:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return
+error;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">经过前述的</span><span class="SpellE"><span lang="EN-US">sys_call_table</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">进入系统调用</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的处理程序</span><span class="SpellE"><span lang="EN-US">sys_ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">以后，首先比对“命令”码</span><span class="SpellE"><span lang="EN-US">cmd</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是否</span><span lang="EN-US">FIOCLEX</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">FIONCLEX</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">FIONBIO</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">FIOASYNC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等标准的命令码。然后才通过</span><span lang="EN-US">default</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下面的代码从目标文件的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">file_operations</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中获取具体设备文件的</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数指针，去处理“自定义”的命令码、例如</span><span lang="EN-US">FIOW32CALL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这一圈兜下来，虽不能说长，但每次系统调用都要无谓地牺牲掉这么一些，毕竟也不值得。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">还有个因素也值得考虑，那就是：如果采用</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的方式，就有希望能使我们的系统调用界面达到跟</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">最大程度上的一致，从而有可能让微软的</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等“系统</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”</span> <span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">直接在兼容内核上运行。虽然那不是我们的目的</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">因为牵涉到版权问题</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，但是在调试中偶而拿来试一下，跟我们自己的</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">基本上是</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">)DLL</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">作一对比，也可能是很有帮助的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">综合上述这些因素，我倾向于采用</span><span class="SpellE"><span lang="EN-US">int</span></span><span lang="EN-US"> 0x2e</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+</div>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 05:01:04 Feb 13, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:47:18 Apr 13, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 137.685
+  exclusion.robots: 0.171
+  exclusion.robots.policy: 0.165
+  RedisCDXSource: 0.595
+  esindex: 0.008
+  LoadShardBlock: 120.666 (3)
+  PetaboxLoader3.datanode: 106.981 (4)
+  CDXLines.iter: 14.337 (3)
+  PetaboxLoader3.resolve: 54.692 (2)
+  load_resource: 71.585
+--><div id="react-toast" class="Toaster"><span class="Toaster__manager-top-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; left: 0px;"></span><span class="Toaster__manager-top" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; top: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-top-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; right: 0px;"></span><span class="Toaster__manager-bottom-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; left: 0px;"></span><span class="Toaster__manager-bottom" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; bottom: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-bottom-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; right: 0px;"></span></div><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>

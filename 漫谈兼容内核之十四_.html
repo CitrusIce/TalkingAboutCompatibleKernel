@@ -1,0 +1,2171 @@
+
+<!-- saved from url=(0098)https://web.archive.org/web/20171109080700/http://www.longene.org/techdoc/0546881001224576800.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030"><script src="./漫谈兼容内核之十四__files/analytics.js.下载" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app219.us.archive.org';v.server_ms=221;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./漫谈兼容内核之十四__files/bundle-playback.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./漫谈兼容内核之十四__files/wombat.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.longene.org:80/techdoc/0546881001224576800.html","20171109080700","https://web.archive.org/","web","/_static/",
+	      "1510214820");
+</script>
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之十四__files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之十四__files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://web.archive.org/web/20171109080700/http://www.longene.org/techdoc/0546881001224576800.files/filelist.xml">
+<title>漫谈兼容内核之十四:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tt</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>SYSTEM</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>5962</o:TotalTime>
+  <o:Created>2008-10-21T08:13:00Z</o:Created>
+  <o:LastSaved>2008-10-21T08:13:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>3338</o:Words>
+  <o:Characters>19030</o:Characters>
+  <o:Lines>158</o:Lines>
+  <o:Paragraphs>44</o:Paragraphs>
+  <o:CharactersWithSpaces>22324</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="ZH-CN" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:正文;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:144.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:宋体;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+span.programelement
+	{mso-style-name:programelement;}
+p.doctext, li.doctext, div.doctext
+	{mso-style-name:doctext;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:"Times New Roman";}
+p.doclist, li.doclist, div.doclist
+	{mso-style-name:doclist;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:"Times New Roman";}
+span.docemphroman
+	{mso-style-name:docemphroman;}
+span.docemphstrong
+	{mso-style-name:docemphstrong;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1443704;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2103226616 -1709641248 -696750248 136711432 844923966 -647350406 -1118123756 -1867509238 1520750154 -1871967786;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:24791233;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1550824996 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:48769839;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1224260682 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:50546113;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1876741048 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:244842798;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-395799204 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:355549029;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1973645538 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:554659130;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1472637084 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:797383419;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1467870616 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:973951326;
+	mso-list-type:hybrid;
+	mso-list-template-ids:493242828 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:1004359038;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1363475660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l10
+	{mso-list-id:1078677497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1959094908 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l11
+	{mso-list-id:1133668919;
+	mso-list-type:hybrid;
+	mso-list-template-ids:661665496 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l12
+	{mso-list-id:1285228769;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2023748340 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l13
+	{mso-list-id:1336957897;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-494783560 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l14
+	{mso-list-id:1369796687;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2084822378 -895033128 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l14:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:57.0pt;
+	mso-level-number-position:left;
+	margin-left:57.0pt;
+	text-indent:-36.0pt;}
+@list l15
+	{mso-list-id:1644505557;
+	mso-list-type:hybrid;
+	mso-list-template-ids:47212220 -1476893870 -1437190970 -590456886 1030631226 395090362 -66403220 442117946 277535990 1177856782;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l16
+	{mso-list-id:1703700310;
+	mso-list-type:hybrid;
+	mso-list-template-ids:845308866 2118654504 -357651790 -503664238 -906055044 -408767784 -2031855276 1723098668 647407900 1163288006;}
+@list l16:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l17
+	{mso-list-id:1780830494;
+	mso-list-type:hybrid;
+	mso-list-template-ids:863028420 -2143931400 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l17:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l18
+	{mso-list-id:1954168074;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1338065696 1279299438 -305233320 -680648548 1987976470 846373418 -805918128 1602928004 -501724660 926848918;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l19
+	{mso-list-id:2091805927;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1876741048 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l20
+	{mso-list-id:2146005750;
+	mso-list-type:hybrid;
+	mso-list-template-ids:938895032 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l20:level1
+	{mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+
+<body lang="ZH-CN" link="blue" vlink="purple" style="tab-interval:21.0pt;text-justify-trim:
+punctuation"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20171109080700/http://www.longene.org:80/techdoc/0546881001224576800.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.longene.org/techdoc/0546881001224576800.html","20171109080700",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="Section1" style="layout-grid:15.6pt">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+隶书;mso-hansi-font-family:&quot;Times New Roman&quot;">漫谈兼容内核之十四</span></b><b><span lang="EN-US" style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书;
+mso-fareast-font-family:宋体">:</span></b><b><span lang="EN-US" style="font-size:
+22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt">Windows</span></b><b><span style="font-size:22.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的跨进程操作</span></b><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毛德操</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US">Jeffrey Richter</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在他的“</span><span lang="EN-US">Advanced Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”一书第</span><span lang="EN-US">18</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">章“打破进程壁垒</span><span lang="EN-US">(Breaking
+Through Process Boundary Walls)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”中讲述了一个有趣的实验，就是利用</span><span class="SpellE"><span lang="EN-US">OpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">CreateRemoteThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">VirtualAllocEx</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">WriteProcessMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">等等</span><span lang="EN-US">Win32 API</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数从一个进程向另一个进程的用户空间“注入</span><span lang="EN-US">(Inject)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”一个</span><span lang="EN-US">DLL</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。其过程大致如下：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo15;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">给定目标进程的进程号</span><span lang="EN-US">PID</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，通过</span><span class="SpellE"><span lang="EN-US">OpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">“打开”这个进程，得到代表着目标进程“对象”的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span><span class="SpellE"><span lang="EN-US">OpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的基础是系统调用</span><span class="SpellE"><span lang="EN-US">NtOpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo15;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">VirtualAllocEx</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在目标进程的用户空间分配一块内存。</span><span class="SpellE"><span lang="EN-US">VirtualAllocEx</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的基础是系统调用</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo15;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">WriteProcessMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">把一些代码和数据拷贝到目标进程用户空间中刚分配的那块内存中，这些代码的入口为</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span><span class="SpellE"><span lang="EN-US">WriteProcessMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的基础是系统调用</span><span class="SpellE"><span lang="EN-US">NtWriteVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo15;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">CreateRemoteThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在目标进程中创建一个以</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">为入口的线程。</span><span class="SpellE"><span lang="EN-US">CreateRemoteThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的基础是系统调用</span><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo15;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">当目标进程中的线程</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">受调度运行时，就把预定的</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">装入目标进程的用户空间。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l5 level1 lfo15;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">然后线程</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">退出运行而不复存在，但是所装入</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">并连接</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">却留在了目标进程的用户空间。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">当然，这是个很有趣的实验，利用这个实验所揭示的特点也许可以开发出某些很好的应用。但是问题也随之而生：要是</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是一段木马程序呢？比方说，要是这里的目标进程是网络浏览器，而</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">每当受调度运行时就把本地的某些信息发送给某个网站，然后睡眠一段时间，如此周而复始呢？显然，只要那个被</span><span class="SpellE"><span lang="EN-US">ThreadFunc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">“附体”的网络浏览器进程还在运行，这段木马程序就可周期性地得到执行，而很难被察觉。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">笔者在以前的漫谈中曾经讲过，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">与</span><span lang="EN-US">Linux</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的一个很明显、很重要的区别就是：在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中一个进程可以越俎代庖地替别的进程做好多事，其中就包括上面讲到的几项跨进程操作。我们在创建</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程、启动</span><span lang="EN-US">PE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">映像执行的过程中也看到过一些跨进程的操作，例如把可执行映像映射到子进程的用户空间、在子进程的映像中寻找函数入口、为子进程创建线程等等。除直接的跨进程操作外，还可以跨进程复制已打开对象的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。而</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，则是不允许、或者说不提供此类跨进程操作的。而且，正是这方面的差异使得</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的“核内差异核外补”策略难以有效实施。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">相比之下，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程是“独立自主”的。当然，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">也有进程间通信，但那只是通信而已。在进程间通信的基础上，一个进程也可以应另一个进程的请求而在其自身的上下文中执行某些操作。但是那些操作都是预定的、预先就安排在这个进程的代码中的，所反映的是程序设计者的意志。从这个意义上说，除非程序中有错误</span><span lang="EN-US">(bug)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程的行为是可预测的。而</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程则有可能发生不可预测的行为，因为别的进程居然可以把一段程序“注入”其空间并使之成为一个线程而得到执行。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可想而知，要是允许这样的跨进程操作不受限制地进行，对于系统的安全性是影响极大的，所以必定要有安全措施配套才行。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对于这么重要的问题，我们当然希望能了解</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的跨进程操作和相应的安全措施是怎么实现的。但是，遗憾的是：一方面是微软不向公众公开</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核的代码，另一方面是</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">尚未实现有关的安全措施。这样，我们现在能做的就只能是先通过</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的代码了解跨进程操作的实现，而看不到有关安全措施的实现。所以下面我们只能在代码中看到“矛”的一面，而看不到“盾”的一面。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下面的代码仍取自</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">0.2.6</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">版本，不过这个版本的</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">尚未实现配套的安全措施，所以只能借此了解一下有关跨进程操作的实现。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">先看</span><span class="SpellE"><span lang="EN-US">NtOpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的实现，因为所有的跨进程操作都是从这里开始的。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTSTATUS STDCALL</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">NtOpenProcess</span></b></span><span lang="EN-US">(OUT PHANDLE<span style="mso-tab-count:1"> </span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>IN<span style="mso-spacerun:yes">&nbsp; </span>ACCESS_MASK<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>IN<span style="mso-spacerun:yes">&nbsp; </span>POBJECT_ATTRIBUTES<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">ObjectAttributes</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>IN<span style="mso-spacerun:yes">&nbsp; </span>PCLIENT_ID<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ClientId</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>if (<span class="SpellE">ObjectAttributes</span> != NULL &amp;&amp; <span class="SpellE">ObjectAttributes</span>-&gt;<span class="SpellE">ObjectName</span>
+!= NULL &amp;&amp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ObjectAttributes</span>-&gt;<span class="SpellE">ObjectName</span>-&gt;Buffer
+!= NULL)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>NTSTATUS Status;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><b>PEPROCESS Process</b>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>Status = <span class="SpellE"><b>ObReferenceObjectByName</b></span>(<span class="SpellE">ObjectAttributes</span>-&gt;<span class="SpellE">ObjectName</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ObjectAttributes</span>-&gt;Attributes,
+NULL, <span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">PsProcessType</span>, <span class="SpellE">UserMode</span>, NULL, (PVOID*)<b>&amp;Process</b>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>Status = <span class="SpellE"><b>ObCreateHandle</b></span>(<span class="SpellE">PsGetCurrentProcess</span>(),Process, <span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span>FALSE, <span class="SpellE">ProcessHandle</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>return(Status);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PLIST_ENTRY
+<span class="SpellE">current_entry</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>PEPROCESS
+current;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>NTSTATUS
+Status;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ExAcquireFastMutex</span>(&amp;<span class="SpellE">PspActiveProcessMutex</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">current_entry</span>
+= <span class="SpellE">PsActiveProcessHead.Flink</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>while (<span class="SpellE">current_entry</span>
+!= &amp;<span class="SpellE">PsActiveProcessHead</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>{</span></p>
+
+<p class="MsoNormal" style="text-indent:10.5pt;mso-char-indent-count:1.0"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>current = CONTAINING_RECORD(<span class="SpellE">current_entry</span>,
+EPROCESS, </span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ProcessListEntry</span>);</span></p>
+
+<p class="MsoNormal" style="text-indent:10.5pt;mso-char-indent-count:1.0"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><b>if
+(current-&gt;<span class="SpellE">UniqueProcessId</span> == <span class="SpellE">ClientId</span>-&gt;<span class="SpellE">UniqueProcess</span>)<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" style="text-indent:10.5pt;mso-char-indent-count:1.0"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>{</span></p>
+
+<p class="MsoNormal" style="text-indent:10.5pt;mso-char-indent-count:1.0"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (current-&gt;<span class="SpellE">Pcb.State</span> ==
+PROCESS_STATE_TERMINATED)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status =
+STATUS_PROCESS_IS_TERMINATING;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span>else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status =<b> <span class="SpellE">ObReferenceObjectByPointer</span></b>(current,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">PsProcessType</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">UserMode</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">ExReleaseFastMutex</span>(&amp;<span class="SpellE">PspActiveProcessMutex</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span>if (NT_SUCCESS(Status))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status =<b> <span class="SpellE">ObCreateHandle</span></b>(<span class="SpellE">PsGetCurrentProcess</span>(),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>current,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>FALSE,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ProcessHandle</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ObDereferenceObject</span>(current);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span>return(Status);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">current_entry</span>
+= <span class="SpellE">current_entry</span>-&gt;<span class="SpellE">Flink</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ExReleaseFastMutex</span>(&amp;<span class="SpellE">PspActiveProcessMutex</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>DPRINT("<span class="SpellE">NtOpenProcess</span>() = STATUS_UNSUCCESSFUL\n");</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>return(STATUS_UNSUCCESSFUL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>return(STATUS_UNSUCCESSFUL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">像别的对象一样，进程对象也可以有个对象名</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">注意进程的对象名与所执行的映像文件名是两码事</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。同时，进程又有进程号。要打开一个进程对象时，既可以按对象名打开，也可以按进程号打开。如果是对象名打开，就把对象名填写在作为参数的</span><span lang="EN-US">OBJECT_ATTRIBUTES</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构中，就是这里的参数</span><span class="SpellE"><span lang="EN-US">ObjectAttributes</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。如果是按进程号打开，则把进程号填写在也是作为参数的“客户标识”</span><span lang="EN-US">CLIENT_ID</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中，就是这里的参数</span><span class="SpellE"><span lang="EN-US">ClientId</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。严格地说</span><span lang="EN-US">CLIENT_ID</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构是进程</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和线程</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的组合，用来唯一地标识一个线程。之所以叫“客户”，可能是对服务进程</span><span class="SpellE"><span lang="EN-US">csrss</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">而言。但是</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在本质上是数组下标，所以进程</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">其实也就是进程号。至于线程</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，则此刻不在关心之列，所以设置成</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就可以了。注意</span><span lang="EN-US">CLIENT_ID</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的进程</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不同于打开一个进程以后所得到的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，前者是全局的，内核中单独有个</span><span lang="EN-US">Cid</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对象表</span><span class="SpellE"><span lang="EN-US">PspCidTable</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">；而后者是局部的，作用于当前进程的打开对象表中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">看一下</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的</span><span lang="EN-US">Win32 API</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数</span><span class="SpellE"><span lang="EN-US">OpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的代码，就可以明白应该怎样使用</span><span lang="EN-US">CLIENT_ID</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">于</span><span class="SpellE"><span lang="EN-US">NtOpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">HANDLE STDCALL</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span lang="EN-US">OpenProcess</span></span><span lang="EN-US">(DWORD <span class="SpellE">dwDesiredAccess</span>, BOOL <span class="SpellE">bInheritHandle</span>, DWORD <span class="SpellE"><b>dwProcessId</b></span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">ClientId.UniqueProcess</span> = (HANDLE)<span class="SpellE"><b>dwProcessId</b></span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">ClientId.UniqueThread</span> = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">errCode</span> = <span class="SpellE"><b>NtOpenProcess</b></span>(&amp;<span class="SpellE">ProcessHandle</span>,…, <b>&amp;<span class="SpellE">ClientId</span></b>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>return <span class="SpellE">ProcessHandle</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可见，这里只是把进程号</span><span class="SpellE"><span lang="EN-US">dwProcessId</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的类型转换成了</span><span lang="EN-US">HANDLE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，而数值并未改变。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span class="SpellE"><span lang="EN-US">NtOpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的另一个参数</span><span class="SpellE"><span lang="EN-US">DesiredAccess</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">则是以标志位的形式说明打开这进程对象的目的，例如：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_TERMINATE<span style="mso-tab-count:1">&nbsp; </span><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_CREATE_THREAD<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_SET_SESSIONID<span style="mso-tab-count:1">&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_VM_OPERATION<span style="mso-tab-count:1">&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>8</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_VM_READ<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:
+3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>16</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_VM_WRITE<span style="mso-tab-count:1">&nbsp;&nbsp; </span><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>32</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_DUP_HANDLE<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>64</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_CREATE_PROCESS<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>128</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_SET_QUOTA<span style="mso-tab-count:1">&nbsp; </span><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>256</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_SET_INFORMATION<span style="mso-tab-count:1">&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>512</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#define PROCESS_QUERY_INFORMATION<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1024</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这些标志位的作用与打开文件时所使用的可读、可写等等相似，一方面是为以后对这个已打开映像的访问设置一个范围，一方面是让内核可以针对所要求的操作实施权限检查。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如果打开成功，</span><span class="SpellE"><span lang="EN-US">NtOpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">就通过参数</span><span class="SpellE"><span lang="EN-US">ProcessHandle</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">返回已打开对象的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所以，如果是按对象名打开，代码中就通过</span><span class="SpellE"><span lang="EN-US">ObReferenceObjectByName</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在内核中比对寻找同名的对象，找到后就返回目标进程的进程控制块指针，然后在当前进程的打开对象表中加入一个表项，并返回其</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。按理说在这个过程中应该检查当前进程的权限，但在</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">0.2.6</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">版中尚未实现。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">而如果是按进程号打开，那就要扫描</span><span lang="EN-US">(while</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">循环</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">当前的进程队列，找出进程号与</span><span class="SpellE"><span lang="EN-US">ClientId</span></span><span lang="EN-US">-&gt;<span class="SpellE">UniqueProcess</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">相符的进程控制块，然后通过</span><span class="SpellE"><span lang="EN-US">ObReferenceObjectByPointer</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">找到相应的对象，再往下就都一样了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">打开进程是这样，打开线程也是差不多。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">打开了目标进程以后，就可以对其实施跨进程操作了。允许跨进程操作的</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用有很多，这些系统调用一般都以</span><span class="SpellE"><span lang="EN-US">ProcessHandle</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">为参数。跨线程的操作也可以间接地认为是跨进程操作，因为目标线程可以是别的进程中的线程。这样，直接或间接意义上的跨进程操作就数量不小了：</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtFreeVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtQueryVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtLockVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtUnlockVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtReadVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtWriteVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtProtectVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtFlushVirtualMemory</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtAllocateUserPhysicalPages</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtFreeUserPhysicalPages</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtMapUserPhysicalPages</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtMapUserPhysicalPagesScatter</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtGetWriteWatch</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtResetWriteWatch</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtMapViewOfSection</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtUnmapViewOfSection</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtOpenThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtTerminateThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtQueryInformationThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtSetInformationThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtResumeThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtGetContextThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtSetContextThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtQueueAPCThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtAlertThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtAlertResumeThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtRegisterThreadTerminatePort</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtImpersonateThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtImpersonateAnonymousThread</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtTerminateProcess</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtQueryInformationProcess</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtSetInformationProcess</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtAssignProcessToJobObject</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtOpenProcessToken</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtOpenThreadToken</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtCreateProfile</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;mso-para-margin-left:2.0gd"><span class="SpellE"><span lang="EN-US">NtDuplicateObject</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">我们当然不可能在这里逐一考察所有这些系统调用，而只是顺着前面所说</span><span lang="EN-US">Jeffrey
+Richter</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的实验考察几个关键的系统调用。首先是在别的进程的用户空间分配一个内存区间，这是由</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">实现的。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTSTATUS STDCALL</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">NtAllocateVirtualMemory</span></b></span><span lang="EN-US">(IN HANDLE <span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN OUT PVOID* <span class="SpellE">UBaseAddress</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN ULONG <span class="SpellE">ZeroBits</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN OUT PULONG <span class="SpellE">URegionSize</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>IN
+ULONG <span class="SpellE">AllocationType</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN ULONG Protect)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>PEPROCESS Process;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><b>MEMORY_AREA* <span class="SpellE">MemoryArea</span></b>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* Check the validity of the
+parameters</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>if ((Protect &amp; PAGE_FLAGS_VALID_FROM_USER_MODE) != Protect)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>return(STATUS_INVALID_PAGE_PROTECTION);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>if ((<span class="SpellE">AllocationType</span> &amp; (MEM_COMMIT |
+MEM_RESERVE)) == 0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>return(STATUS_INVALID_PARAMETER);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">PBaseAddress</span> = *<span class="SpellE">UBaseAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">PRegionSize</span> = *<span class="SpellE">URegionSize</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">BoundaryAddressMultiple.QuadPart</span> = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">BaseAddress</span> = (PVOID)PAGE_ROUND_DOWN(<span class="SpellE">PBaseAddress</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">RegionSize</span> = PAGE_ROUND_UP(<span class="SpellE">PBaseAddress</span>
++ <span class="SpellE">PRegionSize</span>) -</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PAGE_ROUND_DOWN(<span class="SpellE">PBaseAddress</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>Status = <span class="SpellE"><b>ObReferenceObjectByHandle</b></span>(<span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>PROCESS_VM_OPERATION,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">UserMode</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(PVOID*)(&amp;Process),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>NULL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><b>Type = (<span class="SpellE">AllocationType</span> &amp; MEM_COMMIT) ?
+MEM_COMMIT : MEM_RESERVE</b>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>DPRINT("Type %x\n", Type);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">AddressSpace</span> = &amp;Process-&gt;<span class="SpellE">AddressSpace</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">MmLockAddressSpace</span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>if (<span class="SpellE">PBaseAddress</span> != 0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">MemoryArea</span> = <span class="SpellE"><b>MmLocateMemoryAreaByAddress</b></span>(<span class="SpellE">AddressSpace</span>, <span class="SpellE">BaseAddress</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (<span class="SpellE">MemoryArea</span> != NULL)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MemoryAreaLength</span> = (ULONG_PTR)<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">EndingAddress</span> -</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(ULONG_PTR)<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">StartingAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (<span class="SpellE">MemoryArea</span>-&gt;Type == <b>MEMORY_AREA_VIRTUAL_MEMORY</b>
+&amp;&amp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MemoryAreaLength</span> &gt;= <span class="SpellE">RegionSize</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Status =</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE"><b>MmAlterRegion</b></span>(<span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">StartingAddress</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">Data.VirtualMemoryData.RegionListHead</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">BaseAddress</span>, <span class="SpellE">RegionSize</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Type, Protect, <span class="SpellE"><b>MmModifyAttributes</b></span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MmUnlockAddressSpace</span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>DPRINT("<span class="SpellE">NtAllocateVirtualMemory</span>() = %x\<span class="SpellE">n",Status</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>return(Status);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>else if (<span class="SpellE">MemoryAreaLength</span> &gt;= <span class="SpellE">RegionSize</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Status =</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE"><b>MmAlterRegion</b></span>(<span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">StartingAddress</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">Data.SectionData.RegionListHead</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">BaseAddress</span>, <span class="SpellE">RegionSize</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Type, Protect, <span class="SpellE"><b>MmModifyAttributes</b></span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MmUnlockAddressSpace</span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>DPRINT("<span class="SpellE">NtAllocateVirtualMemory</span>() = %x\<span class="SpellE">n",Status</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>return(Status);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MmUnlockAddressSpace</span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>return(STATUS_UNSUCCESSFUL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>Status = <span class="SpellE"><b>MmCreateMemoryArea</b></span>(Process, <span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>MEMORY_AREA_VIRTUAL_MEMORY</b>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">BaseAddress</span>, <span class="SpellE">RegionSize</span>,
+Protect,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">MemoryArea</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">PBaseAddress</span> != 0,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(<span class="SpellE">AllocationType</span> &amp; MEM_TOP_DOWN) ==
+MEM_TOP_DOWN,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">BoundaryAddressMultiple</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">MemoryAreaLength</span> = (ULONG_PTR)<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">EndingAddress</span> -</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(ULONG_PTR)<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">StartingAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE"><b>MmInitialiseRegion</b></span>(&amp;<span class="SpellE">MemoryArea</span>-&gt;<span class="SpellE">Data.VirtualMemoryData.RegionListHead</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MemoryAreaLength</span>, Type, Protect);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>if ((<span class="SpellE">AllocationType</span> &amp; <b>MEM_COMMIT</b>)
+&amp;&amp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>((Protect &amp; PAGE_READWRITE) || (Protect &amp;
+PAGE_EXECUTE_READWRITE)))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>MmReserveSwapPages</b></span>(<span class="SpellE">MemoryAreaLength</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>*<span class="SpellE">UBaseAddress</span> = <span class="SpellE">BaseAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>*<span class="SpellE">URegionSize</span> = <span class="SpellE">MemoryAreaLength</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>DPRINT("*<span class="SpellE">UBaseAddress</span> %x<span style="mso-spacerun:yes">&nbsp; </span>*<span class="SpellE">URegionSize</span>
+%x\n", <span class="SpellE">BaseAddress</span>, <span class="SpellE">RegionSize</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">MmUnlockAddressSpace</span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>return(STATUS_SUCCESS);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">先要着重说一下参数</span><span class="SpellE"><span lang="EN-US">AllocationType</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这是一些标志位，主要有</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">MEM_RESET</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、以及</span><span lang="EN-US">MEM_TOP_DOWN</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。调用者通过这些标志位说明调用</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的意图。</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核把虚存空间的分配与映射区分了开来：</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">标志位</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表示要求“预订”、即分配一个虚拟地址区间。正如前一篇漫谈中所述，虚拟地址区间的分配只是“账面”上的操作，而并不涉及页面映射表的改变，所以并没有建立起有关页面的映射。要建立页面映射，就得为有关的虚存页面提供物理的存储、或者说后备。就</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">而言，这种物理的存储有两种形式。一种是物理的内存页面，另一种是磁盘上的</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件。这样，一旦为一个虚存页面建立了映射，这个页面就要么体现为内存中的某个物理页面，要么体现为</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件中的某个页面</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">也是物理页面</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这两种形态之间的转换就是页面的换入</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">换出。从某种意义上说，映射的建立类似于所预订资源的兑现，为此就得投入相应的资源</span><span lang="EN-US">(Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件页面或内存页面</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">作为代价，类似于“现金交割”，这就是标志位</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所表示的意思。所以，虚存区间的分配实际上分成预订和交割两项操作，这两项操作既可以分两步走，也可以一步到位。如果是分两步走，就要先后调用</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">两次，第一次把</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">设成</span><span lang="EN-US">1</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，第二次把</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">设成</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。也就是说：先预订，再交割。而若要一步到位，只调用</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">一次，那就把这两个标志位都设成</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。如果我们探讨这套方案的设计者的初衷，那么显然是要人们分两步走、甚至分多步走，目的是要减小</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件的大小。假定我们要分配一个</span><span lang="EN-US">512MB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的虚存区间，如果要立即就建立映射，那么就要在</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件中提供</span><span lang="EN-US">512MB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的空间，相当于一订货就把全部货款都付清了。但是，实际上往往并非所有这</span><span lang="EN-US">512MB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的存储空间都是立即就要使用的，所以更好的办法是先预定，然后要用多少就交割多少，不用了就退掉，这样就可以少占</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件的空间、从而可以减小</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件的大小。</span><span lang="EN-US">Jeffrey Richter</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的书中对此有比较详细的叙述。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">但是，这当然不是唯一的方法，例如</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就不采用这样的方法。在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中根本就不分甚么预订和交割，分配内存区间就是分配内存区间，也并不是在分配内存区间的时候就在</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">盘区上分配页面作为类似于“保证金”那样的后备，而是在真正需要的时候才动态分配</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">页面。这一方面可能是因为</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">基本上都是用一个磁盘或盘区作为</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">空间，不像</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">那样采用</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件而有文件大小的压力，另一方面结构上也比较简洁。不过这两种方法应该说是各有千秋，而并无绝对的好坏或高下。按说</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在各个方面都在尽力模仿</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，但是在这方面却实际上采用了类似于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的方法，这一点下面就可以看到。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">另一方面，在前一篇漫谈中我们看到的是映像文件的映射，而映像文件本身就起着相当于</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件的作用，而给定映像文件的大小本来就是固定的，所以不存在要设法减小其文件大小的问题。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">明白了这些，下面就可以看</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的代码了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先，程序中局部量</span><span lang="EN-US">Type </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的值来自</span><span class="SpellE"><span lang="EN-US">AllocationType</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，不是</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就是</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，二者必居其一。不过</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">也可能蕴含了</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，因为两步可以并为一步走。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">参数</span><span class="SpellE"><span lang="EN-US">UbaseAddress</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表示对于起点地址的要求，为</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表示任意。</span><span class="SpellE"><span lang="EN-US">UbaseAddress</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为</span><span lang="EN-US">0</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">时参数</span><span class="SpellE"><span lang="EN-US">ZeroBits</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">表示要求所分配的起点地址前面有几位</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">二进制位</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">必须是</span><span lang="EN-US">0</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，实际上就是要求所分配的区间大体上落在什么位置上。如果</span><span class="SpellE"><span lang="EN-US">UbaseAddress</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">非</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，这里的代码中就通过</span><span class="SpellE"><span lang="EN-US">MmLocateMemoryAreaByAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">找一下，看这地址是否落在某个已分配的区间内。如果是的话</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">返回的</span><span class="SpellE"><span lang="EN-US">MemoryArea</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针非</span><span lang="EN-US">0)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，此时有三种可能：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这个区间在此前已经通过</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">预订或交割，因而其类型为</span><span lang="EN-US">MEMORY_AREA_VIRTUAL_MEMORY</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，区间也够大。现在要做的是改变其一部或全部的状态，例如设置成</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、以及所要求的访问访问模式</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">例如可读写或可执行等等</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这个区间是通过别的手段、而不是</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">分配的。例如</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的映射也会导致空间的分配，但是此时的类型不是</span><span lang="EN-US">MEMORY_AREA_VIRTUAL_MEMORY(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">而是。。。。。。。。。</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。只要区间够大，也允许通过</span><span class="SpellE"><span lang="EN-US">NtAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">改变其一部或全部的状态。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo21;
+tab-stops:list 42.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这个区间不够大，因而失败返回。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的实现中，数据结构</span><span lang="EN-US">MEMORY_AREA</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">代表着内存区间，在同一个内存区间中可以存在一个或多个</span><span lang="EN-US">Region</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以数据结构</span><span lang="EN-US">MM_REGION</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">作为代表。我们既已称</span><span lang="EN-US">Area</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为区间，就只好称</span><span lang="EN-US">Region</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为“区段”了。之所以在一个区间中可以有多个区段，是因为它们的访问模式可能不同。例如可能要需要把一个区间的一部分设置成可执行，另一部分设置成只读，还有一部分设置成读写等等。此外，它们的状态也可能不同，例如在一次预订以后分好几次交割，因而可能有的区段状态为</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，而有的是</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。而所谓</span><span lang="EN-US">Region</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，是指一块连续的，“均匀”的即具有相同模式和状态的虚存区段。所以前面有个参数名是</span><span class="SpellE"><span lang="EN-US">URegionSize</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，而不是</span><span class="SpellE"><span lang="EN-US">UAreaSize</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。此外，</span><span lang="EN-US">MEMORY_AREA</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中的</span><span lang="EN-US">Type</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">字段表示一个区间的性质和类型，例如</span><span lang="EN-US">MEMORY_AREA_VIRTUAL_MEMORY</span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，而</span><span lang="EN-US">MM_REGION</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中的</span><span lang="EN-US">Type</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">字段则表示区段的状态，例如</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">或</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所以，如果找到了相应的区间，就通过</span><span class="SpellE"><span lang="EN-US">MmAlterRegion</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">改变目标区段的模式和状态<b>。</b>注意调用</span><span class="SpellE"><span lang="EN-US">MmAlterRegion</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时的最后一个参数是个函数指针，在这里指向</span><span class="SpellE"><span lang="EN-US">MmModifyAttributes</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。如果</span><span class="SpellE"><span lang="EN-US">MmAlterRegion</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">发现所要求的空间可用，就会通过函数指针调用这个函数，其作用是对页面映射表作出相应的修改，以适应可能与前不同的访问模式，例如把只读改成读写。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">读者也许会问：如果把一个区段的状态从</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">改成</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这到底是否涉及</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件的页面分配呢？前面讲过，</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">目前实际上采用的是类似于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的那种方法，所以只是改变了区段的状态，而并没有涉及</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件的页面分配，甚至没有涉及页面映射的建立。那这套机制怎么工作呢？当第一次访问某个页面时，</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">会因为页面无映射而发生异常，而异常处理程序会根据引起异常的地址找到相应的区段并检查其状态，如果是</span><span lang="EN-US">MEM_RESERVE</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">就作为出错，而若是</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">则为其分配物理页面和建立映射，并在</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件中也分配好后备页面。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如果并未指定起点地址，或者所指定的起点地址并不落在某个已分配的区间中，那就比较自由了，此时通过</span><span class="SpellE"><span lang="EN-US">MmCreateMemoryArea</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">分配一个地址区间并创建其</span><span lang="EN-US">MEMORY_AREA</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，再通过</span><span class="SpellE"><span lang="EN-US">MmInitialiseRegion</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">创建其第一个</span><span lang="EN-US">MM_REGION</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">然后，如果参数</span><span class="SpellE"><span lang="EN-US">AllocationType</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的</span><span lang="EN-US">MEM_COMMIT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">标志位为</span><span lang="EN-US">1</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，就通过</span><span class="SpellE"><span lang="EN-US">MmReserveSwapPages</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">记下一笔帐，以保留一定数量的</span><span lang="EN-US">Swap</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">页面。不过</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在这方面的程序还很粗糙，只能大致看出个意图。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">由于本文的目的不在于存储管理，这里就不在这些问题上再深入下去了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在目标进程的用户空间分配了一个虚存区间以后，就可以对其进行读写了。我们在这里特别感兴趣的是写入，因为</span><span lang="EN-US">Jeffrey Richter</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">把一段程序拷贝到了另一个进程的用户空间。当然，由于这是在另一个进程的用户空间，不能像通常那样直接按地址指针随机写入，而需要通过另一个系统调用</span><span class="SpellE"><span lang="EN-US">NtWriteVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">来进行成块的写入</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">拷贝</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTSTATUS STDCALL</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">NtWriteVirtualMemory</span></b></span><span lang="EN-US">(IN HANDLE <span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN PVOID <span class="SpellE">BaseAddress</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN PVOID Buffer,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>IN
+ULONG <span class="SpellE">NumberOfBytesToWrite</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OUT PULONG <span class="SpellE">NumberOfBytesWritten</span><span style="mso-spacerun:yes">&nbsp; </span>OPTIONAL)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>NTSTATUS Status;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>PMDL <span class="SpellE">Mdl</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>PVOID <span class="SpellE">SystemAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>PEPROCESS Process;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>ULONG <span class="SpellE">OldProtection</span> = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>PVOID <span class="SpellE">ProtectBaseAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>ULONG <span class="SpellE">ProtectNumberOfBytes</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>Status =<b> <span class="SpellE">ObReferenceObjectByHandle</span></b>(<span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PROCESS_VM_WRITE,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>NULL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">UserMode</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(PVOID*)(&amp;Process),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>NULL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>/* We have to make sure the target memory is <span class="SpellE">writable</span>.</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* I am not sure if it is
+correct to do this in any case, but it has to be</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* done at least in some
+cases because you can use <span class="SpellE">WriteProcessMemory</span> to</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* write into the .text
+section of a module where <span class="SpellE">memcpy</span>() would crash.</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*<span style="mso-spacerun:yes">&nbsp; </span>-blight (2005/01/09)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">ProtectBaseAddress</span> = <span class="SpellE">BaseAddress</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">ProtectNumberOfBytes</span> = <span class="SpellE">NumberOfBytesToWrite</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>/* Write memory */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>if (Process == <span class="SpellE">PsGetCurrentProcess</span>())</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* </span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">目标进程就是本进程</span><span lang="EN-US"> */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>memcpy</b></span>(<span class="SpellE">BaseAddress</span>,
+Buffer, <span class="SpellE">NumberOfBytesToWrite</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>else</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* Create MDL
+describing the source buffer. */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">Mdl</span> = <span class="SpellE"><b>MmCreateMdl</b></span>(NULL,
+Buffer, <span class="SpellE">NumberOfBytesToWrite</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* Make the
+target area <span class="SpellE">writable</span>. */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>MiProtectVirtualMemory</b></span>(Process,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">ProtectBaseAddress</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">ProtectNumberOfBytes</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PAGE_READWRITE,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">OldProtection</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* Map the MDL.
+*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>MmProbeAndLockPages</b></span>(<span class="SpellE">Mdl</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">UserMode</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span><span class="SpellE">IoReadAccess</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* Copy memory
+from the mapped MDL into the target buffer. */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KeAttachProcess</b></span>(&amp;Process-&gt;<span class="SpellE">Pcb</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SystemAddress</span> = <span class="SpellE"><b>MmGetSystemAddressForMdl</b></span>(<span class="SpellE">Mdl</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>memcpy</b></span>(<span class="SpellE">BaseAddress</span>, <span class="SpellE">SystemAddress</span>, <span class="SpellE">NumberOfBytesToWrite</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KeDetachProcess</b></span>();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* Free the MDL.
+*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (<span class="SpellE">Mdl</span>-&gt;<span class="SpellE">MappedSystemVa</span> != NULL)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MmUnmapLockedPages</span>(<span class="SpellE">Mdl</span>-&gt;<span class="SpellE">MappedSystemVa</span>, <span class="SpellE">Mdl</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">MmUnlockPages</span>(<span class="SpellE">Mdl</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ExFreePool</span>(<span class="SpellE">Mdl</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>/* Reset the protection of the target memory. */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>Status = <span class="SpellE"><b>MiProtectVirtualMemory</b></span>(Process,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">ProtectBaseAddress</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">ProtectNumberOfBytes</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">OldProtection</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">OldProtection</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>if (<span class="SpellE">NumberOfBytesWritten</span> != NULL)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>MmCopyToCaller</b></span>(<span class="SpellE">NumberOfBytesWritten</span>,
+&amp;<span class="SpellE">NumberOfBytesToWrite</span>, </span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">sizeof</span>(ULONG));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>return(STATUS_SUCCESS);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先当然要找到目标进程的进程控制块。如果目标进程即为当前进程，那就是同一用户空间的拷贝，这当然很简单，调用一下</span><span class="SpellE"><span lang="EN-US">memcpy</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就可以了。我们在这里只关心跨进程的拷贝。由于是跨进程的拷贝，这里有个如何处理源端数据的问题。显然，源端的数据是在当前进程的用户空间，而目标端是在另一个进程的用户空间，这不是简单的通过</span><span class="SpellE"><span lang="EN-US">memcpy</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就可以完成的操作。怎么办呢？方法之一是分两步走，先在内核中分配一块足够大的缓冲区，从当前进程的用户空间把数据拷贝到这个缓冲区中，然后再从这个缓冲区拷贝到目标进程的用户空间。这样当然也是可以的，但是多了一次拷贝，降低了效率。另一个方法是先把源端数据所在的</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">物理</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">页面映射到内核里面、即系统空间。这样，同一个物理页面就有了两个映射，从而有了两个虚拟地址，一个在用户空间，另一个在系统空间。于是从其在系统空间的映像拷贝到目标进程的用户空间就行了，这样可以省去一次拷贝。</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在与设备驱动有关</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">包括文件操作</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的系统调用中都提供了这样的手段，称为</span><span lang="EN-US">MDL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这里就用上了。对于</span><span lang="EN-US">MDL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">将来我在谈到设备驱动框架时还会介绍，在这里读者只要知道有这么一回事就行了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">代码中先通过</span><span class="SpellE"><span lang="EN-US">MmCreateMdl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">MmProbeAndLockPages</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">把源端的物理页面映射到内核里面，并加以验证。同时又通过</span><span class="SpellE"><span lang="EN-US">MiProtectVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">把目标端页面的保护模式设置成</span><span lang="EN-US">PAGE_READWRITE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这就为拷贝做好了准备。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接着就是所谓进程挂靠、即通过</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">切换到目标进程的用户空间了。一旦切换到目标进程的用户空间，</span><span class="SpellE"><span lang="EN-US">memcpy</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就有了用武之地。然后又通过</span><span class="SpellE"><span lang="EN-US">KeDetachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">切换回原来的用户空间。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">完成了拷贝以后，又通过</span><span class="SpellE"><span lang="EN-US">MiProtectVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">恢复目标区间原有的页面保护。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">最后的</span><span class="SpellE"><span lang="EN-US">MmCopyToCaller</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">只是把一个无符号长整数、即实际写入目标进程用户空间的长度复制到用户空间，作为系统调用的返回值。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">现在，离开“阴谋”的实现只有一步之遥了，下一步就是在目标进程中为刚才拷贝过去的可执行代码创建一个线程，这是通过</span><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">实现的。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTSTATUS STDCALL</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">NtCreateThread</span></b></span><span lang="EN-US">(OUT PHANDLE <span class="SpellE">ThreadHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IN
+ACCESS_MASK <span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IN
+POBJECT_ATTRIBUTES <span class="SpellE">ObjectAttributes</span><span style="mso-spacerun:yes">&nbsp; </span>OPTIONAL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IN HANDLE <span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>OUT
+PCLIENT_ID <span class="SpellE">ClientId</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IN
+PCONTEXT <span class="SpellE">ThreadContext</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IN
+PINITIAL_TEB <span class="SpellE">InitialTeb</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IN BOOLEAN
+<span class="SpellE">CreateSuspended</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>PEPROCESS Process;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>PETHREAD Thread;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Status = <span class="SpellE"><b>ObReferenceObjectByHandle</b></span>(<span class="SpellE">ProcessHandle</span>, PROCESS_CREATE_THREAD,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">PsProcessType</span>, <span class="SpellE">PreviousMode</span>,
+(PVOID*)&amp;Process, NULL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Status = <span class="SpellE"><b>PsInitializeThread</b></span>(Process,
+&amp;Thread, <span class="SpellE">ObjectAttributes</span>, <span class="SpellE">PreviousMode</span>,
+FALSE);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>/* create a client id handle */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Status = <span class="SpellE"><b>PsCreateCidHandle</b></span>(Thread, <span class="SpellE">PsThreadType</span>, &amp;Thread-&gt;<span class="SpellE">Cid.UniqueThread</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Status = <span class="SpellE"><b>KiArchInitThreadWithContext</b></span>(&amp;Thread-&gt;<span class="SpellE">Tcb</span>, <span class="SpellE">ThreadContext</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Status = <span class="SpellE"><b>PsCreateTeb</b></span>(<span class="SpellE">ProcessHandle</span>, &amp;<span class="SpellE">TebBase</span>,
+Thread, <span class="SpellE">InitialTeb</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Thread-&gt;<span class="SpellE">Tcb.Teb</span> = <span class="SpellE">TebBase</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Thread-&gt;<span class="SpellE">StartAddress</span> = NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>* Queue an APC to the thread that will execute the <span class="SpellE">ntdll</span>
+startup</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>* routine.</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE">LdrInitApc</span> = <span class="SpellE">ExAllocatePool</span>(<span class="SpellE">NonPagedPool</span>, <span class="SpellE">sizeof</span>(KAPC));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE"><b>KeInitializeApc</b></span>(<span class="SpellE">LdrInitApc</span>,
+&amp;Thread-&gt;<span class="SpellE">Tcb</span>, <span class="SpellE">OriginalApcEnvironment</span>,
+</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">LdrInitApcKernelRoutine</span>, <span class="SpellE">LdrInitApcRundownRoutine</span>,
+</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">LdrpGetSystemDllEntryPoint</span>(), <span class="SpellE">UserMode</span>, NULL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE"><b>KeInsertQueueApc</b></span>(<span class="SpellE">LdrInitApc</span>,
+NULL, NULL, IO_NO_INCREMENT);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>/* </span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>* The thread is non-<span class="SpellE">alertable</span>, so the APC we
+added did not set <span class="SpellE">UserApcPending</span> to TRUE. </span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>* We must do this manually. Do NOT attempt to set the Thread to <span class="SpellE">Alertable</span> before the call,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>* doing so is a blatant and <span class="SpellE">erronous</span> hack.</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Thread-&gt;<span class="SpellE">Tcb.ApcState.UserApcPending</span> = TRUE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Thread-&gt;<span class="SpellE">Tcb.Alerted</span>[<span class="SpellE">KernelMode</span>]
+= TRUE;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE">oldIrql</span> = <span class="SpellE">KeAcquireDispatcherDatabaseLock</span>
+();</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE"><b>PsUnblockThread</b></span>(Thread, NULL, 0);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE">KeReleaseDispatcherDatabaseLock</span>(<span class="SpellE">oldIrql</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>Status = <span class="SpellE"><b>ObInsertObject</b></span>((PVOID)Thread,
+NULL, <span class="SpellE">DesiredAccess</span>, 0, NULL, &amp;<span class="SpellE">hThread</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>return Status;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">参数</span><span class="SpellE"><span lang="EN-US">ThreadContext</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指向一个</span><span lang="EN-US">PCONTEXT</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构。这个数据结构因</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">而不同，对于</span><span lang="EN-US">X86</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是</span><span lang="EN-US">CONTEXT_X86</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，其内容是要求新建线程开始运行时各个寄存器的初值。另一个参数</span><span class="SpellE"><span lang="EN-US">InitialTeb</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">指向一个“初始</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">”，主要是给定了新建线程的堆栈位置。参数</span><span class="SpellE"><span lang="EN-US">ClientId</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">用来返回一个“客户标识”</span><span lang="EN-US">CLIENT_ID</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，实质上是返回客户标识中的线程号。</span><span class="SpellE"><span lang="EN-US">CreateSuspended</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">则表明是否要求新建线程一创建就被挂起。其余的参数就不言自明了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先当然还是找到目标进程的进程控制块。然后调用</span><span class="SpellE"><span lang="EN-US">PsInitializeThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这个函数虽然名为</span><span class="SpellE"><span lang="EN-US">InitializeThread</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，实际上却包括了创建线程、对线程的</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构进行初始化、并将其挂入目标进程的线程队列等操作。注意对</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构的初始化并不等同于对整个线程的初始化，因为</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">并不代表着一个线程的全部，堆栈也是线程的一部分。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接着是</span><span class="SpellE"><span lang="EN-US">PsCreateCidHandle</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。如前所述，一个</span><span lang="EN-US">CID</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是由两个</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">构成的，其一是进程控制块的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，其二是线程控制块的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这里要做的就是为目标线程的控制块</span><span lang="EN-US">(ETHREAD)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">创建一个全局的线程</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，并把它填写在</span><span lang="EN-US">Thread-&gt;Cid</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下面的</span><span class="SpellE"><span lang="EN-US">KiArchInitThreadWithContext</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是个宏操作，因</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的不同而定义为不同的函数，对于</span><span lang="EN-US">X86</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">处理器定义为</span><span lang="EN-US">Ke386InitThreadWithContext()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。这个函数在目标线程的系统堆栈中伪造出一个中断现场，使得当目标进程被调度运行而返回用户空间时正好具有通过参数</span><span class="SpellE"><span lang="EN-US">ThreadContext</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">给定的上下文、即各寄存器的值。至于目标线程在用户空间的程序入口，则就是</span><span class="SpellE"><span lang="EN-US">ThreadContext</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中寄存器</span><span class="SpellE"><span lang="EN-US">Eip</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的值，这是必须在调用</span><span class="SpellE"><span lang="EN-US">NtCreateThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">之前设置好的。注意这与</span><span lang="EN-US">APC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数是两码事。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span class="SpellE"><span lang="EN-US">PsCreateTeb</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">根据参数</span><span class="SpellE"><span lang="EN-US">InitialTeb</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在用户空间创建一个</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span><span lang="EN-US">TEB</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的位置在用户空间顶部，</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的下面。由于一个进程可以有多个线程，在</span><span lang="EN-US">PEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">下面实际上是一个</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数组。每创建一个新的线程，就通过</span><span class="SpellE"><span lang="EN-US">ZwAllocateVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">为其分配一个</span><span lang="EN-US">TEB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">页面，然后就通过</span><span class="SpellE"><span lang="EN-US">NtWriteVirtualMemory</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">填写其初始内容，内容主要来自</span><span class="SpellE"><span lang="EN-US">InitialTeb</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">Thread-&gt;Cid</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如果参数</span><span class="SpellE"><span lang="EN-US">CreateSuspended</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">非</span><span lang="EN-US">0</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，表示新建线程应该一创建即被挂起，那么这里就是地方了，</span><span class="SpellE"><span lang="EN-US">PsSuspendThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">将目标线程挂起。被挂起的线程将不会被调度运行。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">再往下就是为新建线程准备并挂入</span><span lang="EN-US">APC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数了。这里通过</span><span class="SpellE"><span lang="EN-US">LdrpGetSystemDllEntryPoint</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">获取的还是指向</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的指针。我们知道，这个函数的主要功能是</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的装入和动态连接，按理说只有目标进程中的第一个线程才需要执行这个函数。但是读者不妨回过去</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">漫谈十一</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">看一下</span><span class="docemphasis"><span lang="EN-US">__<span class="SpellE">true_LdrInitializeThunk</span>()</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码，</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的装入和动态连接只是在第一次进入这个函数时才执行，以后就跳过去了。而</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的“次要”功能，即对于</span><span class="SpellE"><span class="docemphasis"><span lang="EN-US">LdrpAttachThread</span></span></span><span class="docemphasis"><span lang="EN-US">()</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的调用，却是每一个线程都要执行的。特别是这里面还有对</span><span lang="EN-US">TLS</span></span><span class="docemphasis"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">、即“线程本地存储</span><span lang="EN-US">(Thread
+Local Storage)</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”的初始化，所以每一个新建的线程都要到这个</span><span lang="EN-US">APC</span></span><span class="docemphasis"><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">函数去转一下。</span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接着的</span><span class="SpellE"><span lang="EN-US">PsUnblockThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">又是关键。新建的线程至此还是被“阻塞</span><span lang="EN-US">(blocked)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”的，其</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构尚未被挂入调度队列。而</span><span class="SpellE"><span lang="EN-US">PsUnblockThread</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的作用就是解除其阻塞并将其</span><span lang="EN-US">ETHREAD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构挂入调度队列。在这个操作的过程中当然不能允许发生调度，所以要用</span><span class="SpellE"><span lang="EN-US">KeAcquireDispatcherDatabaseLock</span></span><span lang="EN-US"> ()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">KeReleaseDispatcherDatabaseLock</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">把这个过程保护起来。完成了这个过程以后，在发生调度的时候，新建的线程就有机会被调度运行了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">最后通过</span><span class="SpellE"><span lang="EN-US">ObInsertObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">创建一个</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表项，并返回相应的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这就是目标线程的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">至于新建线程被调度运行时的流程，读者在以前就已经看到过的了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">显然，目前的</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对这整个过程是“不设防”的，尚未实现理应与主流功能配套的安全措施，与</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码应该还有很大的差距</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">有幸看到</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">源代码的人不妨重点考察一下有关的代码</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。特别地，对于跨进程操作的安全性而言，需要有严密的“对象保护”机制。以后我们再来讨论这个问题。</span></p>
+
+</div>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 08:07:00 Nov 09, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:45:08 Apr 13, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 88.467
+  exclusion.robots: 0.314
+  exclusion.robots.policy: 0.3
+  RedisCDXSource: 0.929
+  esindex: 0.012
+  LoadShardBlock: 59.779 (3)
+  PetaboxLoader3.datanode: 67.183 (4)
+  CDXLines.iter: 23.378 (3)
+  PetaboxLoader3.resolve: 53.508 (2)
+  load_resource: 97.738
+--><div id="react-toast" class="Toaster"><span class="Toaster__manager-top-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; left: 0px;"></span><span class="Toaster__manager-top" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; top: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-top-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; right: 0px;"></span><span class="Toaster__manager-bottom-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; left: 0px;"></span><span class="Toaster__manager-bottom" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; bottom: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-bottom-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; right: 0px;"></span></div><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>

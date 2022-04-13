@@ -1,0 +1,1815 @@
+
+<!-- saved from url=(0098)https://web.archive.org/web/20130213060407/http://www.longene.org/techdoc/0500005001224576620.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030"><script src="./漫谈兼容内核之三__files/analytics.js.下载" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app223.us.archive.org';v.server_ms=216;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./漫谈兼容内核之三__files/bundle-playback.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./漫谈兼容内核之三__files/wombat.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.longene.org:80/techdoc/0500005001224576620.html","20130213060407","https://web.archive.org/","web","/_static/",
+	      "1360735447");
+</script>
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之三__files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之三__files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://web.archive.org/web/20130213060407/http://www.longene.org/techdoc/0500005001224576620.files/filelist.xml">
+<title>漫谈兼容内核之三:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tt</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>SYSTEM</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>4497</o:TotalTime>
+  <o:Created>2008-10-21T08:10:00Z</o:Created>
+  <o:LastSaved>2008-10-21T08:10:00Z</o:LastSaved>
+  <o:Pages>15</o:Pages>
+  <o:Words>2666</o:Words>
+  <o:Characters>15199</o:Characters>
+  <o:Lines>126</o:Lines>
+  <o:Paragraphs>35</o:Paragraphs>
+  <o:CharactersWithSpaces>17830</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="ZH-CN" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131078"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-alt:新細明體;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:48769839;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1224260682 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:159202383;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-832824840 1066536590 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-text:%1．;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:244842798;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-395799204 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:973951326;
+	mso-list-type:hybrid;
+	mso-list-template-ids:493242828 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:1004359038;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1363475660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:1078677497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1959094908 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l6
+	{mso-list-id:1507208474;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1572023878 1645873162 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-number-format:japanese-counting;
+	mso-level-text:%1、;
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-18.0pt;
+	font-family:PMingLiU;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";}
+@list l7
+	{mso-list-id:1578006926;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1149118462 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l8
+	{mso-list-id:1642880672;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-467102874 1372498976 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:53.25pt;
+	mso-level-number-position:left;
+	margin-left:53.25pt;
+	text-indent:-32.25pt;}
+@list l9
+	{mso-list-id:1780830494;
+	mso-list-type:hybrid;
+	mso-list-template-ids:863028420 -2143931400 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:1809594228;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1243225962 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l11
+	{mso-list-id:2146005750;
+	mso-list-type:hybrid;
+	mso-list-template-ids:938895032 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+
+<body lang="ZH-CN" style="tab-interval:21.0pt;text-justify-trim:punctuation"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20130213060407/http://www.longene.org:80/techdoc/0500005001224576620.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.longene.org/techdoc/0500005001224576620.html","20130213060407",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="Section1" style="layout-grid:15.6pt">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+隶书;mso-hansi-font-family:&quot;Times New Roman&quot;">漫谈兼容内核之三</span></b><b><span lang="EN-US" style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书;
+mso-fareast-font-family:宋体">:</span></b><b><span lang="EN-US" style="font-size:
+18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt">Kernel-win32</span></b><b><span style="font-size:22.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的文件操作</span></b><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毛德操</span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">上一篇漫谈中分析</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">介绍了</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的对象管理机制。在各种对象类型中，文件显然是最重要、最复杂</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就其操作而言</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的类型。如果说像“信号量”之类的简单对象还有可能独立地加以实现，那么像文件这样的复杂对象这就不太现实，并且实际上也不合适了。所以，本文的目的就是通过几个典型文件操作的实现介绍</span><span lang="EN-US">kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是怎样把</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">用于文件操作的系统调用“嫁接”到</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核中的有关成分上。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件的创建</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">如前文所述，所有的对象都有个</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，里面有个</span><span class="SpellE"><span lang="EN-US">ObjectClass</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针，它指向什么</span><span class="SpellE"><span lang="EN-US">ObjectClass</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，这个对象就是什么类型。“文件”就是一种对象类型，它的数据结构是</span><span class="SpellE"><span lang="EN-US">file_objclass</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">struct</span></span></span><span lang="EN-US"> <span class="SpellE">ObjectClass</span> <span class="SpellE"><b>file_objclass</b></span>
+= {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">oc_type</span>:<span style="mso-tab-count:1">&nbsp; </span>"FILE
+",</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">constructor</span>:<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FileConstructor</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">reconstructor</span></span>:<span style="mso-tab-count:1"> </span><span class="SpellE">FileReconstructor</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">destructor</span>:<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FileDestructor</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">poll</span>:<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FilePoll</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">describe</span>:<span style="mso-tab-count:1">&nbsp; </span><span class="SpellE">FileDescribe</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">oc_flags</span>:<span style="mso-tab-count:1"> </span>OCF_DONT_NAME_ANON
+/* names shared from FCTRL class */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">需要创建一个文件时、或者说需要创建一个类型为文件的对象时，函数</span><span lang="EN-US">_<span class="SpellE">AllocObject</span>()</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将调用这个结构所提供的函数</span><span class="SpellE"><span lang="EN-US">FileConstructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以构造出代表着这个具体对象的数据结构，并且创建并</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">或打开具体的文件。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">另一方面，</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中还有个指针</span><span class="SpellE"><span lang="EN-US">o_private</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，指向由上述构造函数生成、代表着具体类别对象的数据结构。对于文件类对象，这个数据结构是</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* <span class="GramE">process-access</span>
+file object definition</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - can't be shared, since they have to
+have separate attributes for the file</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="GramE">access</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">struct</span></span></span><span lang="EN-US"> <span class="SpellE"><b>WineFile</b></span> {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">list_head</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">wf_ctllist</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* file control
+list next */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">WineFileControl</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*<span class="SpellE">wf_control</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>/* the file control
+object */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> file<span style="mso-tab-count:
+1"> </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*<span class="SpellE">wf_file</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+the Linux file */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__u32<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">wf_access</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>/* file access mode */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__u32<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">wf_sharing</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span>/* sharing mode
+*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__u32<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">wf_attrs</span>; <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>/*
+file open attributes */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这个数据结构代表着目标文件的一次“打开”。也即一个文件访问上下文。至于没有被打开的文件，则只是存在于磁盘上、或本来就是个外设，在内存中一般不存在相应的数据结构。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">注意这里的指针</span><span class="SpellE"><span lang="EN-US">wf_file</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，这是一个</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针。我们知道，</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">就是</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中代表着已打开文件的数据结构，存在于每个进程的“打开文件表”中的就是</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针。由于</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构所代表的是目标文件的一次打开，所以可以断定</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">所代表的也是一次打开、即一个上下文</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">例如可以通过</span><span class="SpellE"><span lang="EN-US">lseek</span></span><span lang="EN-US">()</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">取得的当前读</span><span lang="EN-US">/</span><span class="GramE"><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">写位置</span></span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，而不是目标文件本身。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">显然，对于已经打开的文件，除了代表着文件访问上下文的数据结构以外，还应该有代表着目标文件本身的数据结构。这就是“文件控制类”的对象，其数据结构是</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">struct</span></span></span><span lang="EN-US"> <span class="SpellE">ObjectClass</span> <span class="SpellE"><b>file_control_objclass</b></span>
+= {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">oc_type</span>:<span style="mso-tab-count:1">&nbsp; </span>"FCTRL",</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">constructor</span>:<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FileControlConstructor</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">reconstructor</span></span>:<span style="mso-tab-count:1"> </span><span class="SpellE">FileControlReconstructor</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">destructor</span>:<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FileControlDestructor</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">poll</span>:<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FileControlPoll</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">describe</span>:<span style="mso-tab-count:1">&nbsp; </span><span class="SpellE">FileControlDescribe</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件控制<span class="GramE">类对象</span>的</span><span class="SpellE"><span lang="EN-US">o_private</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构则是</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* <span class="GramE">file-control</span>
+object definition</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - links together <span class="SpellE">WineFile</span>
+objects that use the same file</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">struct</span></span></span><span lang="EN-US"> <span class="SpellE"><b>WineFileControl</b></span> {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">list_head</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">wfc_accessors</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>/* who's accessing
+this file */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spinlock_t</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">wfc_lock</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>/* govern access to list */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Object<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*<span class="SpellE">wfc_myself</span>;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* my own object
+*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这里的</span><span class="SpellE"><span lang="EN-US">wfc_myself</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指向其本身的</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构。队列头</span><span class="SpellE"><span lang="EN-US">wfc_accessors</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">用来维持一个“访问者”队列，这是一个</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构的队列。</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构通过其队列头</span><span class="SpellE"><span lang="EN-US">wf_ctllist</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">挂入这个队列。</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">与</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">之间是一对多的关系。只要一个文件被打开，内存中就得有一个</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">并且只有一个</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">代表着这个文件的</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，而</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构的数量则取决于对此文件同时共存的上下文个数。在某种意义上，</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是对</span><span lang="EN-US">(Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span lang="EN-US">)<span class="SpellE">struct</span> file</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构的包装和扩充，而</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是对</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">dentry</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构的<span class="GramE">的</span>补充。但是，应该在</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中加以补充的</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件所独有</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">有别于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件属性</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的属性有很多，而这里却什么也没有。所以目前这个数据结构的定义只是提供了一个空的骨架，还有待充实。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">还有值得一提的是，打开目标文件以后的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针</span><span class="SpellE"><span lang="EN-US">wf_file</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">保存在</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中，而不是保存在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">线程</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的打开文件表中。这意味着设计者的意图是另起炉灶、完全由自己来管理</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程所打开的文件，而与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的有关机制分道扬镳。可是这是有可能带来问题的。举个例子来说明这一点：假定一个</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程在运行中发生了问题，或者被别的进程</span><span lang="EN-US">kill</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，从而执行了</span><span class="SpellE"><span lang="EN-US">do_exit</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。在退出运行的过程中，</span><span class="SpellE"><span lang="EN-US">do_exit</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">会扫描该进程的打开文件表，根据表中的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针关闭所有已打开文件、并释放资源。可是现在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">指针不在打开文件表中，因而就享受不到这个待遇。设计者显然意识到这一点，所以在有关的内核代码上打了补丁，让它调用一个外挂函数</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">见前一篇漫谈</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。然而，我们却看到有关的外挂函数尚未实现。对于诸如此类的问题，是尽量利用</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核原有的代码较好？还是另起炉灶较好？应该说是各有利弊，具体的情况需要具体分析，总之是值得推敲的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">介绍了这些背景以后，我们可以阅读</span><span lang="EN-US">kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">所实现的代码了。这里看三个系统调用的代码，分别是</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span class="SpellE"><span lang="EN-US">ReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">、和</span><span class="SpellE"><span lang="EN-US">CloseHandle</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。了解了这三种操作，对于</span><span lang="EN-US">kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件操作的实现就知道了个大概，再进一步阅读其它有关的代码也就不难了。这三个系统调用的函数名与一般</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">文献中所见有所不同，但是这没有什么关系，因为这些函数是内核中不向外界开放</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">导出</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的函数，叫什么都可以。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">先看</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，这个函数根据给定的路径名打开一个文件，如果这个文件尚不存在就加以创建、并且打开。这跟</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span class="SpellE"><span lang="EN-US">sys_open</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">基本上是一致的，只是函数名</span><span class="SpellE"><span lang="EN-US">sys_open</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">突出了“打开”而</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">突出了“创建”。不过，除</span><span class="SpellE"><span lang="EN-US">CreateFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">外，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">另有一个系统调用</span><span class="SpellE"><span lang="EN-US">OpenFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，这很容易让人误以为前者是<span class="GramE">只创建</span>不打开，而后者是只打开<span class="GramE">不</span>创建。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">还有，函数名</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中的“</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”表示</span><span lang="EN-US">ASCII</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，意思是所涉及的字符串</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">例如文件名</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是</span><span lang="EN-US">8</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">位</span><span lang="EN-US">ASCII</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">码。与之相对的是“</span><span lang="EN-US">W</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”，表示</span><span lang="EN-US">16</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">位“宽”字符，或</span><span lang="EN-US">Unicode</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下面就来看代码。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* open a file object, maybe creating if
+non-existent</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">int</span></span></span><span lang="EN-US"> <span class="SpellE"><b>CreateFileA</b></span>(<span class="SpellE">struct</span>
+<span class="SpellE">WineThread</span> *thread, <span class="SpellE">struct</span> <span class="SpellE">WiocCreateFileA</span> *<span class="SpellE">args</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>HANDLE
+<span class="SpellE">hFile</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Object
+*<span class="SpellE">obj</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+must have a name... */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!<span class="SpellE">args</span>-&gt;<span class="SpellE">lpFilename</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> -EINVAL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+...but create the object _without_ a name and attach one later</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>* (need a separate file-access object for
+each <span class="SpellE">CreateFileA</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span> =<b> <span class="SpellE">CreateObject</span></b>(thread,
+&amp;<span class="SpellE">file_objclass</span>, NULL, <span class="SpellE">args</span>,
+&amp;<span class="SpellE">hFile</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (IS_ERR(<span class="SpellE">obj</span>))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> PTR_ERR(<span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"***
+[%d] <span class="SpellE">CreateFileA</span>(%p) = %p\<span class="SpellE">n",current</span>-&gt;<span class="SpellE">pid,obj,hFile</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">objput</span></span><span class="GramE">(</span><span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> (<span class="SpellE">int</span>) <span class="SpellE">hFile</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">CreateFileA</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所实现的系统调用通过数据结构传递参数，这是与</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不同、而带有</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">风格的做法；原因就是</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">通过</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用来“搭载”实现</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用。对于</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，这个数据结构是</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">WiocCreateFileA</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">struct</span></span></span><span lang="EN-US"> <span class="SpellE"><b>WiocCreateFileA</b></span> {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>LPCSTR<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__
+<span class="SpellE">lpFilename</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DWORD<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__
+<span class="SpellE">dwDesiredAccess</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DWORD<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__
+<span class="SpellE">dwShareMode</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>LPSECURITY_ATTRIBUTES<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad_<span class="GramE">_ <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">lpSecurityAttributes</span></span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DWORD<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad_<span class="GramE">_ <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">dwCreationDisposition</span></span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DWORD<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad_<span class="GramE">_ <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">dwFlagsAndAttributes</span></span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>HANDLE<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad_<span class="GramE">_ <span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">hTemplateFile</span></span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可见与</span><span lang="EN-US">open()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的参数有相当大的不同，这里限于篇幅不作介绍了，读者可参阅有关的</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文献和资料。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">程序的主体就是</span><span class="SpellE"><span lang="EN-US">CreateObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。如我在上一篇漫谈中所示，这个函数先调用</span><span lang="EN-US">_<span class="SpellE">AllocObject</span>()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">创建具体的</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">并完成实际目标的创建和</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">或打开操作</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，然后把指向该数据结构的指针安装在所属进程的“打开对象表”中，并返回实质上是数组下标的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。而</span><span lang="EN-US">_<span class="SpellE">AllocObject</span>()</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">则进一步细化，通过由</span><span class="SpellE"><span lang="EN-US">file_objclass</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构所提供的函数指针调用</span><span class="SpellE"><span lang="EN-US">FileConstructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，这才是实质性的操作。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">[<span class="SpellE"><span class="GramE">CreateFileA</span></span><span class="GramE">(</span>)<b> &gt; </b><span class="SpellE">CreateObject</span>() &gt;
+_<span class="SpellE">AllocObject</span>() &gt; <span class="SpellE">FileConstructor</span>()]</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* construct a file access object
+(allocate its private data)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - called by <span class="SpellE">CreateObject</span>
+if the file does not already exists</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - called with the object class lock
+held</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="GramE"><span lang="EN-US">static</span></span><span lang="EN-US"> <span class="SpellE">int</span> <span class="SpellE"><b>FileConstructor</b></span>(Object
+*<span class="SpellE">obj</span>, void *data)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">WiocCreateFileA</span>
+*<span class="SpellE">args</span> = data;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">WineFile</span>
+*<span class="SpellE">wf</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> Object *<span class="SpellE">fco</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">int</span></span> err, flags, mode;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"<span class="SpellE">FileConstructor</span>(%p)\<span class="SpellE">n",obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+construct the file information record */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span> = (<span class="SpellE">struct</span>
+<span class="SpellE">WineFile</span> *) <span class="SpellE"><b>kmalloc</b></span>(<span class="SpellE">sizeof</span>(<span class="SpellE">struct</span> <span class="SpellE">WineFile</span>),GFP_KERNEL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!<span class="SpellE">wf</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> -ENOMEM;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span>-&gt;<span class="SpellE">o_private</span>
+= <span class="SpellE">wf</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span>-&gt;<span class="SpellE">wf_access</span>
+= <span class="SpellE">args</span>-&gt;<span class="SpellE">dwDesiredAccess</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span>-&gt;<span class="SpellE">wf_sharing</span>
+= <span class="SpellE">args</span>-&gt;<span class="SpellE">dwShareMode</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span>-&gt;<span class="SpellE">wf_attrs</span>
+= <span class="SpellE">args</span>-&gt;<span class="SpellE">dwFlagsAndAttributes</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+gain access to the file control object */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">fco</span></span> = <span class="SpellE"><b>AllocObject</b></span>(&amp;<span class="SpellE">file_control_objclass</span>, <span class="SpellE">args</span>-&gt;<span class="SpellE">lpFilename</span>, data);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (IS_ERR(<span class="SpellE">fco</span>)) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">err</span> = PTR_ERR(<span class="SpellE">fco</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">cleanup_priv</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span>-&gt;<span class="SpellE">wf_control</span>
+= <span class="SpellE">fco</span>-&gt;<span class="SpellE">o_private</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_<span class="GramE">lock</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>-&gt;<span class="SpellE">wfc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+make use of the name stored in the file control object */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span>-&gt;<span class="SpellE">o_name.name</span>
+= <span class="SpellE">fco</span>-&gt;<span class="SpellE">o_name.name</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+check that we can share access */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">err</span> = <span class="SpellE"><b>FileCheckSharing</b></span>(<span class="SpellE">args</span>, <span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (err&lt;0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">cleanup_fco</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+determine Linux file open parameters */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">switch</span> (<span class="SpellE">args</span>-&gt;<span class="SpellE">dwCreationDisposition</span>) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+CREATE_NEW:<span style="mso-spacerun:yes">&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>flags = O_CREAT | O_EXCL;<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+CREATE_ALWAYS:<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span>flags = O_CREAT | O_TRUNC;<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+OPEN_ALWAYS:<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>flags = O_CREAT;<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+TRUNCATE_EXISTING: <span style="mso-spacerun:yes">&nbsp;</span>flags = O_TRUNC;<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+OPEN_EXISTING:<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>flags = 0;<span style="mso-tab-count:
+4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">default</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="GramE">err</span> = -EINVAL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">cleanup_fco</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">switch</span> (<span class="SpellE">args</span>-&gt;<span class="SpellE">dwDesiredAccess</span> &amp; (GENERIC_READ|GENERIC_WRITE)) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+0:<span style="mso-tab-count:7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+GENERIC_READ:<span style="mso-spacerun:yes">&nbsp; </span><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>flags
+|= O_RDONLY;<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+GENERIC_WRITE: <span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>flags
+|= O_WRONLY;<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">case</span>
+GENERIC_READ|GENERIC_WRITE:<span style="mso-tab-count:1"> </span>flags |=
+O_RDWR;<span style="mso-tab-count:1"> </span>break;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">mode</span> = (<span class="SpellE">args</span>-&gt;<span class="SpellE">dwFlagsAndAttributes</span> &amp; FILE_ATTRIBUTE_READONLY)? <span class="GramE">0444 :</span> 0666;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+open the Linux file */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span>-&gt;<span class="SpellE">wf_file</span>
+= <span class="SpellE"><b>filp_open</b></span>(<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_name.name</span>, flags, mode);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (IS_ERR(<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>)) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">err</span> = PTR_ERR(<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">cleanup_fco</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+don't permit a directory to be opened */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (S_ISDIR(<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>-&gt;<span class="SpellE">i_mode</span>)) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">err</span> = -EACCES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">cleanup_file</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>list_<span class="GramE">add</span></b></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_ctllist</span>, &amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>-&gt;<span class="SpellE">wfc_accessors</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_<span class="GramE">unlock</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>-&gt;<span class="SpellE">wfc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">kdebug</span></span><span class="GramE">(</span>"<span class="SpellE">FileConstructor</span>: <span class="SpellE">f_count</span>=%d <span class="SpellE">i_count</span>=%d <span class="SpellE">i_wc</span>=%d\n",</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_<span class="GramE">read</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_count</span>),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_<span class="GramE">read</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>-&gt;<span class="SpellE">i_count</span>),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_<span class="GramE">read</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>-&gt;<span class="SpellE">i_writecount</span>));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+clean up on error */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cleanup_file</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">fput</span></span><span class="GramE">(</span><span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cleanup_fco</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span>-&gt;<span class="SpellE">o_name.name</span>
+= NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_<span class="GramE">unlock</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>-&gt;<span class="SpellE">wfc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">objput</span></span><span class="GramE">(</span><span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>-&gt;<span class="SpellE">wfc_myself</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cleanup_priv</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">poison(</span><span class="SpellE">wf,sizeof</span>(<span class="SpellE">struct</span> <span class="SpellE">WineFile</span>));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">kfree</span></span><span class="GramE">(</span><span class="SpellE">wf</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> err;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">FileConstructor</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">简而言之，这个函数的操作主要有这么一些：</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">kmalloc</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">分配一块空间用于</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将调用参数纪录在</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构中。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">AllocObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">找到或创建代表着目标文件的“文件控制”对象。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">FileCheckSharing</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">检查是否允许调用参数所要求的访问模式。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将调用参数所要求的操作模式</span><span lang="EN-US">(CREATE_NEW</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span lang="EN-US">CREATE_ALWAYS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span lang="EN-US">OPEN_ALWAYS</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">等等</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和访问模式</span><span lang="EN-US">(GENERIC_READ</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">GENERIC_WRITE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">换算成</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的相应标志位。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">调用</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核函数</span><span class="SpellE"><span lang="EN-US">filp_open</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以打开目标文件，并将已打开文件的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">结构指针填写在</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构中。</span></p>
+
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:-21.0pt;mso-list:l7 level1 lfo12;
+tab-stops:list 21.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">7.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">list_add</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">将前面创建的</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构挂入相应</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构的</span><span class="SpellE"><span lang="EN-US">wfc_accessors</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">队列中。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">上面</span><span class="SpellE"><span lang="EN-US">AllocObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的主体就是对</span><span lang="EN-US">_<span class="SpellE">AllocObject</span>()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的调用。而</span><span lang="EN-US">_<span class="SpellE">AllocObject</span>()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，则先试图根据类型</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在这里是</span><span class="SpellE"><span lang="EN-US">file_control_objclass</span></span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和对象名找到目标对象，找不到才加以创建。所以“文件控制”对象与“打开文件”对象之间是一对多的关系。如果目标文件尚未被打开，因此需要创建“文件控制”对象的话，就会调用他的构建函数</span><span class="SpellE"><span lang="EN-US">FileControlConstructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">[<span class="SpellE"><span class="GramE">CreateFileA</span></span><span class="GramE">(</span>)<b> &gt; </b><span class="SpellE">CreateObject</span>() &gt;
+<span class="SpellE">AllocObject</span>() &gt; _<span class="SpellE">AllocObject</span>()
+&gt; <span class="SpellE">FileControlConstructor</span>()]</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* construct a file control object
+(allocate its private data)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - called by <span class="SpellE">AllocObject</span>
+if the file does not already exists</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - called with the object class lock
+held</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="GramE"><span lang="EN-US">static</span></span><span lang="EN-US"> <span class="SpellE">int</span><span style="mso-spacerun:yes">&nbsp;
+</span><span class="SpellE"><b>FileControlConstructor</b></span>(Object *<span class="SpellE">obj</span>, void *data)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">WineFileControl</span>
+*<span class="SpellE">wfc</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"<span class="SpellE">FileControlConstructor</span>(%p)\<span class="SpellE">n",obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+construct the file information record */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wfc</span></span> = (<span class="SpellE">struct</span>
+<span class="SpellE">WineFileControl</span> *) <span class="SpellE">kmalloc</span>(<span class="SpellE">sizeof</span>(<span class="SpellE">struct</span> <span class="SpellE">WineFileControl</span>),GFP_KERNEL);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!<span class="SpellE">wfc</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> -ENOMEM;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span>-&gt;<span class="SpellE">o_private</span>
+= <span class="SpellE">wfc</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>INIT_LIST_<span class="GramE">HEAD(</span>&amp;<span class="SpellE">wfc</span>-&gt;<span class="SpellE">wfc_accessors</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">spin_lock_<span class="GramE">init</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wfc</span>-&gt;<span class="SpellE">wfc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wfc</span></span>-&gt;<span class="SpellE">wfc_myself</span>
+= <span class="SpellE">obj</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">FileControlConstructor</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">显然，这个函数毫无特殊之处，而且比前面的</span><span class="SpellE"><span lang="EN-US">FileConstructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">简单多了。这当然是因为许多功能和特性尚未实现的缘故，而并不是本来就应该这么简单。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">回到</span><span class="SpellE"><span lang="EN-US">FileConstructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的代码中，还有</span><span class="SpellE"><span lang="EN-US">FileCheckSharing</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是值得一提的。这个函数根据</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的调用参数</span><span class="SpellE"><span lang="EN-US">dwDesiredAccess</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">dwShareMode</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">检查所要求的访问模式</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">例如</span><span lang="EN-US">GENERIC_READ</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">GENERIC_WRITE)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和共享模式</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">例如</span><span lang="EN-US">FILE_SHARE_READ)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是否与目标文件已有的各个“打开”相容。具体地说，就是扫描目标文件的</span><span class="SpellE"><span lang="EN-US">WineFileControl</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">结构中的</span><span class="SpellE"><span lang="EN-US">wfc_accessors</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">队列，与队列中各个</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">结构中记载的访问模式和共享模式进行比较，以确定是否相容。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">创建并</span><span lang="EN-US">/</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">或打开了文件以后，就可以对文件进行各种操作了，最重要的当然是读</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">写。所以我们就来<span class="GramE">看看读</span>文件操作的实现。在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">上，读文件是通过系统调用</span><span class="SpellE"><span lang="EN-US">NtReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进行的。在</span><span lang="EN-US">Kernel_win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码中，这个系统调用在内核中的实现就是</span><span class="SpellE"><span lang="EN-US">ReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。同样，调用参数都包装在一个数据结构中：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">struct</span></span></span><span lang="EN-US"> <span class="SpellE"><b>WiocReadFile</b></span> {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>HANDLE<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__ <span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">hFile</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>LPVOID<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__ <span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">lpBuffer</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>DWORD<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__ <span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">nNumberOfBytesToRead</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>LPDWORD<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__ <span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">lpNumberOfBytesRead</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>LPOVERLAPPED<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>__pad__
+<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">lpOverlapped</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">};</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">前面三个参数的用途是不言自明的。参数</span><span class="SpellE"><span lang="EN-US">lpNumberOfBytesRead</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">则是个指针，用来返回实际读出的字节数。显然这与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的</span><span class="SpellE"><span lang="EN-US">sys_read</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不同，因为后者是把它作为函数值返回的。另一个参数</span><span class="SpellE"><span lang="EN-US">lpOverlapped</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">也是个指针，用于异步的读文件操作。所谓异步，是指调用者并不</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">睡眠</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等待操作的完成，而是把访问的要求交给内核以后就先返回干别的事，内核在完成操作以后再予以“回叫</span><span lang="EN-US">(callback)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">”。但是</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">尚未实现此项功能。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下面我们看</span><span class="SpellE"><span lang="EN-US">ReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的代码。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">int</span></span></span><span lang="EN-US"> <span class="SpellE"><b>ReadFile</b></span>(<span class="SpellE">struct</span>
+<span class="SpellE">WineThread</span> *thread, <span class="SpellE">struct</span> <span class="SpellE">WiocReadFile</span> *<span class="SpellE">args</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">WineFile</span>
+*<span class="SpellE">wf</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> file *file;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Object
+*<span class="SpellE">obj</span> = NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">int</span></span> ret;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">kdebug</span></span><span class="GramE">(</span>"<span class="SpellE">ReadFile</span>(%<span class="SpellE">p,%p</span>)\<span class="SpellE">n",thread,args</span>-&gt;<span class="SpellE">hFile</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = <span class="SpellE">put_user</span>(<span class="SpellE">ret,args</span>-&gt;<span class="SpellE">lpNumberOfBytesRead</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (ret&lt;0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">cleanup_nobj</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span> = <span class="SpellE"><b>GetObject</b></span>(<span class="SpellE">thread,args</span>-&gt;<span class="SpellE">hFile,&amp;file_objclass</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (IS_ERR(<span class="SpellE">obj</span>))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> PTR_ERR(<span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">wf</span></span> = <span class="SpellE">obj</span>-&gt;<span class="SpellE">o_private</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">file</span> = <span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"***
+[%d] <span class="SpellE">ReadFile</span>(%<span class="SpellE">p,%p,%u</span>)\n",</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">current</span>-&gt;<span class="SpellE">pid,obj</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE"><span class="GramE">args</span></span>-&gt;<span class="SpellE">lpBuffer</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">args</span></span>-&gt;<span class="SpellE">nNumberOfBytesToRead</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+check the file can actually be read */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = -EACCES;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!(<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_access</span>
+&amp; GENERIC_READ))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> cleanup;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = -EBADF;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!(file-&gt;<span class="SpellE">f_mode</span> &amp;
+FMODE_READ))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> cleanup;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = -EINVAL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!file-&gt;<span class="SpellE">f_op</span> || !file-&gt;<span class="SpellE">f_op</span>-&gt;read)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> cleanup;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+check that the area isn't <span class="SpellE">mandatorally</span> locked */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = <span class="SpellE">locks_verify_area</span>(FLOCK_VERIFY_READ,
+file-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">file</span>, file-&gt;<span class="SpellE">f_pos</span>, <span class="SpellE">args</span>-&gt;<span class="SpellE">nNumberOfBytesToRead</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (ret&lt;0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> cleanup;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+try and read */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> =<b> file-&gt;<span class="SpellE">f_op</span>-&gt;read</b>(file,
+<span class="SpellE">args</span>-&gt;<span class="SpellE">lpBuffer</span>, <span class="SpellE">args</span>-&gt;<span class="SpellE">nNumberOfBytesToRead</span>,
+&amp;file-&gt;<span class="SpellE">f_pos</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (ret&lt;0)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> cleanup;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"***
+[%d] <span class="SpellE">ReadFile</span>(%p) read %d bytes\<span class="SpellE">n",current</span>-&gt;<span class="SpellE">pid,obj,ret</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">put_<span class="GramE">user</span></span><span class="GramE">(</span><span class="SpellE">ret,args</span>-&gt;<span class="SpellE">lpNumberOfBytesRead</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">ret</span> = 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">cleanup</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">objput</span></span><span class="GramE">(</span><span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">cleanup_nobj</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"***
+[%d] <span class="SpellE">ReadFile</span>(%p) = %d\<span class="SpellE">n",current</span>-&gt;<span class="SpellE">pid,obj,ret</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> ret;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">ReadFile</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这个函数的逻辑是很简单的：先根据</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">通过当前线程的打开对象表找到目标对象，并进一步找到其</span><span class="SpellE"><span lang="EN-US">WieFile</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构，指向目标文件的</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">结构的指针就保存在</span><span class="SpellE"><span lang="EN-US">WieFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中；然后在</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">Linux</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">文件系统两个层面上检查访问权限；最后通过</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件系统实施具体的读出。这个过程清楚地表明</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是怎样把</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的文件操作嫁接到</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件操作上的。读操作如此，写操作也是大同小异。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">再看“关闭文件”的操作。</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">并没有专门针对文件的“关闭文件”操作，而只有“关闭</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”操作，因为文件只是“对象”中的一种。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">int</span></span></span><span lang="EN-US"> <span class="SpellE"><b>CloseHandle</b></span>(<span class="SpellE">struct</span>
+<span class="SpellE">WineThread</span> *thread, <span class="SpellE">struct</span> <span class="SpellE">WiocCloseHandle</span> *<span class="SpellE">args</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">WineProcess</span>
+*process;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Object
+**<span class="SpellE">ppobj</span>, **<span class="SpellE">epobj</span>, *<span class="SpellE">obj</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">int</span></span> last;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"***
+[%d] <span class="SpellE">CloseHandle</span>(%<span class="SpellE">p,%p</span>)\n",</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">current</span>-&gt;<span class="SpellE">pid,thread,args</span>-&gt;<span class="SpellE">hObject</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+validate the handle */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (<span class="SpellE">args</span>-&gt;<span class="SpellE">hObject</span>&lt;MINHANDLE
+||</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">args</span></span>-&gt;<span class="SpellE">hObject</span>&gt;=MAXHANDLE
+||</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>((__u32<span class="GramE">)<span class="SpellE">args</span></span>-&gt;<span class="SpellE">hObject</span> &amp; (<span class="SpellE">sizeof</span>(Object*)-1))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> -EINVAL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">process</span> = <span class="SpellE">GetWineProcess</span>(thread);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">write_<span class="GramE">lock</span></span><span class="GramE">(</span>&amp;process-&gt;<span class="SpellE">wp_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ppobj</span></span> = (Object**) </span></p>
+
+<p class="MsoNormal" style="text-indent:42.0pt;mso-char-indent-count:4.0"><span lang="EN-US">((char*<span class="GramE">)&amp;</span>process-&gt;<span class="SpellE">wp_handles</span> + (__u32)<span class="SpellE">args</span>-&gt;<span class="SpellE">hObject</span> – <span class="SpellE">sizeof</span>(Object*));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span> = *<span class="SpellE">ppobj</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*<span class="SpellE">ppobj</span> = NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+see if this was the last attachment from this "process" */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">epobj</span></span> = &amp;process-&gt;<span class="SpellE">wp_handles</span>[MAXHANDLES];</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">last</span> = 1;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (<span class="SpellE">obj</span> &amp;&amp; <span class="SpellE">obj</span>-&gt;<span class="SpellE">o_class</span>-&gt;detach) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">for</span> (<span class="SpellE">ppobj</span>=process-&gt;<span class="SpellE">wp_handles</span>; <span class="SpellE">ppobj</span>&lt;<span class="SpellE">epobj</span>; <span class="SpellE">ppobj</span>++) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (*<span class="SpellE">ppobj</span>==<span class="SpellE">obj</span>)
+{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">last</span> = 0; /* yes */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">break</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">write_<span class="GramE">unlock</span></span><span class="GramE">(</span>&amp;process-&gt;<span class="SpellE">wp_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!<span class="SpellE">obj</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> -EBADF;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (last &amp;&amp; <span class="SpellE">obj</span>-&gt;<span class="SpellE">o_class</span>-&gt;detach)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>obj</b></span></span><b>-&gt;<span class="SpellE">o_class</span>-&gt;detach</b>(<span class="SpellE">obj,process</span>);
+/* last attachment gone */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>objput</b></span></span><span class="GramE">(</span><span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span> 0;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">CloseHandle</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">开始时在所属进程的打开对象表中搜索，根据</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">找到目标对象的过程跟前面</span><span class="SpellE"><span lang="EN-US">ReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中调用的</span><span class="SpellE"><span lang="EN-US">GetObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">基本相同，不同的是这里要把打开对象表中的相应表项写成</span><span lang="EN-US">NULL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，以<span class="GramE">断开跟目标</span>对象的<span class="GramE">连系</span>。接下去的意图很明显，就是检查这是否当前进程对目标对象的最后一个</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，即是否对目标对象的最后一个打开，如果是就调用该类对象的</span><span lang="EN-US">detach</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">操作</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">注意代码中的注释“</span><span lang="EN-US">yes</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”意思反了</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。可是，看一下文件<span class="GramE">类对象</span>的数据结构</span><span class="SpellE"><span lang="EN-US">file_objclass</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，就可以发现它并没有提供</span><span lang="EN-US">detach</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数，所以实际上并不会执行。看来，在</span><span lang="EN-US">kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的设计中，关闭文件<span class="GramE">类对象</span>时并不需要</span><span lang="EN-US">detach</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">操作。然而在关闭对象时总得对目标对象做点什么啊，否则其数据结构所占的空间何时才能释放？这就是下面</span><span class="SpellE"><span lang="EN-US">objput</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">要做的事。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">[<span class="SpellE"><span class="GramE">CloseHandle</span></span><span class="GramE">(</span>) &gt; <span class="SpellE">objput</span>()]</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* decrement an object's usage count</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - when usage count reaches zero, the
+object is destroyed</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* - uses the class's <span class="SpellE">rwlock</span>
+to govern access to the count</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="GramE"><span lang="EN-US">void</span></span><span lang="EN-US"> <span class="SpellE"><b>objput</b></span>(Object *<span class="SpellE">obj</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"<span class="SpellE">objput</span>(%p)\<span class="SpellE">n",obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!<span class="SpellE">obj</span>) return;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">ifdef</span>
+OBJECT_MAGIC</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_magic</span>!=OBJECT_MAGIC)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">panic(</span>"bad object magic\n");</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">endif</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">write_<span class="GramE">lock</span></span><span class="GramE">(</span>&amp;<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_class</span>-&gt;<span class="SpellE">oc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (!<span class="SpellE"><b>atomic_dec_and_test</b></span>(&amp;<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_count</span>))</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">goto</span></span> <span class="SpellE">still_in_use</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">ifdef</span>
+OBJECT_MAGIC</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span>-&gt;<span class="SpellE">o_magic</span>
+= 0x01010101;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">#<span class="SpellE">endif</span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>list_<span class="GramE">del</span></b></span><span class="GramE">(</span>&amp;<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_objlist</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>obj</b></span></span><b>-&gt;<span class="SpellE">o_class</span>-&gt;destructor</b>(<span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">write_<span class="GramE">unlock</span></span><span class="GramE">(</span>&amp;<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_class</span>-&gt;<span class="SpellE">oc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+quick insanity check */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (<span class="SpellE">waitqueue_active</span>(&amp;<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_wait</span>)) {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">printk</span></span><span class="GramE">(</span>KERN_ALERT
+"<span class="SpellE">wineserver</span>:"</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>" <span class="GramE">object</span> being deleted is still being waited upon\n");</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">if</span> (<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_name.name</span>)
+<span class="SpellE">putname</span>(<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_name.name</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">poison(</span><span class="SpellE">obj,sizeof</span>(Object));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>kfree</b></span></span><span class="GramE">(</span><span class="SpellE">obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">return</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">still_in_use</span>:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">write_<span class="GramE">unlock</span></span><span class="GramE">(</span>&amp;<span class="SpellE">obj</span>-&gt;<span class="SpellE">o_class</span>-&gt;<span class="SpellE">oc_lock</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">objput</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">首先通过</span><span class="SpellE"><span lang="EN-US">atomic_dec_and_test</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">递减目标对象的引用计数、并测试其结果。如果尚未达到</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，就说明目标对象还有用户，所以就不需要有进一步的处理。否则，要是计数达到了</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，那就要把它从对象队列中删除，并调用该类对象的</span><span lang="EN-US">destructor</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">函数。文件<span class="GramE">类对象</span>的</span><span lang="EN-US">destructor</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">函数是</span><span class="SpellE"><span lang="EN-US">FileDestructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">[<span class="SpellE"><span class="GramE">CloseHandle</span></span><span class="GramE">(</span>) &gt; <span class="SpellE">objput</span>() &gt; <span class="SpellE">FileDestructor</span>()]</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">/*</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>* destroy a file (discard its private
+data)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span>*/</span></p>
+
+<p class="MsoNormal"><span class="GramE"><span lang="EN-US">static</span></span><span lang="EN-US"> void <span class="SpellE"><b>FileDestructor</b></span>(Object *<span class="SpellE">obj</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">struct</span></span> <span class="SpellE">WineFile</span>
+*<span class="SpellE">wf</span> = <span class="SpellE">obj</span>-&gt;<span class="SpellE">o_private</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">kdebug</span></span><span class="GramE">(</span>"<span class="SpellE">FileDestructor</span>: <span class="SpellE">f_count</span>=%d <span class="SpellE">i_count</span>=%d <span class="SpellE">i_wc</span>=%d\n",</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_<span class="GramE">read</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_count</span>),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_<span class="GramE">read</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>-&gt;<span class="SpellE">i_count</span>),</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">atomic_<span class="GramE">read</span></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>-&gt;<span class="SpellE">f_dentry</span>-&gt;<span class="SpellE">d_inode</span>-&gt;<span class="SpellE">i_writecount</span>)</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">ktrace</span></span><span class="GramE">(</span>"<span class="SpellE">FileDestructor</span>(%p)\<span class="SpellE">n",obj</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+discard my association with the Linux file */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>fput</b></span></span><span class="GramE">(</span><span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_file</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+unlink from the controlling object */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>list_<span class="GramE">del</span></b></span><span class="GramE">(</span>&amp;<span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_ctllist</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE">obj</span></span>-&gt;<span class="SpellE">o_name.name</span>
+= NULL;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>objput</b></span></span><span class="GramE">(</span><span class="SpellE">wf</span>-&gt;<span class="SpellE">wf_control</span>-&gt;<span class="SpellE">wfc_myself</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">poison(</span><span class="SpellE">obj</span>-&gt;<span class="SpellE">o_private,sizeof</span>(<span class="SpellE">struct</span> <span class="SpellE">WineFile</span>));</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><span class="GramE"><b>kfree</b></span></span><span class="GramE">(</span><span class="SpellE">obj</span>-&gt;<span class="SpellE">o_private</span>);</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} /* end <span class="SpellE"><span class="GramE">FileDestructor</span></span><span class="GramE">(</span>) */</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">先通过</span><span class="SpellE"><span lang="EN-US">fput</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">切断与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">文件系统中目标文件</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> file</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">结构的<span class="GramE">连系</span>，然后将</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构从目标文件控制对象的队列中删除，再对目标文件控制对象也实施</span><span class="SpellE"><span lang="EN-US">objput</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，最后释放</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构。在释放前还调用了一个函数</span><span lang="EN-US">poison()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，那只是将</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构中的内容破坏掉。注意前面</span><span class="SpellE"><span lang="EN-US">objput</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中也调用了</span><span lang="EN-US">poison()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">kfree</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，那是释放目标对象的</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，而这里释放的是与之配套的</span><span class="SpellE"><span lang="EN-US">WineFile</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">从上述创建文件、读文件、和关闭文件这三个文件操作的代码中，我们可以体会到：“内核差异内核补”、把</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的文件操作嫁接到</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件操作上面、其逻辑和思路是多么简单明了，这与</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">试图在核外解决问题的做法形成了鲜明的对比。虽然本文没有涉及写文件操作的代码，但是读者想必明白那是大同小异。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">更重要的是，与</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">相比，逻辑上和操作上的这种简化和优化必将大大提高文件操作的效率。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">但是，另一方面，我们也应看到，</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">只是朝正确的方向走了<span class="GramE">一</span>小步，迄今所实现的只是系统调用界面的一个很粗糙、很不完整的骨架，离实用还相距甚远，而且许多具体的设计和实现也值得推敲。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的过程中，我们在前面</span><span class="SpellE"><span lang="EN-US">FileConstructor</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码中可以看到调用参数之一</span><span class="SpellE"><span lang="EN-US">lpSecurityAttributes</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">根本就没有被引用；另一个参数</span><span class="SpellE"><span lang="EN-US">dwFlagsAndAttributes</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">虽然被引用了，但只是检查了其中的“只读”标志位。然而这两个调用参数恰恰是很重要的。例如</span><span class="SpellE"><span lang="EN-US">lpSecurityAttributes</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是个指针，应该指向一个</span><span lang="EN-US">SECURITY_ATTRIBUTES</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，</span><span lang="EN-US">Windows DDK</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中有这个数据结构的定义：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span class="GramE"><span lang="EN-US">typedef</span></span></span><span lang="EN-US"> <span class="SpellE">struct</span> _SECURITY_ATTRIBUTES {</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>DWORD <span class="SpellE">nLength</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>LPVOID <span class="SpellE">lpSecurityDescriptor</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>BOOL <span class="SpellE">bInheritHandle</span>;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">} SECURITY_ATTRIBUTES,
+*PSECURITY_ATTRIBUTES, *LPSECURITY_ATTRIBUTES</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">；</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可见，这个数据结构中不光有关于</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">所创建</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">目标文件安全特性的描述，还规定了这个文件本次打开后的上下文是否可遗传。尽管许多应用程序在调用</span><span class="SpellE"><span lang="EN-US">CreateFileA</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时会对此给出一个</span><span lang="EN-US">NULL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">指针，表示采用默认的行为特征，但是有些应用程序却会利用这个参数。忽略这个参数无疑有可能会使那样的应用程序产生一些令人莫名其妙的结果。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">再看</span><span class="SpellE"><span lang="EN-US">dwFlagsAndAttributes</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，这个参数也绝不只是一个</span><span lang="EN-US">FILE_ATTRIBUTE_READONLY</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">标志<span class="GramE">位那么</span>简单。例如其中有个标志位是</span><span lang="EN-US">FILE_FLAG_DELETE_ON_CLOSE</span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，表示在关闭这个文件时应将其删除。再例如</span><span lang="EN-US">FILE_ATTRIBUTE_COMPRESSED</span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">也是个标志位，其作用不言自明。显然，</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">只考虑了其中的</span><span lang="EN-US">FILE_ATTRIBUTE_READONLY</span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，而留下了大量其它的标志位未作处理，甚至在数据结构中也没有为保存这些成分留下空间。实际上，实现那些标志位的工作量可能远远超过</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">迄今已有的实现。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">此外，</span><span class="SpellE"><span lang="EN-US">ReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的参数</span><span class="SpellE"><span lang="EN-US">lpOverlapped</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">也没有被用到，这是用来实现异步操作的。</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核也支持异步文件操作，但是显然这里还没有考虑把它嫁接过去。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">还有特别值得一提的是已打开对象的遗传问题。显然</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对此还没有考虑，因为否则在</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">结构中</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">或者别的什么数据结构中</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">总得有个地方来保存有关的信息。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">最后还要提一下跨进程的</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">复制。我在以前的漫谈中也曾讲到，只有在内核中才能有效率地实现这个功能，但是我们并没有看到</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在做这件事的迹象。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不过，尽管差距还很大，由于</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毕竟是在内核中弥补这些差距，所以原则上并不存在大的障碍，只是还没有来得及做、或者是否准备做的问题。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">实际上，这正是所谓“</span><span lang="EN-US">20/80</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">原理”的一个例证。就文件操作而言，有了打开</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">创建、读、写、移动读写位置这些基本功能，许多应用程序就可以运行了。实现这些基本功能的工作量和复杂性可能只是</span><span lang="EN-US">20%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，而受惠的应用软件可能是</span><span lang="EN-US">80%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。但是要让剩下来的那</span><span lang="EN-US">20%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">也能运行起来，所要求的工作量和复杂性则可能有</span><span lang="EN-US">80%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。所以前面那</span><span lang="EN-US">20%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的工作当然应该优先。然而，想要达到“高度兼容”的目的，是绝不能置那</span><span lang="EN-US">20%</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">于不顾的。就像艺术表现的真实性往往在于细节一样，兼容程度的高低也往往深受细节的影响。而且，有些“细节”考虑甚至可能会导致推翻原来的设计方案。例如关于跨进程复制</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的考虑、关于遗传方式的考虑、就使得</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">实际上不可能达到高度兼容，至少是不可能达到比较有效率的高度兼容</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">更何况还有设备驱动的问题</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。而</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，说是对</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的优化，实质上就是推翻了</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">原来的设计方案。好在</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的工作已经做到了内核中，从大的方面来说，总体的设计方案已经不太会因为某些细节不好实现而被推翻了，但是一些具体的设计、具体的实现、则仍是可以推敲和改变的。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对于兼容内核，</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">要实现的相当于它的一个子集，即其系统调用界面。因此兼容内核理应从</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">吸取营养，甚至直接“拿来”。不过由于</span><span lang="EN-US">Kernel-win32</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">还很很粗糙、很不完整，一些具体的设计和实现也值得推敲，所以能直接“拿来”的大概不多。倒是它对于各种成分的轻重缓急和实现次序方面的考虑，还是值得、也应该借鉴的。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span lang="EN-US"><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 06:04:07 Feb 13, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:43:04 Apr 13, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 113.253
+  exclusion.robots: 0.409
+  exclusion.robots.policy: 0.391
+  RedisCDXSource: 1.007
+  esindex: 0.017
+  LoadShardBlock: 91.465 (3)
+  PetaboxLoader3.resolve: 71.815 (3)
+  PetaboxLoader3.datanode: 71.147 (4)
+  CDXLines.iter: 17.262 (3)
+  load_resource: 84.121
+--><div id="react-toast" class="Toaster"><span class="Toaster__manager-top-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; left: 0px;"></span><span class="Toaster__manager-top" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; top: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-top-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; right: 0px;"></span><span class="Toaster__manager-bottom-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; left: 0px;"></span><span class="Toaster__manager-bottom" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; bottom: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-bottom-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; right: 0px;"></span></div><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>

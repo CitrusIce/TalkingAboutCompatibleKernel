@@ -1,0 +1,884 @@
+
+<!-- saved from url=(0098)https://web.archive.org/web/20130314040534/http://www.longene.org/techdoc/0593755001224577143.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030"><script src="./漫谈Wine之二__files/analytics.js.下载" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app211.us.archive.org';v.server_ms=1239;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./漫谈Wine之二__files/bundle-playback.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./漫谈Wine之二__files/wombat.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.longene.org:80/techdoc/0593755001224577143.html","20130314040534","https://web.archive.org/","web","/_static/",
+	      "1363233934");
+</script>
+<link rel="stylesheet" type="text/css" href="./漫谈Wine之二__files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./漫谈Wine之二__files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://web.archive.org/web/20130314040534/http://www.longene.org/techdoc/0593755001224577143.files/filelist.xml">
+<title>漫谈Wine之二:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tt</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>SYSTEM</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2181</o:TotalTime>
+  <o:Created>2008-10-21T08:19:00Z</o:Created>
+  <o:LastSaved>2008-10-21T08:19:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1099</o:Words>
+  <o:Characters>6268</o:Characters>
+  <o:Lines>52</o:Lines>
+  <o:Paragraphs>14</o:Paragraphs>
+  <o:CharactersWithSpaces>7353</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="ZH-CN" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimHei;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:正文;
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:22.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:22.0pt;}
+h2
+	{mso-style-next:正文;
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:173%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:黑体;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+h3
+	{mso-style-next:正文;
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:173%;
+	mso-pagination:lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:16.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:48769839;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1224260682 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:244842798;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-395799204 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:394008514;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1805962144 621736834 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:57.75pt;
+	mso-level-number-position:left;
+	margin-left:57.75pt;
+	text-indent:-36.75pt;}
+@list l3
+	{mso-list-id:605385220;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-15678300 1152565332 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-text:%1．;
+	mso-level-tab-stop:57.75pt;
+	mso-level-number-position:left;
+	margin-left:57.75pt;
+	text-indent:-36.75pt;}
+@list l4
+	{mso-list-id:973951326;
+	mso-list-type:hybrid;
+	mso-list-template-ids:493242828 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:1004359038;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1363475660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:1078677497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1959094908 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l7
+	{mso-list-id:1780830494;
+	mso-list-type:hybrid;
+	mso-list-template-ids:863028420 -2143931400 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:2112166388;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1168853638 1867657962 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:2136022598;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-64717292 -663221420 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-text:%1．;
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:2146005750;
+	mso-list-type:hybrid;
+	mso-list-template-ids:938895032 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+
+<body lang="ZH-CN" style="tab-interval:21.0pt;text-justify-trim:punctuation"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20130314040534/http://www.longene.org:80/techdoc/0593755001224577143.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.longene.org/techdoc/0593755001224577143.html","20130314040534",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="Section1" style="layout-grid:15.6pt">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书">漫谈<span lang="EN-US">Wine</span>之二<span lang="EN-US">:<o:p></o:p></span></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt">Windows</span></b><b><span style="font-size:22.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的文件操作</span></b><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毛德操</span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对</span><span lang="EN-US">Wine</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的研究不应该孤立地进行，而应该把它放在</span><span lang="EN-US">Windows(</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">注意，除特别说明者以外，都是指</span><span lang="EN-US">WinNT)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">两个操作系统、特别是两个内核的差异的背景下来开展。这里面的道理很简单：如果两个内核没有什么差异，或者二者之间存在着简单的映射，那</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的存在就没有什么意义、没有多大空间了，从而兼容内核也就没有什么必要了。所以，无论是对于</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的研究，还是对于兼容内核的开发，</span><span lang="EN-US"> Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的对比研究有着特别重要的意义。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进一步，我们着眼于两个系统的差异，又特别应该着眼于那些从用户角度“能见度”较高的差异，即对于系统的功能、性能有较大影响的差异，而对于“能见度”较低的差异就可以先放一放、甚至可以不太关心。举例来说，在内存管理方面，即虚存空间的划分与使用、页面的换入</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">换出这些问题上，两个内核也存在着差异。但是这些问题一般而言对功能、性能的影响不大，我们就可以把它放到“运动后期”再来考虑。反之如文件操作则“能见度”相当大，就应该优先考虑。其实，如果我们回顾</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">项目的开发历程，也正好可以看到这么一种策略。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">不过，有兴趣于</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">或兼容内核、或者来我们这个网站走走看看的人，对于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">多少都已经有了一些了解和理解，所以我这里将集中谈论</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的一些特点，并与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中相关的对应物作一些比较；而对</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的这些对应物就不作介绍了，有需要的读者可参考“</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核源代码情景分析”和其它有关著作。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这一篇先讲文件操作。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">我这里讲</span><span lang="EN-US">Window</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在文件操作方面的差异，还不是指它们在文件系统的结构与格式方面的差异，而是指应用软件可以对文件作些什么操作、可以怎样来使用文件和文件系统。也就是说，是指应用软件与操作系统之间的界面、即</span><span lang="EN-US">API</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。事实上，这才是更为根本、更具结构性、因而更显著更重要的差异。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">从表面上看，文件操作不外乎打开文件</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">关闭文件、读、写、移动指针、冲涮缓冲区，还有就是对文件加锁</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">解锁这些操作，变也变不到哪儿去。这里面似乎不会有什么根本的、结构性的差异。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">然而，事情不是那么简单。读者看了我下面列举的一些差异</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">尽管并不详尽</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就会明白这些差异实在并不简单，从而可以对</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的系统结构和开发兼容内核的主张有更深刻的理解。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">一、打开文件号</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">要对一个文件进行操作，就得先打开这个文件，在这一点上两个系统</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是一致的。我们知道，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的“已打开文件号”实际上是用于一个指针数组的下标。与此相似，在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中虽然不称为“已打开文件号”而称为“</span><span lang="EN-US">Handle</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”</span><span lang="EN-US">(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">一般译作“句柄”，但是窃以为不如“把手”更为传神</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，实质上也是指针数组的下标。这样看来，在这一点上似乎也是一致的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">然而有着一个重要的区别。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">作为</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">“已打开文件号”的下标，是用于一个“打开文件表”的下标，每个进程有一个“打开文件表”。这个表</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">数组</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的每一项都代表着一个已经被本进程打开的文件。从</span><span lang="EN-US">Unix</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时代开始，设备被看作文件，因而这或者是文件、或者是设备</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">也包括“虚拟设备”</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">可是，作为</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">“句柄”的下标，却是用于一个“打开对象表”的下标。虽然也是每个进程一个“打开对象表”，但是每个表项所代表的却不仅仅是文件或设备了，它也可以代表着内核中的某个数据结构。所谓对象，就是</span><span lang="EN-US">Object</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，实际上就是“物件”、“东西”的意思，文件是物件，设备是物件，窗口是物件，数据结构也可以是物件。说“数据结构”，读者可能还不太敏感，我们来点具体的：比方说，进程的“进程控制块”、即</span><span lang="EN-US">PCB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，就可以是个被打开的对象。所以，在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的系统调用界面上，既有</span><span class="SpellE"><span lang="EN-US">NtCreateFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，也有</span><span class="SpellE"><span lang="EN-US">NtOpenProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。前者用于打开或创建一个文件，后者则用于打开某个进程、实际上是这个进程的</span><span lang="EN-US">PCB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，如果是创建进程则另有</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。打开某个进程干什么呢？例如，可以进一步通过系统调用</span><span class="SpellE"><span lang="EN-US">NtTerminateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">杀灭这个进程。当然，还可以有别的操作，这留到别的漫谈中再来讨论。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">此外，一个进程同时打开的文件数量毕竟有限，而可能要同时打开的“对象”数量可就大了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这么一比较，二者的差异就明显了。</span><span lang="EN-US">Unix/Linux</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">将设备看作文件，而</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进一步将文件看作对象。显然后者更为一般化，是前者的推广。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">单纯由这个因素引起的功能和性能上的差异也许并不大，但是与别的因素结合在一起所造成的差异就相当可见了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">二、已打开文件的遗传</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">当一个进程创建一个子进程时，可以将它的一些已打开文件“遗传”给所创建的子进程。这样，子进程从一开始就取得了对这些文件的访问权和上下文。这一点上</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">都是如此。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">可是，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核的这种遗传机制却有着与</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">不同的特点，可以归纳成下列要素：</span></p>
+
+<p class="MsoNormal" style="margin-left:57.75pt;text-indent:-36.75pt;mso-list:
+l2 level1 lfo8;tab-stops:list 57.75pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1）<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在打开一个文件</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">实际上是更为广义的“对象”，下同</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的时候，可以说明是否允许将这个已打开文件</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">如果成功打开的话</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">遗传给子进程。</span></p>
+
+<p class="MsoNormal" style="margin-left:57.75pt;text-indent:-36.75pt;mso-list:
+l2 level1 lfo8;tab-stops:list 57.75pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2）<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在创建一个子进程的时候，可以规定是否将那些允许遗传的已打开文件遗传给所创建的子进程。显然，如果需要遗传的话，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核会扫描父进程的已打开对象表，把所有允许遗传的表项复制到子进程的已打开对象表中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">总之，这是有选择的遗传和继承，分两次作出选择。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">那么</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">怎么样？</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中，子进程的创建是分两步走的。第一步是通过系统调用</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">创建一个线程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">共享父进程的用户空间和别的资源</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。然后是第二步，通过系统调用</span><span class="SpellE"><span lang="EN-US">execve</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">使新创建的线程变成进程，开始独立拥有自己的用户空间和别的资源，并开始走自己的路。另一个系统调用</span><span lang="EN-US">system()</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">则只是把</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">execve</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、还有</span><span lang="EN-US">wait4()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、组装在一起，因此实际上还是分两步走。在第一步中的遗传</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">继承是全面的，父进程所有的已打开文件都遗传给子进程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">线程</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。而第二步，其实</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">也支持有选择的遗传和继承。</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核的数据结构</span><span class="SpellE"><span lang="EN-US">struct</span></span><span lang="EN-US"> <span class="SpellE">files_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中有个位图</span><span class="SpellE"><span lang="EN-US">close_on_exec_init</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，位图中的遗传控制位</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">标志位</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">决定着相应的已打开文件在执行</span><span class="SpellE"><span lang="EN-US">execve</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等系统调用时是否关闭、也即遗传与否。应用程序可以通过系统调用</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">设置具体已打开文件的遗传控制位，以决定具体已打开文件的遗传特性。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">于是，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的打开文件系统调用可以这样实现：</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span class="SpellE"><span lang="EN-US">NtOpenFile</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>……</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">fd</span> = open();</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">允许遗传</span><span lang="EN-US">)</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ioctl</span>(<span class="SpellE">fd</span>, FIONCLEX)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">；</span><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//
+exec</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">时不关闭</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ioctl</span>(<span class="SpellE">fd</span>, FIOCLEX)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">；</span><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>////
+exec</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">时关闭</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">显然，至此为止，这样的实现还是很简洁的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">可是且慢，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">允许在创建子进程时再作一次选择。如果选择不遗传，那么所有的已打开文件都不遗传。而</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">却不提供这一次选择，这就是一项比较显著的“核内差异”了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">那么我们怎么来“核外补”呢？似乎可以这样：先让它遗传，然后再在子进程中把已经遗传下来的文件关闭掉。可是，这样的实现就谈不上简洁高效了。问题在于子进程并不知道到底有哪些已打开文件被遗传了下来，所以只好来一个格杀勿论：</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(<span class="SpellE">ch</span>=0; <span class="SpellE">ch</span>&lt; OPEN_MAX; <span class="SpellE">ch</span>++)</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>close(<span class="SpellE">ch</span>);</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这里的</span><span lang="EN-US">OPEN_MAX</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">允许一个进程拥有已打开文件的最大数量，定义为</span><span lang="EN-US">256</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。显然，这个办法不好。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">读者也许会想，如果我们在用户空间也提供一个位图、作为内核中本进程的</span><span class="SpellE"><span lang="EN-US">close_on_exec</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位图在用户空间的副本，再让</span><span class="SpellE"><span lang="EN-US">NtOpenFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在设置内核中的位图时也设置一下用户空间的副本，最后让子进程根据这个副本位图有针对地关闭文件，这样不就可以提高效率吗？然而问题在于：一般而言，父进程用户空间的内容是不能遗传给子进程的。实际上，作为一条准则，凡是要遗传给子进程的东西，就不能只是保存在父进程的用户空间，而必须保存在别的什么地方，一般是内核中或是另一个进程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">例如服务进程</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">相对而言，一个差强人意的实现是在父进程的用户空间保留一个副本，然后这样：</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>……</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不遗传</span><span lang="EN-US">)</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">根据副本</span><span class="SpellE"><span lang="EN-US">close_on_exec</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位图</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">每个允许遗传的已打开文件</span><span lang="EN-US">)</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ioctl</span>(<span class="SpellE">fd</span>, FIOCLEX)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">；</span><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">暂时设置成不遗传</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>fork()</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在父进程中</span><span lang="EN-US">)</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:21.0pt"><span lang="EN-US">if (</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">不遗传</span><span lang="EN-US">)</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:21.0pt"><span lang="EN-US">{<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">还是根据副本</span><span class="SpellE"><span lang="EN-US">close_on_exec</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位图</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">每个允许遗传的已打开文件</span><span lang="EN-US">)</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ioctl</span>(<span class="SpellE">fd</span>, FIONCLEX)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">；</span><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">恢复原状</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>……</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">如果选择不遗传，就在</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">之前先把有关的已打开文件暂时改成不让遗传，然后在</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">以后由父进程把这些已打开文件的遗传控制位复原。这里的问题是允许遗传的已打开文件可能很多，所以可能要调用</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">很多次。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这是个可以差强人意的实现，却还是谈不上简洁和高效。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">我以前说过，在用户空间用</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的系统调用来模拟实现</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的系统调用，就好像是用一种高级语言实现另一种高级语言，这就是一个实例。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">相比之下，如果我们不死守“核外补”，而在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核中设法解决，那就简单多了。至少我们可以在</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中为</span><span class="SpellE"><span lang="EN-US">close_on_exec</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">位图的设置增添一种“批处理”操作，即一次系统调用设置</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">本进程的</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">整个位图。可是，既然动了内核，那又何必又要在用户空间保持一个位图副本，又是前后两次调用</span><span class="SpellE"><span lang="EN-US">ioctl</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">？为</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">增添一个参数，把是否需要遗传的信息直接带下去不就行了？然而</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的调用界面属于标准，是不容许随便更改的。既然如此，为什么不干脆增加一个新的系统调用呢？进一步，既然增加一个新的系统调用，那就应该与</span><span class="SpellE"><span lang="EN-US">NtCreateProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的界面相同。这样，就转到我们“一个框架、两个界面”中的“</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">系统调用界面”的思路上来了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">其实就这一项“核内差异”而言，上述的方法虽不能说简洁，但是至少还可行，下面这个问题就更麻烦了。</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">三、文件访问的跨进程复制</span><span lang="EN-US"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">不仅支持父子进程之间对于已打开文件</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对象</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">有选择的遗传</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">继承，还支持跨进程的复制。这种跨进程复制可以在没有“血缘”关系的进程之间进行。</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">为此提供了一个系统调用</span><span class="SpellE"><span lang="EN-US">NtDuplicateObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，我们看一下它的调用界面：</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTSTATUS</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">NTAPI</span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span lang="EN-US">NtDuplicateObject</span></b></span><span lang="EN-US">(</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>IN HANDLE<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">SourceProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>IN HANDLE<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">SourceHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>IN HANDLE<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">TargetProcessHandle</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>OUT PHANDLE<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">TargetHandle</span><span style="mso-spacerun:yes">&nbsp;
+</span>OPTIONAL,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>IN ACCESS_MASK<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">DesiredAccess</span>,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>IN ULONG<span style="mso-spacerun:yes">&nbsp; </span>Attributes,</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;
+</span>IN ULONG<span style="mso-spacerun:yes">&nbsp; </span>Options);</span></p>
+
+<p class="MsoNormal" style="text-indent:21.75pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.75pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这里</span><span class="SpellE"><span lang="EN-US">SourceProcessHandle</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">TargetProcessHandle</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是源和目标两个已打开进程的句柄，代表着两个进程。调用这个函数的进程本身可以是其中之一，也可以是个“第三者”。</span><span class="SpellE"><span lang="EN-US">SourceHandle</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">是源进程的某个已打开文件</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">对象</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的句柄，这个系统调用的目的就是要把源进程对这个已打开文件的访问通道复制给目标进程，或者说把源进程访问这个文件的上下文复制给目标进程。而</span><span class="SpellE"><span lang="EN-US">TargetHandle</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，则用来返回复制以后该已打开文件在目标进程中的句柄。不过，调用时也可以通过</span><span class="SpellE"><span lang="EN-US">TargetHandle</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对目标句柄</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">打开文件号</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">给出一个建议，所以是</span><span lang="EN-US">OPTIONAL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。至于其余三个参数，则我们在这里并不关心。在典型的应用中有三个进程卷入此项操作，源和目标两个进程、以及执行此项操作的进程、可以是任意进程</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">只要访问权限允许</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，而不必是父子或兄弟。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">我们知道，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">有个系统调用</span><span lang="EN-US">dup()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，但那是在同一个进程的内部。已打开文件的遗传与</span><span lang="EN-US">pipe()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、</span><span lang="EN-US">dup()</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span><span lang="EN-US">close()</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">等系统调用结合在一起，就构成了在父进程与子进程之间建立管道连接、以及输入</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">输出重定向等重要的手段。除父子进程之间以外，进程间的管道连接也可建立于两个兄弟进程之间，但那必须由它们共同的父进程发起和参与。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">相比之下，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">当然也可以通过句柄复制来实现类似的功能，但是更进了一步，因为那可以发生在任意进程之间。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">更重要的是，</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">进程之间管道连接的建立实际上与</span><span lang="EN-US">fork()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">捆绑在一起，只能在创建子进程的过程中建立。一旦子进程业已创建，便无能为力了，因而就子进程而言这是静态的。而</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的句柄复制，却可以在任何时候动态地进行。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">Unix/Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">进程间的管道连接以及输入</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">输出重定向等手段有着重要的意义。对这些手段的运用甚至导致了“</span><span lang="EN-US">Unix</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">程序设计环境”的出现和程序设计方法上的革新。这已经是广大</span><span lang="EN-US">Unix/Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">程序员所熟知的了。而</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的句柄复制显然又前进了一步，加以巧妙运用就可以发展出一些功能更强、灵活性更好的手段。例如，在一个由许多进程通过管道连接构成的一个应用系统中，可以由一个总控进程动态地改变这些进程间的连接，从而改变整个系统的结构和形态（不过，要达到这个目的也并不是非要有句柄复制这个功能不可，但是句柄复制显然很简洁</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">高效）。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对于两个内核在这方面的差异，要在核外加以补偿是很难的。显然，要实现跨进程的句柄复制，调用</span><span class="SpellE"><span lang="EN-US">NtDuplicateObject</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的进程就必须能</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">直接或间接地</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">访问其它两个进程的打开文件表，而打开文件表在内核中。另一方面，只要</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">运行于用户空间，它就只能访问当前进程自己的用户空间，而不能访问别的进程的空间。唯一的例外是通过共享内存，即把一部分页面同时映射到多个进程的空间中。然而用户空间共享内存的使用是不大安全的，因为任何一个应用程序的失误都有可能破坏共享内存中的内容，从而破坏整个系统的运行。可是，即便是共享内存，那也只是用户空间的，根本访问不到内核空间去</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">至于内核空间，本来就是共享的，但只有进入内核以后才能共享</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。由此可见，对于这样的“核内差异”，要“核外补”是不容易的。怎么办呢？</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">那么，可不可以干脆就不补呢？问题在于，既然</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">提供了句柄复制，就会有应用软件来使用它；如果对此不加补偿，就使有些</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">应用软件不能在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">上运行。当然，用到了句柄复制的应用软件到底有多少，那倒是可以调查研究的。所以，这取决于你的目标以及对多种因素的综合考虑。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">不过“核外补”的办法还是有的。那就是采用文件服务器</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">文件服务进程</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的方法。在这种方法里，所有的文件实际上都是由文件服务进程打开和拥有的，而“客户”进程只是名义上打开并拥有各自的那些已打开文件，“客户”进程对文件的操作都要委托服务进程代理。这实质上就是把对于已打开文件的所有权与享用权区分了开来。于是，</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上运行的</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">所有</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">进程的已打开文件全都属于同一个进程、即服务进程所有，“客户”进程并不直接打开任何文件。这样就使各“客户”进程本身在内核中的打开文件表失去了效用</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">从而无需去访问它们</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。而服务进程，则在其用户空间为“客户”进程另行维持各自的幻影式的打开文件表。从效果上看，这是把内核与各进程打开文件表之间的关系和操作往上平移</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">提升到了用户空间，变成服务进程与各“客户”进程的“幻影”打开文件表之间的关系与操作。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">这样一来，应用软件层面的所谓跨进程句柄复制，对于</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核而言却只是服务进程内部的句柄复制，类似于</span><span lang="EN-US">dup()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。这就实现了对于句柄复制的“核外补”。而且，这一来别的问题也可以随之而得倒类似的解决。例如有条件遗传</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">继承的问题，就因为不再使用“客户”进程在内核中的打开文件表，而改成使用由服务进程为各个“客户”进程维持的“幻影”打开文件表，从而变得简单了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">显然，服务进程不失为实现“核外补”的好方法，</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">就是采用了这个方法。但是也有缺点，那就是效率问题。所以，一般在“正常”的情况下，文件服务进程只在下列条件下使用：</span></p>
+
+<p class="MsoNormal" style="margin-left:39.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo9;
+tab-stops:list 39.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在物理上与应用软件分离的文件服务器中。例如，由文件服务器和无盘工作站构成的应用系统就是这样。这样的系统往往是文件操作不太繁重、对性能要求也不高的。另一方面，如果客户端自身带有磁盘，则文件服务器只是用作辅助或后备，因此对效率的要求也不高。</span></p>
+
+<p class="MsoNormal" style="margin-left:39.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo9;
+tab-stops:list 39.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在一些采用微内核的嵌入式系统中。此类嵌入式系统通常很少有文件操作，一般只是在要改变系统配置或运行策略时才需要读</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">写文件，因而文件操作的效率无关紧要。</span></p>
+
+<p class="MsoNormal" style="margin-left:39.0pt;text-indent:-18.0pt;mso-list:l9 level1 lfo9;
+tab-stops:list 39.0pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:
+&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">出于别的考虑、例如集中监控，而愿意以牺牲部分的效率为代价。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">可是，我们的目的是要在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核上高效运行</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">软件，采用文件服务进程的方法在所有这三个方面都与我们的目的背道而驰：</span></p>
+
+<p class="MsoNormal" style="margin-left:57.75pt;text-indent:-36.75pt;mso-list:
+l3 level1 lfo10;tab-stops:list 57.75pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">1．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">我们的应用软件与文件存储器物理上并不分离。明明磁盘就在本地，本可以直接打开、直接操作，却也要舍近求远绕道服务进程。以</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">为例，就好像是把文件服务器和无盘工作站合并放在同一台机器上，降低了效率。</span></p>
+
+<p class="MsoNormal" style="margin-left:57.75pt;text-indent:-36.75pt;mso-list:
+l3 level1 lfo10;tab-stops:list 57.75pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">2．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">在我们的目标应用、即桌面应用中，文件操作是最重要、最频繁的操作，其效率至关重要。</span></p>
+
+<p class="MsoNormal" style="margin-left:57.75pt;text-indent:-36.75pt;mso-list:
+l3 level1 lfo10;tab-stops:list 57.75pt"><!--[if !supportLists]--><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;"><span style="mso-list:Ignore">3．<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">我们不能以牺牲部分的效率作为代价，因为这恰恰成为许多用户不愿意使用</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的一个重要原因。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">正是在这个意义上，我说</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">作为解决方案有点怪。如果我们追究其原因，则问题出在“核内差异核外补”这个策略上。我认为，只要我们死守“核外补”，就实际上很难在</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的基础上再作显著的改进与提高</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">当然，局部的、小幅的改进还是可能的</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。其实，我在另一篇漫谈中将要讲到，在“核外补”方面，</span><span lang="EN-US">Wine</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">已经干得很不错了。但是，如果我们转变策略，来一个“核内差异核内补”，那就“退一步海阔天空”，许多问题都可以高效地解决，而那正是兼容内核的目标之一。</span></p>
+
+</div>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 04:05:34 Mar 14, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:47:16 Apr 13, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 99.363
+  exclusion.robots: 0.175
+  exclusion.robots.policy: 0.169
+  RedisCDXSource: 1.8
+  esindex: 0.007
+  LoadShardBlock: 80.071 (3)
+  PetaboxLoader3.datanode: 136.059 (4)
+  CDXLines.iter: 14.168 (3)
+  load_resource: 1125.744
+  PetaboxLoader3.resolve: 1066.092
+--><div id="react-toast" class="Toaster"><span class="Toaster__manager-top-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; left: 0px;"></span><span class="Toaster__manager-top" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; top: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-top-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; right: 0px;"></span><span class="Toaster__manager-bottom-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; left: 0px;"></span><span class="Toaster__manager-bottom" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; bottom: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-bottom-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; right: 0px;"></span></div><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>

@@ -1,0 +1,1750 @@
+
+<!-- saved from url=(0098)https://web.archive.org/web/20180504053619/http://www.longene.org/techdoc/0890630001224576785.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030"><script src="./漫谈兼容内核之十三__files/analytics.js.下载" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app218.us.archive.org';v.server_ms=566;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./漫谈兼容内核之十三__files/bundle-playback.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./漫谈兼容内核之十三__files/wombat.js.下载" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.longene.org:80/techdoc/0890630001224576785.html","20180504053619","https://web.archive.org/","web","/_static/",
+	      "1525412179");
+</script>
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之十三__files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./漫谈兼容内核之十三__files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://web.archive.org/web/20180504053619/http://www.longene.org/techdoc/0890630001224576785.files/filelist.xml">
+<title>漫谈兼容内核之十三:</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tt</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>SYSTEM</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>4332</o:TotalTime>
+  <o:Created>2008-10-21T08:13:00Z</o:Created>
+  <o:LastSaved>2008-10-21T08:13:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>2686</o:Words>
+  <o:Characters>15315</o:Characters>
+  <o:Lines>127</o:Lines>
+  <o:Paragraphs>35</o:Paragraphs>
+  <o:CharactersWithSpaces>17966</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="ZH-CN" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:隶书;
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@隶书";
+	panose-1:2 1 5 9 6 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:正文;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:144.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+span.docemphasis
+	{mso-style-name:docemphasis;}
+span.programelement
+	{mso-style-name:programelement;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:24791233;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1550824996 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:48769839;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1224260682 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:50546113;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1876741048 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:244842798;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-395799204 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:366641060;
+	mso-list-type:hybrid;
+	mso-list-template-ids:9976446 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:973951326;
+	mso-list-type:hybrid;
+	mso-list-template-ids:493242828 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-tab-stop:60.0pt;
+	mso-level-number-position:left;
+	margin-left:60.0pt;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:1004359038;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1363475660 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:1078677497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1959094908 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l8
+	{mso-list-id:1133668919;
+	mso-list-type:hybrid;
+	mso-list-template-ids:661665496 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:1285228769;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2023748340 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l10
+	{mso-list-id:1336957897;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-494783560 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l11
+	{mso-list-id:1369796687;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2084822378 -895033128 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-text:%1）;
+	mso-level-tab-stop:57.0pt;
+	mso-level-number-position:left;
+	margin-left:57.0pt;
+	text-indent:-36.0pt;}
+@list l12
+	{mso-list-id:1780830494;
+	mso-list-type:hybrid;
+	mso-list-template-ids:863028420 -2143931400 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l12:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l13
+	{mso-list-id:2091805927;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1876741048 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l14
+	{mso-list-id:2146005750;
+	mso-list-type:hybrid;
+	mso-list-template-ids:938895032 -738544912 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l14:level1
+	{mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+
+<body lang="ZH-CN" style="tab-interval:21.0pt;text-justify-trim:punctuation"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20180504053619/http://www.longene.org:80/techdoc/0890630001224576785.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.longene.org/techdoc/0890630001224576785.html","20180504053619",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div class="Section1" style="layout-grid:15.6pt">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+隶书;mso-hansi-font-family:&quot;Times New Roman&quot;">漫谈兼容内核之十三</span></b><b><span lang="EN-US" style="font-size:18.0pt;mso-bidi-font-size:12.0pt;font-family:隶书;
+mso-fareast-font-family:宋体">:</span></b><b><span lang="EN-US" style="font-size:
+22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:22.0pt;mso-bidi-font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">关于“进程挂靠”</span></b><b><span lang="EN-US" style="font-size:22.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">毛德操</span></p>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">上一篇漫谈在介绍</span><span lang="EN-US">APC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">机制时提到：线程在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中运行时有时候需要暂时“挂靠</span><span lang="EN-US">(Attach)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”到别的进程的用户空间，即暂时切换到另一个进程的用户空间。这称为“进程挂靠”，因为用户空间是一个进程最主要的特征。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">显然，要是当前线程的操作与用户空间无关、不需要访问用户空间，那么当时的用户空间到底是谁的用户空间根本就无关紧要，所以这必定发生在与用户空间有关的操作中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">一般而言，如果线程</span><span lang="EN-US">T</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">属于进程</span><span lang="EN-US">P</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，那么当这个线程在内核中运行时的用户空间应该就是进程</span><span lang="EN-US">P</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的用户空间，它也没有必要访问到别的进程的用户空间去。可是，</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">内核允许一些跨进程的操作，特别是跨用户空间的操作，所以有时候就需要把当时的用户空间切换到别的进程的用户空间，或者说挂靠到别的进程。在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中，一个进程实际上只是意味着一个用户</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">地址</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">空间，说一个线程属于某个进程的意思是它使用的是某个特定的用户空间，系统空间则是由所有线程共用的。那么“某个特定的用户空间”是什么意思呢？实质上就是一个具体的页面映射方案，或者一套具体的映射目录和页面表，以及相关的其它数据结构。而所谓“切换到某个进程的用户空间”，就是把这套具体的映射目录和页面表装入</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中的页面映射机构，使其真正发生作用。当然，在完成了有关的操作以后还要回到原来的用户空间，否则就无法从内核“返回”自己的用户空间了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">然而究竟什么时候需要用到进程挂靠呢？最好还是通过一个实例来加以说明。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">前几篇漫谈中说到，在启动一个</span><span lang="EN-US">PE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">格式的</span><span lang="EN-US">EXE</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映像运行时先要创建一个进程，然后把目标</span><span lang="EN-US">EXE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">映像和</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的映像映射到新建进程的用户空间，并且在映射后的</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">映像中找到</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">等函数的入口。在这个过程中，当前线程属于作为创建者的那个进程，或“父进程”，而其部分操作的对象则在新建进程、即“子进程”的用户空间。所以此时就用到了进程挂靠，使当前线程挂靠到新建进程的用户空间。下面我们通过</span><span class="SpellE"><span lang="EN-US">LdrpMapSystemDll</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码来说明为什么有进程挂靠、以及怎样实现进程挂靠。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在创建进程的过程中要调用到一个函数</span><span class="SpellE"><span lang="EN-US">LdrpMapSystemDll</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，其作用是把“系统</span><span lang="EN-US">DLL</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">”、即</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">映射到新建进程的用户空间，并从中获取几个重要函数的入口。当然，这是个内核函数，是在系统空间运行的。</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">NTSTATUS <span class="SpellE"><b>LdrpMapSystemDll</b></span>(HANDLE <span class="SpellE">ProcessHandle</span>,
+PVOID* <span class="SpellE">LdrStartupAddr</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>CHAR<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE">BlockBuffer</span>
+[1024];</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>UNICODE_STRING <span class="SpellE">DllPathname</span>
+= </span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ROS_STRING_INITIALIZER(L"\\SystemRoot\\system32\\ntdll.dll");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>/*</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* Locate and open NTDLL to
+determine <span class="SpellE">ImageBase</span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* and <span class="SpellE">LdrStartup</span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*/</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>InitializeObjectAttributes</b></span>(&amp;<span class="SpellE">FileObjectAttributes</span>, &amp;<span class="SpellE">DllPathname</span>,
+0, NULL, NULL);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>DPRINT("Opening
+NTDLL\n");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>ZwOpenFile</b></span>(&amp;<span class="SpellE">FileHandle</span>, FILE_READ_ACCESS, &amp;<span class="SpellE"><b>FileObjectAttributes</b></span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&amp;<span class="SpellE">Iosb</span>, FILE_SHARE_READ, FILE_SYNCHRONOUS_IO_NONALERT);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>ZwReadFile</b></span>(<span class="SpellE">FileHandle</span>, 0, 0, 0, &amp;<span class="SpellE">Iosb</span>, <span class="SpellE">BlockBuffer</span>, <span class="SpellE">sizeof</span>(<span class="SpellE">BlockBuffer</span>), 0, 0);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">DosHeader</span>
+= (PIMAGE_DOS_HEADER) <span class="SpellE">BlockBuffer</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">NTHeaders</span>
+= (PIMAGE_NT_HEADERS) (<span class="SpellE">BlockBuffer</span> + <span class="SpellE">DosHeader</span>-&gt;<span class="SpellE">e_lfanew</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . . </span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">ImageBase</span>
+= <span class="SpellE">NTHeaders</span>-&gt;<span class="SpellE">OptionalHeader.ImageBase</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">ImageSize</span>
+= <span class="SpellE">NTHeaders</span>-&gt;<span class="SpellE">OptionalHeader.SizeOfImage</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>/*</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* Create a section for NTDLL</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*/</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>DPRINT("Creating section\n");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>ZwCreateSection</b></span>(&amp;<span class="SpellE">NTDllSectionHandle</span>, SECTION_ALL_ACCESS, NULL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>NULL, PAGE_READWRITE, SEC_IMAGE | SEC_COMMIT, <span class="SpellE"><b>FileHandle</b></span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>ZwClose</b></span>(<span class="SpellE">FileHandle</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>/*</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* Map the NTDLL into the
+process</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*/</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp; </span><span style="mso-spacerun:yes">&nbsp;</span><span class="SpellE">ViewSize</span> = 0;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">ImageBase</span>
+= 0;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>ZwMapViewOfSection</b></span>(<span class="SpellE">NTDllSectionHandle</span>, <span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(PVOID*)&amp;<span class="SpellE">ImageBase</span>, 0, <span class="SpellE">ViewSize</span>,
+NULL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">ViewSize</span>, 0, MEM_COMMIT, PAGE_READWRITE);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">CurrentProcess</span>
+= <span class="SpellE">PsGetCurrentProcess</span>();</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>if (Process != <span class="SpellE">CurrentProcess</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>DPRINT("Attaching to Process\n");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KeAttachProcess</b></span>(&amp;Process-&gt;<span class="SpellE">Pcb</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>/*</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>* retrieve <span class="SpellE">ntdll's</span> startup address</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>*/<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>if (<span class="SpellE">SystemDllEntryPoint</span>
+== NULL)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">RtlInitAnsiString</span> (&amp;<span class="SpellE">ProcedureName</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp; </span>"<span class="SpellE"><b>LdrInitializeThunk</b></span>");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>LdrGetProcedureAddress</b></span><b> </b>((PVOID)<span class="SpellE">ImageBase</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&amp;<span class="SpellE">ProcedureName</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&amp;<span class="SpellE">SystemDllEntryPoint</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . .
+.</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*<span class="SpellE">LdrStartupAddr</span> = <span class="SpellE">SystemDllEntryPoint</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>if (Process != <span class="SpellE">CurrentProcess</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KeDetachProcess</b></span>();</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">ObDereferenceObject</span>(Process);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">ZwClose</span>(<span class="SpellE">NTDllSectionHandle</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>return(STATUS_SUCCESS);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">先看一下大致的流程：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">InitializeObjectAttributes</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">设置好一个</span><span lang="EN-US">OBJECT_ATTRIBUTES</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构</span><span class="SpellE"><span lang="EN-US">FileObjectAttributes</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">；然后用这个数据结构作为参数之一，通过系统调用</span><span class="SpellE"><span lang="EN-US">ZwOpenFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">打开目标文件</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。之所以如此，是因为</span><span class="SpellE"><span lang="EN-US">ZwOpenFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">并不接受文件名作为参数，而必须把文件名放在</span><span lang="EN-US">OBJECT_ATTRIBUTES</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构中。当然，这个数据结构中还有别的信息。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">ZwReadFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">读入目标文件的开头</span><span lang="EN-US">1K</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">字节，目的在于获取其</span><span class="SpellE"><span lang="EN-US">DosHeader</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">NTHeaders</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，进而获取其</span><span class="SpellE"><span lang="EN-US">NTHeaders</span></span><span lang="EN-US">-&gt;<span class="SpellE">OptionalHeader</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的</span><span class="SpellE"><span lang="EN-US">ImageBase</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">SizeOfImage</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">两项信息，前者是映像在文件中的起点，后者是映像的大小。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">ZwCreateSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为目标文件建立</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">并打开</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">一个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对象。从逻辑的意义上，这个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对象就与目标文件的内容划上了等号。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">至此，目标文件已经可以关闭，因为不再需要通过文件读写等常规的文件操作访问这个文件了。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">ZwMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">将已建立的</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、即目标文件的内容映射到目标进程的用户空间。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">将当前线程挂靠到目标进程。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">从已经映射到目标进程用户空间的映像中获取函数</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的入口地址。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">再通过</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">获取若干其它函数的入口地址。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">通过</span><span class="SpellE"><span lang="EN-US">KeDetachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">撤销挂靠，回到当前线程所属的进程。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo14;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">关闭所创建的</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对象。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">首先要说明，函数名以</span><span class="SpellE"><span lang="EN-US">Zw</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">开头的函数实际上就是以</span><span class="SpellE"><span lang="EN-US">Nt</span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">开头的对应系统调用。以打开文件为例，在用户空间调用时要用</span><span class="SpellE"><span lang="EN-US">NtOpenFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，在内核中调用则用</span><span class="SpellE"><span lang="EN-US">ZwOpenFile</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">显然，这个流程中的进程挂靠、即</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">KeDetachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">、是因为要执行</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">而产生的需求。对此我们很自然地就会有两个问题：首先，为什么</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">需要进程挂靠？其次，既然</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">需要，那为什么</span><span class="SpellE"><span lang="EN-US">ZwMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">倒又不需要？二者不是都涉及目标进程的用户空间吗？</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">要回答这两个问题，就得近一步深入到这两个函数的代码中。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">如前所述，系统调用</span><span class="SpellE"><span lang="EN-US">NtCreateSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在内核中创建一个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对象，并使这个对象与一个</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">已经打开的</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">目标文件挂上勾，此后就可以通过另一个系统调用</span><span class="SpellE"><span lang="EN-US">NtMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">将目标文件的部分或全部内容映射到某个用户空间</span><span lang="EN-US">(Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">可以为多个进程共享，分别映射到不同空间的相同或不同地址上</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">下面先看</span><span class="SpellE"><span lang="EN-US">NtMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">[<span class="SpellE">LdrpMapSystemDll</span>() &gt; <span class="SpellE">NtMapViewOfSection</span>()]</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">NTSTATUS STDCALL</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span class="SpellE"><b><span lang="EN-US">NtMapViewOfSection</span></b></span><span lang="EN-US">(IN HANDLE <span class="SpellE">SectionHandle</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN HANDLE <span class="SpellE">ProcessHandle</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN OUT PVOID* <span class="SpellE">BaseAddress</span><span style="mso-spacerun:yes">&nbsp; </span>OPTIONAL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN ULONG <span class="SpellE">ZeroBits</span><span style="mso-spacerun:yes">&nbsp; </span>OPTIONAL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN ULONG <span class="SpellE">CommitSize</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>IN
+OUT PLARGE_INTEGER <span class="SpellE">SectionOffset</span><span style="mso-spacerun:yes">&nbsp; </span>OPTIONAL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN OUT PULONG <span class="SpellE">ViewSize</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN SECTION_INHERIT <span class="SpellE">InheritDisposition</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN ULONG <span class="SpellE">AllocationType</span><span style="mso-spacerun:yes">&nbsp; </span>OPTIONAL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>IN ULONG Protect)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;
+</span>PVOID <span class="SpellE">SafeBaseAddress</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>LARGE_INTEGER <span class="SpellE">SafeSectionOffset</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>ULONG <span class="SpellE">SafeViewSize</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>PSECTION_OBJECT Section;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>PEPROCESS Process;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>KPROCESSOR_MODE <span class="SpellE">PreviousMode</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>PMADDRESS_SPACE <span class="SpellE">AddressSpace</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>NTSTATUS Status = STATUS_SUCCESS;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">PreviousMode</span>
+= <span class="SpellE">ExGetPreviousMode</span>();</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>if(<span class="SpellE">PreviousMode</span>
+!= <span class="SpellE">KernelMode</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>else</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SafeBaseAddress</span>
+= (<span class="SpellE">BaseAddress</span> != NULL ? *<span class="SpellE">BaseAddress</span>
+: NULL);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SafeSectionOffset.QuadPart</span>
+= (<span class="SpellE">SectionOffset</span> != NULL ? <span class="SpellE">SectionOffset</span>-&gt;<span class="SpellE">QuadPart</span> : 0);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SafeViewSize</span>
+= (<span class="SpellE">ViewSize</span> != NULL ? *<span class="SpellE">ViewSize</span>
+: 0);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">AddressSpace</span>
+= &amp;Process-&gt;<span class="SpellE">AddressSpace</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>MmMapViewOfSection</b></span>(Section,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Process,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(<span class="SpellE">BaseAddress</span> != NULL ? &amp;<span class="SpellE">SafeBaseAddress</span> : NULL),</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ZeroBits</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">CommitSize</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(<span class="SpellE">SectionOffset</span> != NULL ? &amp;<span class="SpellE">SafeSectionOffset</span> : NULL),</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(<span class="SpellE">ViewSize</span> != NULL ? &amp;<span class="SpellE">SafeViewSize</span>
+: NULL),</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">InheritDisposition</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">AllocationType</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Protect);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>return(Status);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">参数</span><span class="SpellE"><span lang="EN-US">SectionHandle</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">代表着一个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对象，</span><span class="SpellE"><span lang="EN-US">ProcessHandle</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">则代表着一个用户空间，</span><span class="SpellE"><span lang="EN-US">BaseAddress</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是要求装入的地址，而</span><span class="SpellE"><span lang="EN-US">SectionOffset</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是目标文件中的起点。还有个参数</span><span lang="EN-US">Protect</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">是对映射后的内存区间</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">而不是目标文件</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的访问保护，在这里是</span><span lang="EN-US">PAGE_READWRITE</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">显然，实际的操作是由</span><span class="SpellE"><span lang="EN-US">MmMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">完成的，函数名中的前缀</span><span lang="EN-US">Mm</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">表示这个函数属于内存管理。</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">[<span class="SpellE">LdrpMapSystemDll</span>() &gt; <span class="SpellE">NtMapViewOfSection</span>()
+&gt; <span class="SpellE">MmMapViewOfSection</span>()]</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">NTSTATUS STDCALL</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span class="SpellE"><b><span lang="EN-US">MmMapViewOfSection</span></b></span><span lang="EN-US">(IN PVOID <span class="SpellE">SectionObject</span>, ……)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>PMADDRESS_SPACE <span class="SpellE">AddressSpace</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Section = (PSECTION_OBJECT)<span class="SpellE">SectionObject</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>AddressSpace</b></span><b>
+= &amp;Process-&gt;<span class="SpellE">AddressSpace</span></b>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>MmLockAddressSpace</b></span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>if (Section-&gt;<span class="SpellE">AllocationAttributes</span> &amp; SEC_IMAGE)<o:p></o:p></b></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ULONG <span class="SpellE">i</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ULONG <span class="SpellE">NrSegments</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ULONG_PTR <span class="SpellE">ImageBase</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ULONG <span class="SpellE">ImageSize</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PMM_IMAGE_SECTION_OBJECT <span class="SpellE">ImageSectionObject</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PMM_SECTION_SEGMENT <span class="SpellE">SectionSegments</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ImageSectionObject</span> = Section-&gt;<span class="SpellE">ImageSection</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SectionSegments</span> = <span class="SpellE">ImageSectionObject</span>-&gt;Segments;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">NrSegments</span> = <span class="SpellE">ImageSectionObject</span>-&gt;<span class="SpellE">NrSegments</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ImageBase</span> = (ULONG_PTR)*<span class="SpellE">BaseAddress</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (<span class="SpellE">ImageBase</span> == 0)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ImageBase</span> = <span class="SpellE">ImageSectionObject</span>-&gt;<span class="SpellE">ImageBase</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ImageSize</span> = 0;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (<span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt; <span class="SpellE">NrSegments</span>;
+<span class="SpellE">i</span>++)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (!(<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].Characteristics
+&amp; IMAGE_SCN_TYPE_NOLOAD))</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ULONG_PTR <span class="SpellE">MaxExtent</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MaxExtent</span> = (ULONG_PTR)<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].<span class="SpellE">VirtualAddress</span> +</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].Length;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ImageSize</span> = max(<span class="SpellE">ImageSize</span>,
+<span class="SpellE">MaxExtent</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* Check there
+is enough space to map the section at that point. */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (<span class="SpellE"><b>MmLocateMemoryAreaByRegion</b></span>(<span class="SpellE">AddressSpace</span>,
+(PVOID)<span class="SpellE">ImageBase</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PAGE_ROUND_UP(<span class="SpellE">ImageSize</span>)) != NULL)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>/* Otherwise find a gap to map the image. */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ImageBase</span> = (ULONG_PTR)<span class="SpellE">MmFindGap</span>(<span class="SpellE">AddressSpace</span>, </span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PAGE_ROUND_UP(<span class="SpellE">ImageSize</span>), PAGE_SIZE, FALSE);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (<span class="SpellE">i</span> = 0; <span class="SpellE">i</span> &lt; <span class="SpellE">NrSegments</span>;
+<span class="SpellE">i</span>++)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (!(<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].Characteristics
+&amp; IMAGE_SCN_TYPE_NOLOAD))</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PVOID <span class="SpellE">SBaseAddress</span> = (PVOID)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>((char*)<span class="SpellE">ImageBase</span>
++ (ULONG_PTR)<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].<span class="SpellE">VirtualAddress</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MmLockSectionSegment</span>(&amp;<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>]);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Status = <span class="SpellE"><b>MmMapViewOfSegment</b></span>(Process,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Section,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>],</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">SBaseAddress</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].Length,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>].Protection,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>0,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>FALSE);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">MmUnlockSectionSegment</span>(&amp;<span class="SpellE">SectionSegments</span>[<span class="SpellE">i</span>]);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*<span class="SpellE">BaseAddress</span> = (PVOID)<span class="SpellE">ImageBase</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>else</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (<span class="SpellE">SectionOffset</span> == NULL)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ViewOffset</span> = 0;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ViewOffset</span> = <span class="SpellE">SectionOffset</span>-&gt;<span class="SpellE">u.LowPart</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if ((*<span class="SpellE">ViewSize</span>) == 0)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(*<span class="SpellE">ViewSize</span>) = Section-&gt;<span class="SpellE">MaximumSize.u.LowPart</span>
+- <span class="SpellE">ViewOffset</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else if (((*<span class="SpellE">ViewSize</span>)+<span class="SpellE">ViewOffset</span>) &gt;
+Section-&gt;<span class="SpellE">MaximumSize.u.LowPart</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(*<span class="SpellE">ViewSize</span>) = Section-&gt;<span class="SpellE">MaximumSize.u.LowPart</span>
+- <span class="SpellE">ViewOffset</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">MmLockSectionSegment</span>(Section-&gt;Segment);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>MmMapViewOfSegment</b></span>(Process,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Section,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Section-&gt;Segment,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">BaseAddress</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*<span class="SpellE">ViewSize</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Protect,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ViewOffset</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(<span class="SpellE">AllocationType</span> &amp; MEM_TOP_DOWN));</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">MmUnlockSectionSegment</span>(Section-&gt;Segment);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>MmUnlockAddressSpace</b></span>(<span class="SpellE">AddressSpace</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>return(STATUS_SUCCESS);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">我把这段程序留给读者自己阅读，只是略加提示：</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对象所代表的目标文件分为两大类，一类是可执行映像文件，一类是不同文件。可执行映像文件的映射比普通文件要复杂一些，因为映像文件中一般有好多不同的段，需要映射到不同的地址上去，这就是代码中有两个</span><span lang="EN-US">for</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">循环的原因。每个段的映射则都是由</span><span class="SpellE"><span lang="EN-US">MmMapViewOfSegment</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">完成的。</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">[<span class="SpellE">LdrpMapSystemDll</span>() &gt; <span class="SpellE">NtMapViewOfSection</span>()
+&gt; </span></p>
+
+<p class="MsoNormal" style="text-indent:10.5pt;mso-char-indent-count:1.0;
+tab-stops:144.0pt"><span class="SpellE"><span lang="EN-US">MmMapViewOfSection</span></span><span lang="EN-US">() &gt; <span class="SpellE">MmMapViewOfSegment</span>()]</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">NTSTATUS STATIC</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span class="SpellE"><b><span lang="EN-US">MmMapViewOfSegment</span></b></span><span lang="EN-US">(PEPROCESS
+Process,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PMADDRESS_SPACE <span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PSECTION_OBJECT Section,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PMM_SECTION_SEGMENT Segment,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PVOID* <span class="SpellE">BaseAddress</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ULONG <span class="SpellE">ViewSize</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ULONG Protect,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ULONG <span class="SpellE">ViewOffset</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>BOOL <span class="SpellE">TopDown</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>PMEMORY_AREA <span class="SpellE">MArea</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>NTSTATUS Status;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>KIRQL <span class="SpellE">oldIrql</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>PHYSICAL_ADDRESS <span class="SpellE">BoundaryAddressMultiple</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">BoundaryAddressMultiple.QuadPart</span>
+= 0;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>Status = <span class="SpellE"><b>MmCreateMemoryArea</b></span>(Process,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">AddressSpace</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>MEMORY_AREA_SECTION_VIEW,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">BaseAddress</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ViewSize</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Protect,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">MArea</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>FALSE,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">TopDown</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">BoundaryAddressMultiple</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">KeAcquireSpinLock</span>(&amp;Section-&gt;<span class="SpellE">ViewListLock</span>, &amp;<span class="SpellE">oldIrql</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>InsertTailList</b></span>(&amp;Section-&gt;<span class="SpellE">ViewListHead</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;<span class="SpellE">MArea</span>-&gt;<span class="SpellE">Data.SectionData.ViewListEntry</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">KeReleaseSpinLock</span>(&amp;Section-&gt;<span class="SpellE">ViewListLock</span>, <span class="SpellE">oldIrql</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">ObReferenceObjectByPointer</span>((PVOID)Section,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SECTION_MAP_READ,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>NULL,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ExGetPreviousMode</span>());</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">MArea</span>-&gt;<span class="SpellE">Data.SectionData.Segment</span> = Segment;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">MArea</span>-&gt;<span class="SpellE">Data.SectionData.Section</span> = Section;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">MArea</span>-&gt;<span class="SpellE">Data.SectionData.ViewOffset</span> = <span class="SpellE">ViewOffset</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE">MArea</span>-&gt;<span class="SpellE">Data.SectionData.WriteCopyView</span> = FALSE;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="SpellE"><b>MmInitialiseRegion</b></span>(&amp;<span class="SpellE">MArea</span>-&gt;<span class="SpellE">Data.SectionData.RegionListHead</span>,</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">ViewSize</span>, 0, Protect);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>return(STATUS_SUCCESS);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这里</span><span class="SpellE"><span lang="EN-US">MmCreateMemoryArea</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的作用是为一个段的影射分配虚存区间：</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">按给定的地址要求在目标进程的用户空间找到足够大的“空隙”</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">如果并非必须映射在给定的地址，就找一个足够大的空隙，</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">从这个空隙中划出一块给定大小的区间</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">分配</span><span lang="EN-US">/</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">创建一个</span><span lang="EN-US">MEMORY_AREA</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构，并将其挂入相应的</span><span class="SpellE"><span lang="EN-US">AddressSpace</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">队列。</span></p>
+
+<p class="MsoNormal" style="margin-left:42.0pt;text-indent:-21.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 42.0pt left 144.0pt"><!--[if !supportLists]--><span lang="EN-US" style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings"><span style="mso-list:Ignore">l<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span lang="EN-US">MEMORY_AREA</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构除可挂入</span><span class="SpellE"><span lang="EN-US">AddressSpace</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">队列外还可挂入</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对象中的队列，这样就把内存区间、</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对象、以及目标文件结合了起来。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">对于了解</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">内核中存储管理和共享内存区映射的读者，这些操作和过程应该是容易理解的。但是我在这里要说的重点却并不在于这个过程本身，而在于这个过程中并无进程挂靠。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">读者或许已经注意到，上面在以</span><span class="SpellE"><span lang="EN-US">NtMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为入口的整个流程中，我们并没有看到对于</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的调用、即并没有进行进程挂靠。虽然这是在父进程的上下文中把一个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、即“区间”、影射到子进程的用户空间，但是却并不需要挂靠到子进程，这是为什么呢？要回答这个问题，我们先要搞清：所谓一个进程的用户空间是怎么体现的。简而言之，这主要体现为“一本账、一个表”。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">首先，一个“用户空间”是一大片虚拟地址空间，在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中是</span><span lang="EN-US">3GB</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">、在</span><span lang="EN-US">Windows</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中是</span><span lang="EN-US">2GB</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的地址空间。但是这么大一片虚拟地址空间并不是都已分配使用，都已经映射到了物理页面、或是某个映射文件或盘区。所以就需要有个账本，记下哪一些虚拟地址区间已经分配使用了，这就是“一本账”。在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核中，这个账本就是以</span><span class="SpellE"><span lang="EN-US">mm_struct</span></span><span lang="EN-US"> (</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在上面的代码中是</span><span lang="EN-US">MADDRESS_SPACE)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为根的一整套数据结构，在“进程控制块”</span><span class="SpellE"><span lang="EN-US">task_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">中有个指针指向本进程的</span><span class="SpellE"><span lang="EN-US">mm_struct</span></span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在上面的代码中是</span><span lang="EN-US">&amp;Process-&gt;<span class="SpellE">AddressSpace</span>)</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。由于已分配使用</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">而尚未释放</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的虚拟地址区间一般都是不连续的，例如用于堆栈的区间和可执行代码的区间就不会连续，所以从数据结构的角度看这“账本”的具体内容总是一个链表，链表中的每一个结点都代表着一个已分配使用的地址区间，在</span><span lang="EN-US">Linux</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">内核中这就是</span><span class="SpellE"><span lang="EN-US">vm_area_struct</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">数据结构</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在上面的代码中是</span><span lang="EN-US">MEMORY_AREA</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">数据结构</span><span lang="EN-US">)</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。在这一方面，不同操作系统的内核在具体的数据结构和程序实现上可以有所不同，但是大体上都是一样的，变不出太多的花样。所以，要把一个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">映射到一个进程的用户空间，首先是对这“账本”的操作。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">但是，光有这账本还不够，因为这账本并不直接对</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中的页面映射部件</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">起作用，所以还需要有一个用于</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的页面映射表，这就是“一个表”。所谓挂靠到某个进程，就是把这个进程的页面映射表装入</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，使得访问用户空间的某个地址时使用的是目标进程的页面映射表。当然，在任何特定的时刻，</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">中只能有一个页面映射表，既然装入了目标进程的页面映射表，就离开了原来进程的页面映射表。但是，不管是什么进程的页面映射表，他们的系统空间部分、即内核部分、则都是共同的。由此可见，“进程挂靠”</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和恢复</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">只能在内核中进行，而不能在用户空间进行。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这里还要注意，对于页面映射表的“准备”和“使用”是两码事，建立映射时所涉及的是准备，而把准备好了的页面映射表装入</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">才开始了它的使用。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">所以，</span><span class="SpellE"><span lang="EN-US">ZwMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">之所以不需要挂靠到目标进程，是因为建立映射的过程只是账面的操作，而并不真的要去访问</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">目标进程</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">用户空间的某个地址。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">按理说，既然是把一个</span><span lang="EN-US">Section</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">映射到目标进程的用户空间，就应该同时完成对账本和映射表的操作。但是</span><span class="SpellE"><span lang="EN-US">ReactOS</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的代码把这两种操作分离了开来，在</span><span class="SpellE"><span lang="EN-US">NtMapViewOfSection</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中只是对账本的操作，而把对映射表的操作推迟了</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">下面就会看到</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，那当然也是可以的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">至此，</span><span lang="EN-US">ntdll.dll</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的映射已经完成，回到</span><span class="SpellE"><span lang="EN-US">LdrpMapSystemDll</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的代码中，下一步是要从这映像中获取</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">等函数的入口地址，这时候就需要实施进程挂靠了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">[<span class="SpellE">LdrpMapSystemDll</span>() &gt; <span class="SpellE">KeAttachProcess</span>()]</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">VOID <span style="mso-spacerun:yes">&nbsp;</span>STDCALL</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span class="SpellE"><b><span lang="EN-US">KeAttachProcess</span></b></span><span lang="EN-US">(PKPROCESS Process)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>KIRQL <span class="SpellE">OldIrql</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>PKTHREAD Thread = <span class="SpellE">KeGetCurrentThread</span>();</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>DPRINT("<span class="SpellE">KeAttachProcess</span>: %x\n", Process);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Make sure that we are in
+the right page directory */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>UpdatePageDirs</b></span>(Thread,
+Process);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Lock Dispatcher */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">OldIrql</span>
+= <span class="SpellE">KeAcquireDispatcherDatabaseLock</span>();</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Check if the Target
+Process is already attached */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if (Thread-&gt;<span class="SpellE">ApcState.Process</span> == Process || </span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Thread-&gt;<span class="SpellE">ApcStateIndex</span> != <span class="SpellE">OriginalApcEnvironment</span>) {</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>DPRINT("Process already Attached. <span class="SpellE">Exitting</span>\n");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">KeReleaseDispatcherDatabaseLock</span>(<span class="SpellE">OldIrql</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>} else { </span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KiAttachProcess</b></span>(Thread, Process, <span class="SpellE">OldIrql</span>,
+&amp;Thread-&gt;<span class="SpellE">SavedApcState</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">前面的映射只是记在了新建进程的账本上，却没有改变它的页面映射表，这里的</span><span class="SpellE"><span lang="EN-US">UpdatePageDirs</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">就来处理这页面映射表了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这里</span><span class="SpellE"><span lang="EN-US">KeAcquireDispatcherDatabaseLock</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的作用是通过提高中断优先级达到禁止线程调度的目的。因为下面的</span><span class="SpellE"><span lang="EN-US">KiAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">即将实现用户空间的切换，在这个当口上是不能允许线程调度的。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">下面就是“挂靠”的实施了。</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">[<span class="SpellE">KeAttachProcess</span>() &gt; <span class="SpellE">KiAttachProcess</span>()]</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">VOID STDCALL</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span class="SpellE"><b><span lang="EN-US">KiAttachProcess</span></b></span><span lang="EN-US">(PKTHREAD Thread,
+PKPROCESS Process, </span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span>KIRQL <span class="SpellE">ApcLock</span>,
+PRKAPC_STATE <span class="SpellE">SavedApcState</span>)</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>. . . . . .</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Increase Stack Count */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>Process-&gt;<span class="SpellE">StackCount</span>++;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Swap the APC Environment
+*/</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KiMoveApcState</b></span>(&amp;Thread-&gt;<span class="SpellE">ApcState</span>, <span class="SpellE">SavedApcState</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Reinitialize <span class="SpellE">Apc</span> State */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">InitializeListHead</span>(&amp;Thread-&gt;<span class="SpellE">ApcState.ApcListHead</span>[<span class="SpellE">KernelMode</span>]);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">InitializeListHead</span>(&amp;Thread-&gt;<span class="SpellE">ApcState.ApcListHead</span>[<span class="SpellE">UserMode</span>]);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>Thread-&gt;<span class="SpellE">ApcState.Process</span> = Process;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>Thread-&gt;<span class="SpellE">ApcState.KernelApcInProgress</span> = FALSE;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>Thread-&gt;<span class="SpellE">ApcState.KernelApcPending</span> = FALSE;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>Thread-&gt;<span class="SpellE">ApcState.UserApcPending</span> = FALSE;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Update Environment
+Pointers if needed*/</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if (<span class="SpellE">SavedApcState</span>
+== &amp;Thread-&gt;<span class="SpellE">SavedApcState</span>) {</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Thread-&gt;<span class="SpellE">ApcStatePointer</span>[<span class="SpellE">OriginalApcEnvironment</span>]
+= &amp;Thread-&gt;<span class="SpellE">SavedApcState</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Thread-&gt;<span class="SpellE">ApcStatePointer</span>[<span class="SpellE">AttachedApcEnvironment</span>]
+= &amp;Thread-&gt;<span class="SpellE">ApcState</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Thread-&gt;<span class="SpellE">ApcStateIndex</span> = <span class="SpellE">AttachedApcEnvironment</span>;</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Swap the Processes */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE"><b>KiSwapProcess</b></span>(Process,
+<span class="SpellE">SavedApcState</span>-&gt;Process);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Return to old IRQL*/</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">KeReleaseDispatcherDatabaseLock</span>(<span class="SpellE">ApcLock</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>DPRINT("<span class="SpellE">KiAttachProcess</span> Completed <span class="SpellE">Sucesfully</span>\n");</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">注意代码中的</span><span lang="EN-US">Process-&gt;<span class="SpellE">StackCount</span></span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">与进程的“堆栈”并无关系，而是指进程挂靠的嵌套深度。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">前面讲过，所谓挂靠到某个进程，就是切换到那个进程的用户空间，就是把那个进程的页面映射表装入</span><span lang="EN-US">MMU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，这里调用</span><span class="SpellE"><span lang="EN-US">KiSwapProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的原因就在于此。不过在此之前还需要把当前进程的</span><span lang="EN-US">APC</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">队列从</span><span class="SpellE"><span lang="EN-US">ApcState</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">转移到</span><span class="SpellE"><span lang="EN-US">SavedApcState</span></span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">去，所以还调用了</span><span class="SpellE"><span lang="EN-US">KiMoveApcState</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，读者可以结合前一篇漫谈把这里的程序读懂。此外，这里</span><span class="SpellE"><span lang="EN-US">KeReleaseDispatcherDatabaseLock</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">一方面是解除对线程调度的禁令，一方面是回到原来的中断优先级。与之配对的是前面</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">中的</span><span class="SpellE"><span lang="EN-US">KeAcquireDispatcherDatabaseLock</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">我们接着看</span><span class="SpellE"><span lang="EN-US">KiSwapProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的代码。</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">[<span class="SpellE">KeAttachProcess</span>() &gt; <span class="SpellE">KiAttachProcess</span>()
+&gt; <span class="SpellE">KiSwapProcess</span>()]</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">VOID</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">STDCALL</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span class="SpellE"><b><span lang="EN-US">KiSwapProcess</span></b></span><span lang="EN-US">(PKPROCESS <span class="SpellE">NewProcess</span>, PKPROCESS <span class="SpellE">OldProcess</span>)
+</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">{</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>//PKPCR <span class="SpellE">Pcr</span>
+= <span class="SpellE">KeGetCurrentKpcr</span>();</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* Do they have an LDT? */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if ((<span class="SpellE">NewProcess</span>-&gt;<span class="SpellE">LdtDescriptor</span>) || (<span class="SpellE">OldProcess</span>-&gt;<span class="SpellE">LdtDescriptor</span>)) {</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/*
+FIXME : <span class="SpellE">SWitch</span> GDT/IDT */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>DPRINT("Switching CR3
+to: %x\n", <span class="SpellE">NewProcess</span>-&gt;<span class="SpellE">DirectoryTableBase.u.LowPart</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>Ke386SetPageTableDirectory</b>(<span class="SpellE">NewProcess</span>-&gt;<span class="SpellE">DirectoryTableBase.u.LowPart</span>);</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>/* FIXME: Set <span class="SpellE">IopmOffset</span> in TSS */</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US">}</span></p>
+
+<p class="MsoNormal" style="tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这里</span><span lang="EN-US">Ke386SetPageTableDirectory()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的作用就是切换用户空间，即装入目标进程的页面映射表，这主要是对寄存器</span><span lang="EN-US">CR3</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的操作。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">读懂了</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，自然也就懂得了</span><span class="SpellE"><span lang="EN-US">KeDetachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">回到前面</span><span class="SpellE"><span lang="EN-US">LdrpMapSystemDll</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">代码中，可以看到夹在</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span class="SpellE"><span lang="EN-US">KeDetachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">之间的操作主要是</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，就可以明白这是为什么了。因为</span><span class="SpellE"><span lang="EN-US">LdrGetProcedureAddress</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">是根据一个函数名从给定的映像中找到该函数的程序入口</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">当然，这必须是由目标映像导出的函数，否则也找不到</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。这里要找的就是</span><span class="SpellE"><span lang="EN-US">LdrInitializeThunk</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">以及其它几个函数的入口。要在目标映像中寻找函数入口，当然就得访问这个映像、即访问这个映像在用户空间的所在地址区间，这就涉及页面映射表的使用</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">而不是准备</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">了。于是，就需要暂时切换到目标进程的用户空间，也就是“挂靠”到目标进程。当然，完成了操作之后还得切换回来，那就是</span><span class="SpellE"><span lang="EN-US">KeDetachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的事了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">这里还要说一下，从程序的角度看，</span><span class="SpellE"><span lang="EN-US">KeAttachProcess</span></span><span lang="EN-US">()</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">以后就可以根据目标映像在用户空间的起始地址访问这个映像了，似乎很简单。但是实际的过程却并不那么简单。这个映像虽然已经在用户空间有了映射，也就是在页面映射表中有了相应的表项，但是此刻可能</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">应该说多半</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">还没有相应的物理页面，所以在第一次访问这个映像时就会发生缺页异常。然后，在内核对缺页异常的处理中，将会发现所映射的是一个磁盘文件、即映像文件中的一个逻辑页面，就为其分配一个物理页面并从磁盘文件读入这逻辑页面。从缺页异常返回以后，</span><span lang="EN-US">CPU</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">重新执行访问用户空间的那条指令，才能获得成功。就这样，访问到哪，就缺页到哪、读入到哪，慢慢地就星罗棋布、把许多页面从磁盘读了进来。然而，也许到目标映像结束运行时还有许多页面是从未读入内存的。所谓“工作集”的概念就是这样来的，但是那已经不在本文的话题之内了。</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+tab-stops:144.0pt"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 05:36:19 May 04, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:45:07 Apr 13, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 414.569
+  exclusion.robots: 0.2
+  exclusion.robots.policy: 0.193
+  RedisCDXSource: 1.143
+  esindex: 0.008
+  LoadShardBlock: 395.929 (3)
+  PetaboxLoader3.datanode: 346.186 (4)
+  CDXLines.iter: 15.1 (3)
+  PetaboxLoader3.resolve: 148.875 (2)
+  load_resource: 126.582
+--><div id="react-toast" class="Toaster"><span class="Toaster__manager-top-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; left: 0px;"></span><span class="Toaster__manager-top" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; top: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-top-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; top: 0px; right: 0px;"></span><span class="Toaster__manager-bottom-left" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; left: 0px;"></span><span class="Toaster__manager-bottom" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; margin: 0px auto; text-align: center; bottom: 0px; right: 0px; left: 0px;"></span><span class="Toaster__manager-bottom-right" style="max-width: 560px; position: fixed; z-index: 5500; pointer-events: none; bottom: 0px; right: 0px;"></span></div><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script><script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/js.js"></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>
